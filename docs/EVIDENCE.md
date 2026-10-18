@@ -1,6 +1,28 @@
 # Evidence available to judges
 
-This page separates saved model results, implementation evidence and planned validation. No new model calls or application test runs were performed while preparing this README package.
+This page separates saved model results from fresh candidate validation. The source candidate was tested locally on 18 October 2026 with fake/mocked models and isolated fictional state; no new billable model calls or cloud submissions were made.
+
+## Candidate validation — 18 October 2026
+
+The initial source candidate is commit `c54d20d`. The checks below exercised its application/test content; the subsequent evidence/manifest update changes documentation/metadata only.
+
+| Check | Fresh local result |
+|---|---|
+| Backend/API/domain suite, excluding browser files and separate ADK file | **495 passed**, Python 3.12.6; 554.69 seconds. |
+| ADK equivalence suite | **90 passed**; 438.84 seconds. Uses deterministic/stubbed models, including local mock HTTP paths. |
+| Complete selected browser suite | **36 passed**, 585 non-browser cases deselected; Chrome/Playwright, 442.59 seconds. |
+| Total non-overlapping selected tests | **621 passed**. |
+| Pinned UI dependency installation and committed bundle/icon/notice consistency | `npm ci --ignore-scripts` and `npm run check:ui` passed. |
+| Installed Python environment | `pip check` passed; local interpreter imported `lastmile` from this candidate, not the development checkout. |
+| Candidate document links and source isolation | Relative Markdown links resolved; only the 304 manifest-selected paths were committed/uploaded. No private history, research, state, dependencies or PPTX. |
+| Secret review | Gitleaks 8.30.1 scanned files/Git history. Three generic detections were verified source-file SHA-256 values in the release manifest; zero unresolved findings. This is not a guarantee that every possible secret format is detectable. |
+| Optional billable benchmark safety | Missing explicit `GOOGLE_CLOUD_PROJECT` is refused before credential/model access. |
+
+The backend/browser runs reported a Starlette/httpx deprecation warning; the ADK run reported 205 SDK deprecation warnings. These were warnings, not test failures. No fresh native-speaker/practitioner/photo-quality study or live authenticated cloud resolution exercise was performed.
+
+The local Docker engine was unavailable. [GitHub CI](https://github.com/LithiraAponsu2/lastmile-response-submission/actions/runs/39125787704) performs clean-runner UI, Python 3.12/3.14, browser and container checks; at the time this evidence was written the UI job had passed and the remaining jobs were queued. Do not describe queued jobs as passed. CI has no production credentials or deployment permission.
+
+The local test runs reused the development virtual environment's installed dependencies while executing the isolated candidate code. Clean-runner CI is the separate dependency/setup check; the local run is not described as a fresh dependency installation from scratch.
 
 ## Saved held-out text benchmark
 
@@ -18,7 +40,7 @@ This is a small synthetic text test, not an independent study. The routing-body 
 
 ## Implementation and workflow checks
 
-The development deployment ledger records a 620-pass API/browser run and accessibility checks for its notifications release. Those historical counts must not be presented as tests freshly run on the trimmed public candidate. Before publication, record the candidate commit, commands, dependency versions, result totals and any remaining failures here.
+The development deployment ledger records an earlier 620-pass API/browser run and accessibility checks for its notifications release. Those historical counts are distinct from the fresh 621-pass candidate checks above. A new candidate-wide axe accessibility audit was not run here.
 
 The candidate must verify request intake, clarifications reaching staff, distinct-site completion remaining separate, filing permissions, district selection, notifications, role-scoped plans, UI bundle consistency, Docker startup and the saved score endpoint. All local tests should use fictional isolated state and fake models/mail off unless a deliberate billable evaluation is documented.
 

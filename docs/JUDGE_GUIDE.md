@@ -18,6 +18,6 @@ docker build -t lastmile-response .
 docker run --rm -p 8080:8080 -e LASTMILE_LLM=fake -e LASTMILE_TEAM_DEMO=true -e LASTMILE_MAIL=off lastmile-response
 ```
 
-Open `http://localhost:8080` and `http://localhost:8080/public`. This is an ephemeral fictional exercise with the deterministic model. The README draft package alone does not contain the application; candidate clean-clone startup must be verified before publication.
+Open `http://localhost:8080` and `http://localhost:8080/public`. This is an ephemeral fictional exercise with the deterministic model. The repository includes the application source and runtime inputs; consult [EVIDENCE.md](EVIDENCE.md) for completed local checks and the status of container/clean-runner verification.
 
 [Architecture](ARCHITECTURE.md) · [AI usage](AI_USAGE.md) · [Evidence](EVIDENCE.md) · [README](../README.md)
