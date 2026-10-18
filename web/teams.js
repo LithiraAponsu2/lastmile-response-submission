@@ -32,7 +32,7 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
   const mobileNavigation = matchMedia("(max-width: 760px)");
   let navCollapsed = false, mobileNavOpen = false;
   try { navCollapsed = localStorage.getItem("lastmile-sidebar-collapsed") === "true"; } catch { /* Storage is optional. */ }
-  const toolNames = { whowhat: "Who does what where", requests: "Requests", sources: "Reports", resources: "Places & stock", map: "Status map", tasks: "Needs & assignments", communications: "Communications", activity: "Activity" };
+  const toolNames = { whowhat: "Who does what where", requests: "Requests", inbox: "Public requests", sources: "Reports", resources: "Places & stock", map: "Status map", tasks: "Needs & assignments", communications: "Communications", activity: "Activity" };
   const draftKey = () => state.doc && state.me ? `${state.me.id}:${state.doc.id}` : "";
   let map = null, mapCtl = null, toastTimer, pollTimer, routeEpoch = 0, lastPoll = 0, pollInFlight = false;
   const id = () => crypto.randomUUID();
@@ -289,7 +289,7 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
     const item = (key, label) => btn([navIcon(key), h("span", { class: "nav-label" }, label)], () => { mobileNavOpen = false; updateNavigation(); return key === "dashboard" ? showIncidents() : goTool(key); }, "sidebar-item", { "aria-label": label, title: label, "aria-current": active === key ? "page" : null });
     const sidebar = h("aside", { class: "app-sidebar", "aria-label": "Application sidebar", onkeydown: e => { if (e.key === "Escape" && mobileNavigation.matches && mobileNavOpen) { mobileNavOpen = false; updateNavigation(); $("#toggle-navigation").focus(); } } },
       h("div", { class: "sidebar-heading" }, h("span", { class: "nav-label eyebrow" }, "Workspace"), btn(navIcon("collapse"), toggleNavigation, "sidebar-toggle", { id: "toggle-navigation", "aria-controls": "sidebar-menu" })),
-      h("div", { id: "sidebar-menu", class: "sidebar-menu" }, h("nav", { "aria-label": "Main navigation" }, item("dashboard", "Dashboard"), item("incidents", "Incidents"), ...["requests", "tasks", "whowhat", "sources", "communications", "activity", "resources", "map"].map(key => item(key, toolNames[key])),
+      h("div", { id: "sidebar-menu", class: "sidebar-menu" }, h("nav", { "aria-label": "Main navigation" }, item("dashboard", "Dashboard"), item("incidents", "Incidents"), ...["requests", "inbox", "tasks", "whowhat", "sources", "communications", "activity", "resources", "map"].map(key => item(key, toolNames[key])),
         h("a", { class: "sidebar-item", href: "/public", target: "_blank", rel: "noopener", title: "Public status page (opens in a new tab)", "aria-label": "Public status page (opens in a new tab)" }, navIcon("public"), h("span", { class: "nav-label" }, "Public status page"))),
         h("div", { class: "sidebar-bottom" }, btn([navIcon("activity"), h("span", { class: "nav-label" }, "How well the AI does")], aiQuality, "sidebar-item", { title: "How well the AI does", "aria-label": "How well the AI does" }),
           btn([navIcon("settings"), h("span", { class: "nav-label" }, "Workspace settings")], workspaceSettings, "sidebar-item", { id: "workspace-settings", title: "Workspace settings", "aria-label": "Workspace settings" }), h("small", { class: "sidebar-note" }, "Sri Lanka prototype"))));
@@ -300,7 +300,7 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
     updateNavigation();
   }
   function navIcon(key) {
-    const paths = { whowhat:"M4 5h16M4 12h10M4 19h7M17 15l3 3-3 3", requests:"M4 8h13M13 4l4 4-4 4M20 16H7M11 12l-4 4 4 4", dashboard:"M3 3h8v8H3zM13 3h8v5h-8zM13 10h8v11h-8zM3 13h8v8H3z", incidents:"M3 7h18v14H3zM3 7V3h7l3 4M7 12h10M7 16h7", sources:"M4 4h16v16H4zM8 8h8M8 12h8M8 16h5", resources:"m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7", map:"m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2zM9 3v16M15 5v16", tasks:"M8 3h8v4H8zM8 5H5v16h14V5h-3M8 12l2 2 5-5M8 18h7", communications:"M3 4h18v13H9l-6 4zM7 8h10M7 12h7", activity:"M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0", handover:"M5 3h10l4 4v14H5zM14 3v5h5M8 12h8M8 16h8", guide:"m9 5 7 7-7 7", warning:"m12 3 9 17H3zM12 9v4M12 16v1", public:"M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0M3 12h18M12 3c-5 5-5 13 0 18M12 3c5 5 5 13 0 18", bell:"M6 9a6 6 0 0 1 12 0c0 6 3 8 3 8H3s3-2 3-8M10 21h4", settings:"M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2", more:"M5 5h4v4H5zM15 5h4v4h-4zM5 15h4v4H5zM15 15h4v4h-4z", collapse:"M4 4h16v16H4zM9 4v16m7-12-3 4 3 4" };
+    const paths = { whowhat:"M4 5h16M4 12h10M4 19h7M17 15l3 3-3 3", requests:"M4 8h13M13 4l4 4-4 4M20 16H7M11 12l-4 4 4 4", dashboard:"M3 3h8v8H3zM13 3h8v5h-8zM13 10h8v11h-8zM3 13h8v8H3z", incidents:"M3 7h18v14H3zM3 7V3h7l3 4M7 12h10M7 16h7", sources:"M4 4h16v16H4zM8 8h8M8 12h8M8 16h5", resources:"m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7", map:"m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2zM9 3v16M15 5v16", tasks:"M8 3h8v4H8zM8 5H5v16h14V5h-3M8 12l2 2 5-5M8 18h7", communications:"M3 4h18v13H9l-6 4zM7 8h10M7 12h7", activity:"M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0", handover:"M5 3h10l4 4v14H5zM14 3v5h5M8 12h8M8 16h8", guide:"m9 5 7 7-7 7", warning:"m12 3 9 17H3zM12 9v4M12 16v1", public:"M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0M3 12h18M12 3c-5 5-5 13 0 18M12 3c5 5 5 13 0 18", bell:"M6 9a6 6 0 0 1 12 0c0 6 3 8 3 8H3s3-2 3-8M10 21h4", inbox:"M3 13h5l2 3h4l2-3h5M5 4h14l2 9v7H3v-7z", settings:"M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2", more:"M5 5h4v4H5zM15 5h4v4h-4zM5 15h4v4H5zM15 15h4v4h-4z", collapse:"M4 4h16v16H4zM9 4v16m7-12-3 4 3 4" };
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg"), path = document.createElementNS(svg.namespaceURI, "path");
     svg.setAttribute("viewBox", "0 0 24 24"); svg.setAttribute("aria-hidden", "true"); svg.classList.add("nav-icon"); path.setAttribute("d", paths[key] || paths.guide); svg.append(path); return svg;
   }
@@ -813,6 +813,7 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
     }
     if (key === "map") return nationalMap(heading, epoch);
     if (key === "requests") return requestsPage(heading, epoch);
+    if (key === "inbox") return publicPage(heading, epoch);
     if (key === "resources") return placesPage(heading, epoch);
     if (key === "whowhat") return whoWhatPage(heading, epoch);
     if (key === "communications") return communicationsPage(heading, epoch);
@@ -1661,7 +1662,7 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
     if (map) { dropMap(map); map = null; mapCtl = null; }
     const unread = (c().notifications || []).filter(n => !n.read_by.includes(state.me.id)).length;
     // Three everyday views; older, specialist records stay one click away under More.
-    const main = [["overview", "Overview"], ["map", "Map & status"], ["requests", `Requests (${(c().asks || []).filter(askOpen).length})`], ["sources", `Reports (${state.doc.sources.length})`]];
+    const main = [["overview", "Overview"], ["map", "Map & status"], ["requests", `Requests (${(c().asks || []).filter(askOpen).length})`], ["sources", `Reports (${state.doc.sources.length})`], ["public", `Public requests (${(c().public_requests || []).filter(r => r.status !== "closed").length})`]];
     const more = [["resources", `Shelters & resources (${c().assets.length})`], ...(has("partner") ? [] : [["finance", "Funding records"]]), ["documents", "Documents"], ["notifications", `Shared with you (${unread})`], ["timeline", "Activity"], ["assignments", "Needs & assignments"]];
     if (state.tab === "situation") state.tab = "overview";
     const extra = more.find(([key]) => key === state.tab);
@@ -1673,7 +1674,7 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
       await target.updateComplete;
       if (target.isConnected) target.focus({ preventScroll: true });
     };
-    const tabGroup = createDataTabs({ tabs, active: state.tab, onSelect: activate, renderPanel: key => [({ overview: overviewPanel, map: mapPanel, sources: sourcesPanel, resources: resourcesPanel, requests: asksPanel, assignments: () => h("div", { class: "stack" }, notice("Evidence-based needs and receiving-body assignments. Each step needs reviewed evidence; most coordination now uses Requests."), requestsPanel(), operationPanel("requests")), finance: financePanel, documents: documentsPanel, notifications: notificationsPanel, timeline: timelinePanel })[key](), !['overview', 'requests', 'assignments'].includes(key) && operationPanel(key)] });
+    const tabGroup = createDataTabs({ tabs, active: state.tab, onSelect: activate, renderPanel: key => [({ overview: overviewPanel, map: mapPanel, sources: sourcesPanel, resources: resourcesPanel, requests: asksPanel, assignments: () => h("div", { class: "stack" }, notice("Evidence-based needs and receiving-body assignments. Each step needs reviewed evidence; most coordination now uses Requests."), requestsPanel(), operationPanel("requests")), finance: financePanel, documents: documentsPanel, notifications: notificationsPanel, timeline: timelinePanel, public: publicPanel })[key](), !['overview', 'requests', 'assignments', 'public'].includes(key) && operationPanel(key)] });
     const menu = createViewMenu({ items: more, active: state.tab, onSelect: key => activate(key).catch(error => toast(error.message)) });
     const sendAllowed = canAct("contributor", "agency_supervisor", "coordinator");
     area.replaceChildren(h("div", { class: "data-toolbar" }, h("div", { class: "row" }, sendAllowed && btn(actionLabel("New request", "request"), () => askDialog(), "primary with-icon"), canAct("contributor", "agency_supervisor", "coordinator", "finance_approver") && btn(actionLabel("Add report", "plus"), contributeDialog, "with-icon")), menu), tabGroup);
@@ -1993,7 +1994,7 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
       const funding = data.get("kind") === "funding", quantity = data.get("quantity"), due = data.get("due_at");
       await command("ask", { kind: data.get("kind"), title: data.get("title"), note: data.get("note") || "", priority: data.get("priority"),
         ...(data.get("delivery_area") ? { delivery_area: data.get("delivery_area") } : {}), ...(data.get("delivery_place") ? { delivery_place: data.get("delivery_place") } : {}), ...(data.get("place_key") ? { place_key: data.get("place_key") } : {}), ...(funding ? { amount: String(data.get("amount")).replaceAll(",", "") } : { to: data.get("to"), ...(quantity ? { quantity: Number(quantity), unit: data.get("unit") || "units" } : {}) }),
-        ...(due ? { due_at: new Date(due).toISOString() } : {}), ...(data.get("source_id") ? { source_id: data.get("source_id") } : {}) });
+        ...(due ? { due_at: new Date(due).toISOString() } : {}), ...(data.get("source_id") ? { source_id: data.get("source_id") } : {}), ...(preset.public_request_id ? { public_request_id: preset.public_request_id } : {}) });
       state.tab = "requests"; renderData();
     }, "Send request");
   }
@@ -2085,8 +2086,10 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
     const proposals = (c().chat.proposals || []).filter(p => p.status === "pending" && p.version === state.doc.version).length + (c().plans || []).filter(p => p.origin === "chat" && planOpen(p)).length;
     if (proposals) items.push(["proposal", `${proposals} change${proposals === 1 ? "" : "s"} from the chat to review`, "Check the exact change before it applies.", go(state.tab, null, "chat")]);
     const checks = (c().public_requests || []).filter(r => r.status === "verify" || r.similar_to);
-    if (checks.length && canAct("coordinator")) { const answered = checks.filter(r => r.answer).at(-1); items.push(["public", `${plural(checks.length, "public request")} to check`, answered ? `${answered.code} answered: ${answered.answer.text}` : checks.at(-1).reading?.summary || checks.at(-1).text, go("overview", "public-requests")]); }
-    const suggested = (c().plans || []).filter(p => p.origin === "event" && p.status === "pending");
+    if (checks.length && canAct("coordinator")) { const answered = checks.filter(r => r.answer).at(-1); items.push(["public", `${plural(checks.length, "public request")} to check`, answered ? `${answered.code} answered: ${answered.answer.text}` : checks.at(-1).reading?.summary || checks.at(-1).text, go("public", (answered || checks.at(-1)).id)]); }
+    const forPublic = (c().plans || []).filter(p => p.origin === "event" && p.status === "pending" && isPublicPlan(p));
+    if (forPublic.length && canAct("coordinator")) items.push(["public", `${plural(forPublic.length, "suggested request")} for public requests`, forPublic[0].title, go("public", forPublic[0].trigger.key.slice(7))]);
+    const suggested = (c().plans || []).filter(p => p.origin === "event" && p.status === "pending" && !isPublicPlan(p));
     if (suggested.length) items.push(["proposal", `${plural(suggested.length, "suggestion")} to review`, suggested[0].title, go("overview", "ai-suggestions")]);
     for (const n of pendingAcks()) items.push(["ack", `Acknowledge a report from ${orgShort(n.from)}`, sourceName(n.source_id), go("sources", n.source_id)]);
     const unread = (c().notifications || []).filter(n => !n.read_by.includes(state.me.id) && !pendingAcks().includes(n)).length;
@@ -2120,27 +2123,46 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
     }
     return strip;
   }
-  function publicCard(r, actions = []) {
+  // A small card: what was asked, where, what the person sees and the next step; the rest under Details.
+  // `heading` follows the page outline: h4 under a board column, h3 directly under a section.
+  function publicCard(r, actions = [], context = null, heading = "h4") {
     const reading = r.reading || {}, [label, tone] = PUBLIC_STATE[r.status] || [r.status, ""];
-    const ask = (state.doc?.coordination?.asks || []).find(a => a.public_request_id === r.id);
+    const ask = r.ask || (state.doc ? askFor(r) : null), plan = state.doc && r.status === "filed" ? suggestionFor(r) : null;
+    // A reason belongs to the state it explains: "no open incident" is not shown once the request is in one.
+    const reason = r.decision?.reason && (!r.decision.status || r.decision.status === r.status) ? r.decision.reason : "";
     const by = r.model?.model && r.model.model !== "offline-rules" ? `Read by ${r.model.model}` : "Read by the offline rules (no AI model)";
-    return h("article", { class: "record public-card", id: r.id },
-      h("div", { class: "row between" }, h("h3", {}, `${NEED_LABEL[reading.need] || "Request"} · ${r.area_label}`), pill(label, tone)),
-      h("small", { class: "muted" }, `${r.code} · ${ago(r.at)}${reading.urgency === "high" ? " · urgent" : ""}${reading.people ? ` · ${reading.people} people` : ""}`),
-      r.similar > 0 && h("p", { class: "plan-why" }, `${plural(r.similar, "other report")} confirmed as the same problem.`),
-      r.group_of && h("p", { class: "muted" }, `Same problem as ${codeOf(r.group_of)}, confirmed by a coordinator. Its request covers this one.`),
-      r.similar_to && h("p", { class: "plan-why" }, `Possibly the same problem as ${codeOf(r.similar_to)}: same need, same area, within a day. If it is, that request covers this one; if not, this one gets its own suggestion.`),
-      h("blockquote", { class: "public-words" }, r.text),
-      photoStrip(r),
-      reading.summary && h("p", { class: "public-summary" }, h("strong", {}, "Summary: "), reading.summary),
-      reading.photo_note && h("p", { class: "muted" }, h("strong", {}, "Photos: "), reading.photo_note),
-      (r.decision?.reason) && h("p", { class: "plan-why" }, r.decision.reason),
-      r.answer && h("p", {}, h("strong", {}, "Their answer: "), r.answer.text),
-      (r.reading_notes || []).map(n => h("p", { class: "muted" }, n)),
-      r.phone && h("p", {}, h("strong", {}, "Phone: "), h("a", { href: `tel:${r.phone.replace(/\s/g, "")}` }, r.phone)),
-      ask && h("p", {}, h("strong", {}, "Request: "), `${ask.title} → ${orgName(ask.to)} · ${ask.status.replaceAll("_", " ")}`),
-      h("small", { class: "muted" }, by),
-      actions.length > 0 && h("div", { class: "row wrap" }, actions));
+    const turn = actions.some(a => a?.classList?.contains("primary"));
+    const more = h("details", { class: "public-more" }, h("summary", {}, "Details"));
+    // Built when opened, so photos load and the full suggestion renders only when someone wants them.
+    more.addEventListener("toggle", () => {
+      if (!more.open || more.dataset.ready) return;
+      more.dataset.ready = "1";
+      more.append(h("div", { class: "stack public-detail" },
+        h("blockquote", { class: "public-words" }, r.text),
+        photoStrip(r),
+        reading.summary && h("p", { class: "public-summary" }, h("strong", {}, "Summary: "), reading.summary),
+        reading.photo_note && h("p", { class: "muted" }, h("strong", {}, "Photos: "), reading.photo_note),
+        reason && h("p", { class: "plan-why" }, reason),
+        r.group_of && h("p", { class: "muted" }, `Same problem as ${codeOf(r.group_of)}, confirmed by a coordinator. Its request covers this one.`),
+        r.similar > 0 && h("p", { class: "plan-why" }, `${plural(r.similar, "other report")} confirmed as the same problem.`),
+        (r.reading_notes || []).map(n => h("p", { class: "muted" }, n)),
+        r.phone && h("p", {}, h("strong", {}, "Phone: "), h("a", { href: `tel:${r.phone.replace(/\s/g, "")}` }, r.phone)),
+        ask && h("p", {}, h("strong", {}, "Request: "), `${ask.title} → ${orgName(ask.to)} · ${askStatus(ask)}`),
+        plan && h("div", { class: "public-suggestion" }, h("p", { class: "muted" }, "The suggested request in full. Edit it, or dismiss it and write your own."), planCard(plan)),
+        h("small", { class: "muted" }, by)));
+    });
+    return h("article", { class: "ask-card public-card" + (turn ? " your-turn" : ""), id: r.id, "aria-labelledby": `${r.id}-title` },
+      h("div", { class: "row between" }, h("small", { class: "muted" }, [r.code, ago(r.at), reading.people && `${reading.people} people`, reading.urgency === "high" && "urgent"].filter(Boolean).join(" · ")), pill(label, tone)),
+      h(heading, { id: `${r.id}-title`, class: "public-title" }, `${NEED_LABEL[reading.need] || "Request"} · ${r.area_label}`),
+      h("p", { class: "public-quote" }, `“${r.text}”`),
+      r.similar_to && h("p", { class: "plan-why" }, `Possibly the same problem as ${codeOf(r.similar_to)}.`),
+      r.answer && h("p", { class: "public-answer" }, h("strong", {}, "Their answer: "), r.answer.text),
+      context,
+      h("p", { class: "public-stage" }, h("strong", {}, "The person sees: "), publicStage(r, ask)),
+      ask && h("small", {}, `Request to ${orgShort(ask.to)} · ${askStatus(ask)}`),
+      plan && h("p", { class: "public-suggested" }, h("strong", {}, "Suggested: "), plan.title),
+      actions.filter(Boolean).length > 0 && h("div", { class: "row wrap public-actions" }, actions),
+      more);
   }
   const publicStatus = (r, status, reason, done) => async () => { await api(`/public-requests/${r.id}/status`, { status, reason }); toast(done); };
   function closeDialog(r, after) {
@@ -2148,42 +2170,130 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
       field("Reason", h("textarea", { name: "reason", rows: 2, maxlength: 300, required: true }, "Not something this portal handles."))],
       async data => { await api(`/public-requests/${r.id}/status`, { status: "closed", reason: data.get("reason") }); toast("Request closed"); await after(); }, "Close request");
   }
-  // In the incident: what the public asked for here, with the AI's reading.
-  function publicSection() {
-    const items = (c().public_requests || []).filter(r => r.status !== "closed");
-    if (!items.length) return null;
+  // In the incident: what the public asked for here, the AI's reading, and the way to act on each.
+  const isPublicPlan = p => (p.trigger?.key || "").startsWith("public:");
+  const askFor = r => (c().asks || []).filter(a => [r.id, r.group_of].includes(a.public_request_id)).at(-1);
+  const suggestionFor = r => (c().plans || []).find(p => p.origin === "event" && p.status === "pending" && p.trigger?.key === `public:${r.id}`);
+  const PUBLIC_KIND = { rescue: "team", medical: "team", shelter: "shelter", food: "supplies", water: "water", power: "power", road: "road" };
+  const PUBLIC_OWNER = { power: "edl", water: "water", road: "rda", supplies: "ndrsc", shelter: "division" };
+  // What the person sees with their tracking code; the same rule as the public tracker.
+  function publicStage(r, ask) {
+    if (r.stage) return r.stage;
+    if (r.status === "closed") return "Closed";
+    if (r.status === "verify") return "Being checked";
+    if (!ask) return "Being reviewed";
+    const body = orgShort(ask.to);
+    return { accepted: "Help on the way", in_progress: "Help on the way", done: "Done", confirmed: "Done" }[ask.status] || `Being handled by ${body}`;
+  }
+  // A request to the right body, prefilled from what the person wrote; a person checks every field before sending it.
+  function publicPreset(r) {
+    const reading = r.reading || {}, kind = PUBLIC_KIND[reading.need] || "other", to = PUBLIC_OWNER[kind];
+    return { kind, ...(to && c().participants.includes(to) ? { to } : {}),
+      title: `${NEED_LABEL[reading.need] || "Help"} for ${reading.people ? `${reading.people} people, ` : ""}${r.area_label}`.slice(0, 200),
+      ...(reading.people ? { quantity: reading.people, unit: "people" } : {}), priority: reading.urgency === "high" ? "urgent" : "normal",
+      ...(String(r.area || "").startsWith("ds-") ? { delivery_area: r.area } : {}),
+      note: `Public request ${r.code}: ${reading.summary || r.text}`.slice(0, 1000), public_request_id: r.id };
+  }
+  function publicActions(r, refresh) {
+    const ask = askFor(r), live = ask && !["declined", "cancelled"].includes(ask.status), plan = suggestionFor(r), lead = canAct("coordinator"), out = [];
+    if (lead && r.status === "verify") out.push(btn("Mark as genuine", async () => { await publicStatus(r, "filed", "Checked by a coordinator", "Marked as genuine")(); await refresh(); }, "primary small"));
+    else if (lead && r.similar_to) out.push(
+      btn("Same problem", async () => { await api(`/public-requests/${r.id}/similar`, { same: true }); toast(`Joined to ${codeOf(r.similar_to)}`); await refresh(); }, "small"),
+      btn("Different place or need", async () => { await api(`/public-requests/${r.id}/similar`, { same: false }); toast("Kept separate; its own suggestion follows"); await refresh(); }, "primary small"));
+    else if (lead && r.status === "filed" && !live && plan) {
+      const blocked = !planOpen(plan) || (plan.checks || []).some(x => x.level === "block");
+      out.push(btn("Send suggested request", async () => { state.doc = await api(`/incidents/${state.doc.id}/plans/${plan.id}/approve`, { hash: plan.hash, request_id: id() }); renderIncident(); toast("Request sent"); }, "primary small", blocked ? { disabled: true, title: "Open Details to check this suggestion first" } : {}));
+    }
+    else if (lead && r.status === "filed" && !live && !r.group_of) out.push(btn(actionLabel("Create request", "request"), () => askDialog(publicPreset(r)), "primary small with-icon"));
+    if (ask) out.push(btn(actionLabel("Open request", "forward", true), () => focusRecord("requests", ask.id), "small with-icon"));
+    if (lead && !live && r.status !== "closed") out.push(btn("Close", () => closeDialog(r, refresh), "quiet small"));
+    if (lead && r.status === "closed") out.push(btn("Reopen", async () => { await publicStatus(r, "filed", "Reopened by a coordinator", "Reopened")(); await refresh(); }, "quiet small"));
+    return out;
+  }
+  function publicPanel() {
+    const all = c().public_requests || [], closed = all.filter(r => r.status === "closed"), open = all.filter(r => r.status !== "closed");
     const refresh = async () => { state.doc = await api(`/incidents/${state.doc.id}`); renderIncident(); };
-    return h("section", { id: "public-requests", class: "card stack", "aria-labelledby": "public-title" },
-      h("div", { class: "row between" }, h("h2", { id: "public-title" }, "From the public"), pill(String(items.length))),
-      h("p", { class: "muted" }, "Requests people sent from the public status page. The suggested request for each is under Suggestions."),
-      items.toReversed().map(r => publicCard(r, !canAct("coordinator") ? [] : r.status === "verify" ? [
-        btn("Mark as genuine", async () => { await publicStatus(r, "filed", "Checked by a coordinator", "Marked as genuine")(); await refresh(); }, "primary"),
-        btn("Close", () => closeDialog(r, refresh), "quiet")] : r.similar_to ? [
-        btn("Same problem", async () => { await api(`/public-requests/${r.id}/similar`, { same: true }); toast(`Joined to ${codeOf(r.similar_to)}`); await refresh(); }),
-        btn("Different place or need", async () => { await api(`/public-requests/${r.id}/similar`, { same: false }); toast("Kept separate; its own suggestion follows"); await refresh(); }, "primary")] : [])));
+    const column = r => {
+      const ask = askFor(r);
+      if (r.status === "verify" || r.similar_to) return 0;
+      if (!ask || ["declined", "cancelled"].includes(ask.status)) return 1;
+      return ["done", "confirmed"].includes(ask.status) ? 3 : 2;
+    };
+    const columns = ["To check", "To send", "Being handled", "Done"];
+    return h("div", { class: "stack" }, h("section", { id: "public-requests", class: "card stack", "aria-labelledby": "public-title" },
+      h("div", {}, h("h2", { id: "public-title" }, "Public requests"),
+        h("small", {}, "What people asked for on the public page. Check doubtful ones, send each to the right body and follow it to Done; the person sees each step with their tracking code.")),
+      !all.length ? empty("No public requests in this incident yet. Requests sent from the public page for this district arrive here.") :
+        h("div", { class: "ask-board" }, columns.map((label, i) => {
+          const items = open.filter(r => column(r) === i).toReversed();
+          return h("section", { class: "ask-column", "aria-labelledby": `public-col-${i}` }, h("h3", { id: `public-col-${i}` }, label, h("span", { class: "count" }, String(items.length))),
+            items.length ? items.map(r => publicCard(r, publicActions(r, refresh))) : h("small", { class: "muted" }, "None"));
+        })),
+      closed.length > 0 && h("details", { class: "form-disclosure" }, h("summary", {}, `Closed (${closed.length})`), h("div", { class: "public-grid" }, closed.toReversed().map(r => publicCard(r, publicActions(r, refresh)))))));
+  }
+  // The Overview only points to the tab, so each request and its suggestion appear once.
+  function publicPointer() {
+    const open = (c().public_requests || []).filter(r => r.status !== "closed");
+    if (!open.length) return null;
+    const check = open.filter(r => r.status === "verify" || r.similar_to).length, plans = (c().plans || []).filter(p => p.status === "pending" && isPublicPlan(p)).length;
+    return h("section", { class: "card row between wrap", "aria-labelledby": "public-pointer-title" },
+      h("div", {}, h("h2", { id: "public-pointer-title" }, `Public requests (${open.length})`),
+        h("p", { class: "muted" }, [check && `${check} to check`, plans && `${plural(plans, "suggested request")} to send`].filter(Boolean).join(" · ") || "Each is followed under its own tab.")),
+      btn(actionLabel("Open Public requests", "forward", true), () => { state.tab = "public"; renderData(); }, "with-icon"));
   }
   function codeOf(id) { return (state.doc?.coordination?.public_requests || []).find(x => x.id === id)?.code || "an earlier report"; }
-  // On the Dashboard, for coordinators: requests with no incident, requests to check, and what the AI closed.
+  // Filing a request that is in no incident: into any open incident this body takes part in, or a new one.
+  function fileActions(r, records, refresh) {
+    const open = records.filter(i => i.status !== "closed" && i.acting_member !== false && i.participants?.includes(state.me.organisation));
+    const district = r.area_label.split(", ").at(-1).replace(" District", "");
+    const here = open.filter(i => i.district === district), others = open.filter(i => i.district !== district);
+    const choice = select("incident", [...here, ...others].map(i => [i.id, `${i.title} · ${i.district}`]));
+    choice.setAttribute("aria-label", `Incident for ${r.code}`);
+    return [open.length > 0 && h("div", { class: "public-file" }, choice, btn("Add to incident", async () => { await api(`/public-requests/${r.id}/file`, { incident_id: choice.value }); toast("Added to the incident"); await refresh(); }, "primary small")),
+      btn("Open new incident", () => openFromPublic(r, district), open.length ? "small" : "primary small"),
+      r.status !== "closed" && btn("Close", () => closeDialog(r, refresh), "quiet small")];
+  }
+  // On the Dashboard, for coordinators: requests with no incident yet.
   function publicQueueSection(queue, records) {
-    const waiting = [...queue.hold, ...queue.verify];
-    if (!waiting.length && !queue.closed.length) return null;
-    const open = records.filter(i => i.status !== "closed");
+    const waiting = [...queue.hold, ...queue.verify.filter(r => !r.incident_id)];
+    if (!waiting.length) return null;
     const refresh = () => listIncidents();
-    const actions = r => {
-      const district = r.area_label.split(", ").at(-1).replace(" District", "");
-      const here = open.filter(i => i.district === district), others = open.filter(i => i.district !== district);
-      const choice = select("incident", [...here, ...others].map(i => [i.id, `${i.title} · ${i.district}`]));
-      choice.setAttribute("aria-label", `Incident for ${r.code}`);
-      return [open.length > 0 && h("div", { class: "row public-file" }, choice, btn("Add to incident", async () => { await api(`/public-requests/${r.id}/file`, { incident_id: choice.value }); toast("Added to the incident"); await refresh(); })),
-        btn("Open new incident", () => openFromPublic(r, district), "primary"),
-        btn("Close", () => closeDialog(r, refresh), "quiet")];
-    };
     return h("section", { id: "dash-public", class: "dash-card stack", "aria-labelledby": "dash-public-title" },
-      h("div", { class: "dash-card-head" }, h("h2", { id: "dash-public-title" }, "Public requests waiting"), pill(String(waiting.length), waiting.length ? "warn" : "green")),
-      waiting.length ? h("p", { class: "muted" }, "No open incident covers these yet, or they need a check. Add each to an incident, open one, or close it.") : h("p", { class: "muted" }, "Nothing waiting."),
-      waiting.map(r => publicCard(r, actions(r))),
-      queue.closed.length > 0 && h("details", { class: "closed-by-ai" }, h("summary", {}, `Closed automatically (${queue.closed.length}) · check and reopen if needed`),
-        queue.closed.toReversed().map(r => publicCard(r, [btn("Reopen", async () => { await publicStatus(r, "hold", "Reopened by a coordinator", "Reopened")(); await refresh(); }, "quiet")]))));
+      h("div", { class: "dash-card-head" }, h("h2", { id: "dash-public-title" }, "Public requests waiting"), pill(String(waiting.length), "warn")),
+      h("p", { class: "muted" }, "No open incident covers these yet. Add each to an incident, open one, or close it."),
+      h("div", { class: "public-grid" }, waiting.map(r => publicCard(r, fileActions(r, records, refresh), null, "h3"))),
+      btn(actionLabel("All public requests", "forward", true), () => goTool("inbox"), "quiet with-icon"));
+  }
+  // Every public request this person may see, across incidents, including the ones the AI closed.
+  async function publicPage(heading, epoch) {
+    const content = h("div", { class: "stack", "aria-busy": "true" }, heading, h("p", { role: "status" }, "Loading public requests…")); shell(content);
+    let queue, records;
+    try { [queue, records] = await Promise.all([api("/public-requests"), api("/incidents")]); }
+    catch (error) { if (epoch === routeEpoch) { content.removeAttribute("aria-busy"); content.append(h("div", { class: "error", role: "alert" }, "Public requests could not load. " + error.message, btn("Try again", () => route()))); } return; }
+    if (epoch !== routeEpoch) return;
+    const refresh = () => route(), lead = has("coordinator");
+    const inIncident = r => btn(actionLabel("Open in incident", "forward", true), () => openRecord({ incident_id: r.incident_id, tab: "public", record: r.id }), "small with-icon");
+    const where = r => r.incident_title && h("small", {}, "Incident: ", h("strong", {}, r.incident_title));
+    const groups = [
+      ["waiting", "Waiting for a decision", "No open incident covers these yet. Add each to an incident, open one, or close it.", [...queue.hold, ...queue.verify.filter(r => !r.incident_id)], r => lead ? fileActions(r, records, refresh) : []],
+      ["checking", "Being checked", "In an incident, waiting for a coordinator there to check them.", queue.verify.filter(r => r.incident_id), r => [inIncident(r)]],
+      ["filed", "In incidents", "Each is followed in its incident until the person sees Done.", queue.filed, r => [inIncident(r)]],
+      ["closed", "Closed", "Closed by the AI or by a person. Anything closed by mistake can go into an incident.", queue.closed,
+        r => !lead ? [] : r.incident_id ? [inIncident(r), btn("Reopen", async () => { await api(`/public-requests/${r.id}/status`, { status: "filed", reason: "Reopened by a coordinator" }); toast("Reopened"); await refresh(); }, "quiet small")] : fileActions(r, records, refresh)]];
+    const search = input("public_search", "", { type: "search", placeholder: "Search code, words or area", "aria-label": "Search public requests" });
+    const sections = groups.map(([key, title, note, list, actions]) => {
+      const section = h("section", { id: `public-${key}`, class: "dash-card stack", "aria-labelledby": `public-${key}-title` },
+        h("div", { class: "dash-card-head" }, h("h2", { id: `public-${key}-title` }, title), pill(String(list.length), key === "waiting" && list.length ? "warn" : "")),
+        h("p", { class: "muted" }, note),
+        !list.length ? h("p", { class: "muted" }, "None.") : h("div", { class: "public-grid" }, list.toReversed().map(r => publicCard(r, actions(r), where(r), "h3"))));
+      return key === "closed" ? h("details", { class: "public-closed" }, h("summary", {}, `Closed (${list.length})`), section) : section;
+    });
+    search.addEventListener("input", () => {
+      const words = search.value.trim().toLowerCase();
+      for (const card of content.querySelectorAll(".public-card")) card.hidden = !!words && !card.textContent.toLowerCase().includes(words);
+    });
+    content.replaceChildren(heading, notice(lead ? "Public requests from the public status page in your districts. People follow each one with their tracking code." : "Public requests in the incidents your organisation takes part in. Coordinators decide on those that are in no incident yet."), field("Search", search), ...sections);
+    content.removeAttribute("aria-busy");
   }
   function openFromPublic(r, district) {
     const need = r.reading?.need || "other", owner = { power: "edl", water: "water", road: "rda", food: "ndrsc" }[need];
@@ -2200,7 +2310,7 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
   }
   // Plans prepared when something happened (a warning, a report, an overdue request, a disagreement), for this role.
   function suggestionsSection() {
-    const mine = (c().plans || []).filter(p => p.origin === "event" && p.status === "pending");
+    const mine = (c().plans || []).filter(p => p.origin === "event" && p.status === "pending" && !isPublicPlan(p));
     if (!mine.length || state.doc.status === "closed") return null;
     return h("section", { id: "ai-suggestions", class: "card stack", "aria-labelledby": "suggestions-title" },
       h("div", { class: "row between" }, h("h2", { id: "suggestions-title" }, "Suggestions"), pill(String(mine.length), "warn")),
@@ -2219,7 +2329,7 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
           : h("div", { class: "dash-empty" }, h("strong", {}, "You’re up to date"), h("p", {}, jobOf().idle || "Nothing here needs your organisation and role right now."))),
       h("div", { class: "metrics" }, metric(open, "Open requests", "requests"), metric(pending, "Reports to review", "sources"), metric(!shelters.length ? "—" : known.length ? known.reduce((n, a) => n + a.balance.available, 0) : shelters.reduce((n, a) => n + (lastFree(a) ?? 0), 0), known.length || !shelters.length ? "Free shelter places" : "Free places at last report", "resources"), metric(c().participants.length, "Organisations", null)),
       shelters.length > 0 && h("section", { class: "card stack", "aria-labelledby": "shelters-title" }, h("h2", { id: "shelters-title" }, "Shelters"), h("ul", { class: "shelter-list" }, shelters.map(a => h("li", { class: "overview-shelter" }, h("span", {}, h("strong", {}, a.name), h("small", {}, a.balance.available == null ? `${orgName(a.owner)} · ${lastFree(a) != null ? `${lastFree(a)} free at last report · ` : ""}${shelterCheck(assetFacts(a))}` : `${orgName(a.owner)} · ${a.balance.reason}`)), pill(a.balance.available == null ? "Needs a check" : a.balance.available === 0 ? "Full" : `${a.balance.available} free`, a.balance.available == null ? "warn" : a.balance.available === 0 ? "danger" : "green"))))),
-      publicSection(),
+      publicPointer(),
       suggestionsSection(),
       areaSummaryCard(),
       has("coordinator") && h("details", { class: "card incident-admin", open: state.adminOpen, ontoggle: e => { state.adminOpen = e.currentTarget.open; } }, h("summary", {}, "Incident management"), operationPanel("situation")));
@@ -2325,16 +2435,21 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
     const figuresAllowed = ["dmc", "district", "division", "ndrsc"].includes(state.me.organisation);
     const gaugeRows = read.gauges.rows.filter(r => r.warning);
     const landslide = /landslide/i.test(s.text);
+    // Rows already recorded from this report start unticked, so reading it again adds only what is new.
+    const doneFigures = new Set(c().area_figures.filter(f => f.source_id === s.id).map(f => f.area));
+    const doneWarnings = new Set((c().warnings || []).filter(w => w.source_id === s.id && !w.ended_at).flatMap(w => w.areas.map(a => `${w.level}:${a}`)));
+    // A bulletin without separate advice: start from its own warning sentences, quoted exactly.
+    const quoted = (s.text.match(/[^\n.]*(?:level\s*(?:[123]|i{1,3})\b|\b(?:red|amber|yellow)\b)[^\n.]*\.?/gi) || []).map(x => x.trim()).filter(Boolean).join(" ").slice(0, 600);
     const sections = [];
     if (read.sitrep.rows.length) sections.push(h("fieldset", { class: "bulletin-section" }, h("legend", {}, `Situation report figures${read.sitrep.as_of ? ` · as at ${dateTime(read.sitrep.as_of)}` : ""}`),
       !figuresAllowed && notice("Figures are recorded by the DMC, district, divisional or NDRSC offices."),
-      h("div", { class: "check-list" }, read.sitrep.rows.map(r => h("label", {}, input("sitrep", r.area, { type: "checkbox", checked: r.district === home, disabled: !figuresAllowed }),
+      h("div", { class: "check-list" }, read.sitrep.rows.map(r => h("label", {}, input("sitrep", r.area, { type: "checkbox", checked: r.district === home && !doneFigures.has(r.area), disabled: !figuresAllowed }),
         `${r.district}: ${r.figures.people_affected.toLocaleString("en-GB")} people affected, ${r.figures.deaths} deaths, ${r.figures.missing} missing, ${r.figures.people_in_centres.toLocaleString("en-GB")} in ${r.figures.safety_centres} centres`))),
       read.sitrep.problems.length > 0 && h("small", { class: "muted" }, "Not read: " + read.sitrep.problems.join("; "))));
     if (read.warnings.levels.length) sections.push(h("fieldset", { class: "bulletin-section" }, h("legend", {}, "Warnings named in the text"),
       h("div", { class: "field-row" }, field("Issued by", select("w_issuer", Object.entries(v.issuers), landslide ? "nbro" : "dmc")), field("Hazard", select("w_hazard", Object.entries(v.hazards), landslide ? "landslide" : "flood"))),
-      read.warnings.levels.map(l => h("div", {}, h("strong", {}, `${WARNING[l.level].icon} ${v.warning_levels[l.level]}`), h("div", { class: "check-list" }, l.areas.map(a => h("label", {}, input("w_" + l.level, a, { type: "checkbox", checked: true }), nameOf(a)))))),
-      field("Advice from the bulletin", h("textarea", { name: "w_advice", maxlength: 600, placeholder: "Copy the issuer's advice exactly." })),
+      read.warnings.levels.map(l => h("div", {}, h("strong", {}, `${WARNING[l.level].icon} ${v.warning_levels[l.level]}`), h("div", { class: "check-list" }, l.areas.map(a => h("label", {}, input("w_" + l.level, a, { type: "checkbox", checked: !doneWarnings.has(`${l.level}:${a}`) }), nameOf(a)))))),
+      field("Advice from the bulletin", h("textarea", { name: "w_advice", maxlength: 600, value: quoted, placeholder: "Copy the issuer's advice exactly." }), "Starts with the bulletin's own warning wording; replace it with the issuer's advice if the bulletin gives any."),
       field("Valid until (optional)", input("w_valid_until", "", { type: "datetime-local" }))));
     if (gaugeRows.length) sections.push(h("fieldset", { class: "bulletin-section" }, h("legend", {}, `River gauges above alert level${read.gauges.issued_at ? ` · ${dateTime(read.gauges.issued_at)}` : ""}`),
       h("div", { class: "check-list" }, gaugeRows.map(r => h("label", {}, input("gauge", r.gauge_id, { type: "checkbox", checked: !!r.area && state.areas.byId.get(r.area)?.district === home, disabled: !r.area }),
@@ -2342,6 +2457,8 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
       h("small", { class: "muted" }, "Each ticked gauge records an Irrigation Department flood warning for the DS division it is in.")));
     if (!sections.length) { toast("No figures, warnings or gauge levels were recognised in this report."); return; }
     dialog(`Read: ${s.title}`, () => [notice("Check every row against the original before adding it. Each record links back to this report."), ...sections], async data => {
+      // Check everything before saving anything, so a record is never half added.
+      if (["red", "amber", "yellow"].some(level => data.getAll("w_" + level).length) && !String(data.get("w_advice") || "").trim()) throw new Error("Copy the advice from the bulletin before adding warnings.");
       let added = 0;
       for (const area of data.getAll("sitrep")) {
         const row = read.sitrep.rows.find(r => r.area === area);
@@ -2349,7 +2466,6 @@ import { LAYER_STYLE, LEVEL_ORDER, clearLayers, guardCanvas, SECTOR_ORDER, STATU
       }
       for (const level of ["red", "amber", "yellow"]) {
         const chosen = data.getAll("w_" + level); if (!chosen.length) continue;
-        if (!data.get("w_advice")) throw new Error("Copy the advice from the bulletin before adding warnings.");
         await command("warning", { issuer: data.get("w_issuer"), hazard: data.get("w_hazard"), level, areas: chosen, issued_at: s.observed_at, valid_until: toIso(data.get("w_valid_until")), advice: data.get("w_advice"), source_id: s.id, public: canPublish() }); added++;
       }
       const picked = gaugeRows.filter(r => data.getAll("gauge").includes(r.gauge_id));

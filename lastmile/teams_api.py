@@ -787,17 +787,38 @@ def mount_teams(app, hub, settings, web_dir, cloud=None):
 
     @router.get("/public-requests")
     def public_queue(actor=Depends(user)):
-        """Requests waiting for a person (no incident, or needing a check) and those the AI closed, in this person's scope."""
-        mine = []
+        """Every public request this person may see, by state: waiting for a decision (no incident), being checked,
+        in an incident (with its request and what the person sees) and closed. Coordinators see those with no incident."""
+        from .team_participation import lead_org
+        out, docs = {"hold": [], "verify": [], "filed": [], "closed": []}, {}
         for record in requests_inbox.inbox()["requests"]:
+            if record["status"] not in out:
+                continue
             try:
                 public_scope(record, actor)
             except WorkspaceError:
                 continue
-            if record["status"] in {"hold", "verify", "closed"} and not (record["status"] == "verify" and record["incident_id"]):
-                mine.append(requests_inbox.staff_copy(record))
-        return {"hold": [r for r in mine if r["status"] == "hold"], "verify": [r for r in mine if r["status"] == "verify"],
-                "closed": [r for r in mine if r["status"] == "closed"][-50:]}
+            item = {**requests_inbox.staff_copy(record), "incident_id": record["incident_id"], "incident_title": None, "incident_status": None,
+                    "stage": public.STAGES.get(record["status"], "Received"), "ask": None}
+            if record["incident_id"]:
+                if record["incident_id"] not in docs:
+                    try:
+                        docs[record["incident_id"]] = hub.get(record["incident_id"])
+                    except WorkspaceError:
+                        docs[record["incident_id"]] = None
+                doc = docs[record["incident_id"]]
+                if doc:
+                    c = doc["coordination"]
+                    item.update(incident_title=doc["title"], incident_status=doc["status"])
+                    stage, _, ask = requests_inbox.progress(record, c, item["stage"]) if record["status"] in {"filed", "verify"} else (item["stage"], None, None)
+                    if ask:
+                        item.update(stage=stage, ask={k: ask[k] for k in ("id", "to", "status", "title")})
+                    # Same rule as the incident view: the phone number is for the lead body and the body asked to help.
+                    if actor["organisation"] not in {lead_org(c)} | {a["to"] for a in c.get("asks", []) if a.get("public_request_id") == record["id"]}:
+                        item["phone"] = None
+            out[record["status"]].append(item)
+        out["closed"] = out["closed"][-100:]
+        return out
 
     @router.get("/public-requests/{request_id}/photos/{number}")
     def public_photo(request_id: str, number: int, actor=Depends(user)):

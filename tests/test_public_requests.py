@@ -273,3 +273,20 @@ def test_the_tracker_never_follows_a_request_that_is_not_linked_to_it(people):
     command(team, "contributor", "ask", {"to": "rda", "kind": "road", "title": "An unrelated request with no public link"})
     tracked = ask_for_help(team, "Our electricity is broken since the storm, please fix the line.")
     assert team["public"].get(f"/api/public/requests/{tracked['code']}").json()["stage"] == "Being reviewed"
+
+
+def test_the_public_requests_page_lists_every_state_with_its_incident_and_stage(people):
+    """The sidebar page: requests in incidents carry the incident, their request and what the person sees; the phone stays with the handlers."""
+    team = people
+    tracked = ask_for_help(team, "Our electricity is broken since the storm last night, 12 people in our lane have no power.", phone="0771234567", consent=True)
+    junk = ask_for_help(team, "Buy cheap phones today at www.example-shop.com discount!!")
+    approve(team, suggestion(team))
+    queue = team["admin"].get("/api/teams/public-requests").json()
+    assert set(queue) == {"hold", "verify", "filed", "closed"}
+    [filed] = queue["filed"]
+    assert filed["code"] == tracked["code"] and filed["incident_title"] == "Kotmale flood exercise" and filed["incident_id"]
+    assert filed["ask"]["to"] == "edl" and filed["stage"] == "Being handled by Electricity Distribution Lanka (CEB)" and filed["phone"] == "0771234567"
+    assert [r["code"] for r in queue["closed"]] == [junk["code"]]
+    # A participant who is not handling it sees the request in its incident, but not the phone number or the closed queue.
+    mine = team["contributor"].get("/api/teams/public-requests").json()
+    assert [r["code"] for r in mine["filed"]] == [tracked["code"]] and mine["filed"][0]["phone"] is None and mine["closed"] == []

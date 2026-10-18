@@ -1,5 +1,13 @@
 # Public-candidate changes
 
+## Application sync — 18 October 2026
+
+- Updates global and incident public-request boards, request-specific attention/notification links and staff-visible progress.
+- Includes the dashboard scroll-boundary correction and its desktop/phone regression, readable organisation names and the Galle Four Gravets display-name correction while retaining saved location IDs.
+- Updates the judge walkthrough and README; retains submission-specific offline defaults, rights notices and source-only CI. Research, runtime records, presentation files and video files remain excluded.
+- Makes the activity/composer browser regression wait for Refresh to replace the form before measuring it, avoiding a stale-element timing failure. Development CI now selects all browser tests, matching this candidate's coverage rule.
+- See [EVIDENCE.md](docs/EVIDENCE.md) for the validation of this update; earlier results remain identified with their original snapshot.
+
 ## Submission snapshot — 18 October 2026
 
 - Includes the resident request/tracking and organisation coordination implementation, AI tools, notifications, frontend source, tests, runtime reference assets and disclosed saved benchmark evidence.

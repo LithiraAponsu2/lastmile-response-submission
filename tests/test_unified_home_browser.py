@@ -21,7 +21,7 @@ def test_home_role_entry_local_components_activity_and_equal_panes(browser, tmp_
         expect(page.get_by_role("heading", name="Incidents", exact=True)).to_be_visible()
         expect(page.get_by_role("dialog")).not_to_be_visible()
         nav = page.get_by_role("navigation", name="Main navigation", exact=True)
-        expect(nav.get_by_role("button")).to_have_count(10)
+        expect(nav.get_by_role("button")).to_have_count(11)  # incl. Public requests
         expect(page.get_by_role("link", name="Organisation workspace", exact=True)).to_have_count(0)
         expect(page.get_by_role("region", name="Incident statistics", exact=True)).to_contain_text("Active incidents")
         nav.get_by_role("button", name="Dashboard", exact=True).click()

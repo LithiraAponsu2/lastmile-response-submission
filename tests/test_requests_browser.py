@@ -29,7 +29,7 @@ def test_request_between_bodies_end_to_end(browser, tmp_path):
         expect(page.get_by_role("heading", name="Kotmale coordination practice", level=1, exact=True)).to_be_visible()
         switch(page, "water", "service_supervisor")
         # Three everyday tabs; the sample request is waiting for the NWSDB lead.
-        expect(page.get_by_role("tab")).to_have_count(4)
+        expect(page.get_by_role("tab")).to_have_count(5)
         expect(page.get_by_role("tab", name="Requests (1)", exact=True)).to_be_visible()
         page.get_by_role("button", name="New request from DS", exact=False).click()
         card = page.get_by_role("article", name="Water bowsers for Kotmale Practice Hall", exact=True)
@@ -126,7 +126,7 @@ def test_requests_page_groups_by_incident_and_highlights_what_we_supply(browser,
         page.screenshot(path=str(tmp_path / "requests-page.png"), full_page=True)
         # Selecting it opens the incident's Requests tab on that request.
         group.locator(".request-row").click()
-        expect(page.get_by_role("tab", name="Requests", exact=False)).to_have_attribute("aria-selected", "true")
+        expect(page.get_by_role("tab", name=re.compile(r"^Requests"))).to_have_attribute("aria-selected", "true")
         expect(page.get_by_role("article", name="Water bowsers for Kotmale Practice Hall", exact=True)).to_be_focused()
         page.set_viewport_size({"width": 390, "height": 844})
         page.goto(server.url + "/#view=requests")

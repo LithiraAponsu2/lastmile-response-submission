@@ -1,13 +1,16 @@
-"""Open incident views on the simplified screen: three tabs, the rest under More."""
+"""Open incident views on the simplified screen: five everyday tabs, the rest under More."""
+import re
 
 
 def show(page, label, exact=True):
     """Select a tab by name, opening it from the More menu when it is not one of the everyday tabs."""
-    tab = page.get_by_role("tab", name=label, exact=exact)
+    # A partial name matches from the start, so "Requests" never picks "Public requests".
+    name = label if exact else re.compile("^" + re.escape(label))
+    tab = page.get_by_role("tab", name=name, exact=exact or None)
     if not tab.count():
         page.locator(".more-views > .more-trigger").click()
-        page.locator(".more-views").get_by_role("menuitem", name=label, exact=exact).click()
-        tab = page.get_by_role("tab", name=label, exact=exact)
+        page.locator(".more-views").get_by_role("menuitem", name=name, exact=exact or None).click()
+        tab = page.get_by_role("tab", name=name, exact=exact or None)
     tab.click()
     return tab
 

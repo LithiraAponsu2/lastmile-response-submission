@@ -16,9 +16,9 @@ def test_tabs_stay_compact_across_panels_and_viewports(browser, tmp_path):
         page.on("pageerror", lambda error: errors.append(str(error)))
         page.on("console", lambda message: errors.append(message.text) if message.type == "error" else None)
         tabs = page.get_by_role("tablist", name="Incident data sections", exact=True)
-        # Four everyday tabs; the rest open from More as a fifth tab.
-        expect(page.get_by_role("tab")).to_have_count(4)
-        for label in ["Shelters & resources", "Funding records", "Shared with you", "Reports", "Requests", "Map & status", "Needs & assignments", "Documents", "Activity", "Overview"]:
+        # Five everyday tabs; the rest open from More as a sixth tab.
+        expect(page.get_by_role("tab")).to_have_count(5)
+        for label in ["Shelters & resources", "Funding records", "Shared with you", "Reports", "Requests", "Public requests", "Map & status", "Needs & assignments", "Documents", "Activity", "Overview"]:
             tab = show(page, label, exact=label in {"Funding records", "Needs & assignments", "Documents", "Activity", "Overview", "Map & status"})
             expect(tab).to_have_attribute("aria-selected", "true")
             if label == "Shelters & resources":

@@ -31,12 +31,22 @@ def test_recorded_activity_compact_reopen_and_composer(browser, tmp_path):
         page.keyboard.press("Enter")
         expect(card.locator(".work-log")).not_to_be_visible()
         card.screenshot(path=str(tmp_path / "activity-collapsed.png"))
+        before_refresh = page.locator(".chat-form").element_handle()
         page.get_by_role("button", name="Refresh", exact=True).click()
+        page.wait_for_function("el => !el.isConnected", arg=before_refresh)
+        before_refresh.dispose()
         expect(card.get_by_text("Assistant finished", exact=True)).to_be_visible()
         expect(card.locator(".work-log")).not_to_be_visible()
         expect(page.locator(".chat-form")).to_be_visible()
-        page.wait_for_function("(() => {const el=document.querySelector('.chat-form');if(!el)return false;const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight+1;})()")
-        box = page.locator(".chat-form").bounding_box()
+        # Refresh can replace the composer between separate visibility and bounds calls.
+        # Read and validate one visible rectangle in the same browser evaluation.
+        box = page.wait_for_function("""() => {
+            const el = document.querySelector('.chat-form');
+            if (!el) return false;
+            const r = el.getBoundingClientRect();
+            return r.width > 0 && r.height > 0 && r.top >= 0 && r.bottom <= innerHeight + 1
+                ? {y: r.y, height: r.height} : false;
+        }""").json_value()
         assert box["y"] >= 0 and box["y"] + box["height"] <= 1001
         page.set_viewport_size({"width": 390, "height": 844})
         card.get_by_text("Assistant finished", exact=True).click()

@@ -26,6 +26,14 @@ credentials.json
 # Editable presentations are withheld until explicitly released
 *.pptx
 *.preview.html
+*.mp4
+*.webm
+*.mov
+output/
+.demo-build/
+.pitch-build/
+.pitch-update-1018/
+.research-build/
 
 # Internal research/planning never belongs in this submission snapshot
 reports/

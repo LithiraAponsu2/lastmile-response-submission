@@ -40,6 +40,9 @@ def test_opening_an_incident_and_asking_a_body_notifies_that_body_with_times(tea
     act(supervisor, base, "ask_update", {"ask_id": ask["id"], "step": "accept", "note": "Two bowsers leave at 14:00"})
     back = bell(relief)["items"][0]
     assert back["title"] == "NWSDB accepted your request" and "Two bowsers leave at 14:00" in back["detail"]
+    act(supervisor, base, "ask_update", {"ask_id": ask["id"], "step": "start"})
+    act(supervisor, base, "ask_update", {"ask_id": ask["id"], "step": "done", "note": "Bowsers at the hall"})
+    assert titles(relief)[:2] == ["NWSDB marked your request as delivered", "NWSDB started work on your request"]
     # Newest first; a body's own steps are not news to it.
     items = bell(supervisor)["items"]
     assert [i["at"] for i in items] == sorted((i["at"] for i in items), reverse=True)

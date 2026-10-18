@@ -4,10 +4,16 @@ Use fictional information only. The hosted role picker simulates organisations a
 
 1. Open the resident page and inspect English, Sinhala and Tamil views, area lookup and the request/tracking interface.
 2. In an isolated exercise, submit a fictional need with a location. Inspect the request's interpretation, status and tracking code.
-3. In the staff workspace, open its incident or verification queue. If clarification is requested, answer from the resident tracker and confirm the staff card/attention items receive it.
+3. In the staff workspace, open **Public requests** in the sidebar to see requests across accessible incidents, then open the incident's **Public requests** tab. Inspect waiting, verification, filed and closed states. If clarification is requested, answer from the resident tracker and confirm the staff card/attention items receive it. The notification should open the relevant request.
 4. Submit a separate need at another fictional site in the same division. Inspect any possible-duplicate prompt; retain separate requests unless a coordinator confirms the same issue. Do not equate matching categories with the same beneficiaries.
 5. Ask the assistant to prepare an action using existing incident records. Inspect its evidence and linked plan, edit if needed, then approve as an authorised simulated role. Inspect the saved records rather than treating generated prose as proof of a write.
 6. Inspect assignment progress, notifications, recorded outcome and the resident's staff-recorded status. Outcome recording does not demonstrate physical delivery or resident acceptance.
+
+## Two more AI workflows
+
+With Gemini explicitly enabled in your own authorised environment, ask for a linked letter, report-sharing action and agency request using facts already recorded in an incident. Inspect the proposed steps and shared references before approving; check each resulting record afterwards. The offline exercise tests the plumbing with a deterministic driver, so it does not demonstrate Gemini's language understanding.
+
+For communications, use an official bulletin as the source, review the extracted warning rows, then request public messages grounded in those recorded facts. Inspect English/Sinhala/Tamil drafts for retained place names, quantities and advice before approval. No SMS/email gateway is connected, and generated language still needs native-speaker review.
 
 ## Local setup
 

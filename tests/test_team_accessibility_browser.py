@@ -1,4 +1,5 @@
 """Keyboard, focus, recovery, progressive forms and narrow-screen behaviour."""
+import re
 import uuid
 
 import pytest
@@ -35,13 +36,15 @@ def test_keyboard_tabs_skip_link_search_and_dialog_focus(browser, ux_server):
     overview = page.get_by_role("tab", name="Overview", exact=True)
     overview.focus(); page.keyboard.press("ArrowRight")
     area_map = page.get_by_role("tab", name="Map & status", exact=True)
-    requests = page.get_by_role("tab", name="Requests", exact=False)
+    requests = page.get_by_role("tab", name=re.compile(r"^Requests"))
     reports = page.get_by_role("tab", name="Reports", exact=False)
     expect(area_map).to_be_focused()
     page.keyboard.press("ArrowRight")
     expect(requests).to_be_focused()
     expect(overview).to_have_attribute("aria-selected", "true")
     page.keyboard.press("End")
+    expect(page.get_by_role("tab", name=re.compile(r"^Public requests"))).to_be_focused()
+    page.keyboard.press("ArrowLeft")
     expect(reports).to_be_focused()
     page.keyboard.press("Enter")
     expect(reports).to_have_attribute("aria-selected", "true")

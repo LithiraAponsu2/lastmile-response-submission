@@ -10,8 +10,10 @@ from .team_participation import lead_org
 from .workspace import timestamp
 
 SHORT = {"dmc": "DMC", "district": "District Secretariat", "division": "Divisional Secretariat", "ndrsc": "NDRSC", "water": "NWSDB", "rda": "RDA"}
-DID = {"recommend": "recommended", "accept": "accepted", "decline": "declined", "start": "started work on", "done": "marked as delivered",
-       "confirm": "confirmed delivery of", "reopen": "reopened", "cancel": "cancelled", "comment": "commented on", "escalate": "escalated", "redirect": "redirected"}
+# What another body did to a request; {it} is "your request" or "a request".
+DID = {"recommend": "recommended {it}", "accept": "accepted {it}", "decline": "declined {it}", "start": "started work on {it}", "done": "marked {it} as delivered",
+       "confirm": "confirmed delivery of {it}", "reopen": "reopened {it}: not done yet", "cancel": "cancelled {it}", "comment": "added an update on {it}"}
+FUNDING = {"accept": "approved {it}", "decline": "returned {it}", "done": "marked {it} as released", "confirm": "confirmed receipt of {it}"}
 LIMIT = 60
 
 
@@ -62,7 +64,8 @@ def feed(views, others, actor):
                 elif h["step"] == "escalate":
                     title = f"{name(by)} escalated a request" + (" to you" if up.get("to") == org else "")
                 else:
-                    title = f"{name(by)} {DID.get(h['step'], h['step'])} " + ("your request" if a["from"] == org else "a request")
+                    words = (a["kind"] == "funding" and FUNDING.get(h["step"])) or DID.get(h["step"], h["step"] + " {it}")
+                    title = f"{name(by)} " + words.format(it="your request" if a["from"] == org else "a request")
                 add(f"{a['id']}:{i}", h["at"], "ask", title, what + (f" · “{h['note']}”" if h.get("note") and h["step"] != "asked" else ""), "requests", a["id"], by)
 
         # Reports another body asked yours to acknowledge (the view keeps only those addressed to this organisation).
@@ -77,14 +80,18 @@ def feed(views, others, actor):
                 reading = p.get("reading") or {}
                 filed = next((h["at"] for h in p.get("history", []) if h.get("stage") == "filed"), None) or p.get("at")
                 add(f"{p['id']}:in", filed, "public", f"Public request {p['code']} came in" + (" (urgent)" if reading.get("urgency") == "high" else ""),
-                    reading.get("summary") or p["text"], "overview", "public-requests")
+                    reading.get("summary") or p["text"], "public", p["id"])
                 if p.get("answer"):
-                    add(f"{p['id']}:answer", p["answer"]["at"], "public", f"The resident answered on {p['code']}", p["answer"]["text"], "overview", "public-requests")
+                    add(f"{p['id']}:answer", p["answer"]["at"], "public", f"The resident answered on {p['code']}", p["answer"]["text"], "public", p["id"])
 
         # AI suggestions prepared for this person's organisation and role; a person still decides.
         for p in c.get("plans", []):
             if p.get("origin") == "event" and p.get("status") == "pending":
-                add(p["id"], p.get("created_at"), "suggestion", "AI suggestion to review", p["title"], "overview", "ai-suggestions")
+                key = (p.get("trigger") or {}).get("key", "")
+                if key.startswith("public:"):
+                    add(p["id"], p.get("created_at"), "suggestion", "Suggested request for a public request", p["title"], "public", key.removeprefix("public:"))
+                else:
+                    add(p["id"], p.get("created_at"), "suggestion", "AI suggestion to review", p["title"], "overview", "ai-suggestions")
 
         for o in c.get("offers", []):
             if o["recipient"] == org:

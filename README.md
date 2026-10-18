@@ -13,6 +13,8 @@
 
 Sri Lankan disaster-response teams need to connect scattered requests, reports and resources. LastMile gives residents a way to report needs and track staff updates, while organisations share evidence, clarify requests, assign work and record outcomes in one workspace. The intended benefit is fewer lost requests and clearer accountability; field impact has not yet been measured.
 
+**Report → review → coordinate → track:** residents send text/photos and answer questions; staff work from public-request boards across incidents or inside one incident; the responsible body records progress. Notifications take reviewers to the relevant request. Possible duplicates need a human decision, and separate delivery sites retain their own quantities and completion.
+
 > **Submission links:** 3–4 minute demonstration video and final template-based PDF will be added after verification. Editable PPTX is withheld for now.
 <!-- Add verified PDF/video links here before submission. Add a PPTX link only after explicit release; no broken placeholder links. -->
 

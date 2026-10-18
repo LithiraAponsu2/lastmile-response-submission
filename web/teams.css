@@ -493,7 +493,9 @@ td, th { text-align: left; border-bottom: 1px solid var(--border); padding: 12px
 .card-stat .progress-track { max-width: none; margin-top: 4px; height: 6px; }
 .card-funding { color: #3d4f69; }
 .card-bodies { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
-.card-bodies li { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 999px; background: #eef2f8; color: #3d4f69; }
+/* Contain the hidden organisation label even in rows below the list's scrollport.
+   Otherwise its absolute static position can extend the document past the dashboard. */
+.card-bodies li { position: relative; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 999px; background: #eef2f8; color: #3d4f69; }
 .card-bodies li.mine { background: #e8f0fe; color: #174ea6; box-shadow: inset 0 0 0 1px #aecbfa; }
 .card-foot { gap: 10px; flex-wrap: wrap; border-top: 1px solid #edf1f7; padding-top: 12px; }
 .card-foot > small { flex: 1; min-width: 0; }
@@ -863,3 +865,21 @@ button.role-switch:hover { background: #eef4fe; border-color: #c6d8f7; }
   .role-switch-text strong { white-space: normal; }
   .notes-pane { top: 8px; right: 8px; left: 8px; width: auto; max-height: calc(100dvh - 16px); }
 }
+
+/* Public requests: the incident tab and the sidebar page. */
+.public-actions { gap: 8px; }
+.public-follow { gap: 8px; }
+.public-stage { margin: 0; padding: 8px 12px; border-radius: 10px; background: #f6f9fd; font-size: 13px; line-height: 1.6; }
+.public-suggestion { display: grid; gap: 6px; padding: 10px; border: 1px dashed #c6d8f7; border-radius: 12px; }
+.public-suggestion > p { margin: 0; }
+.public-closed > summary { cursor: pointer; font-weight: 600; padding: 8px 0; }
+.public-card .public-title { margin: 0; font-size: 14px; line-height: 1.35; overflow-wrap: anywhere; }
+.public-quote { margin: 0; font-size: 13px; color: #24324b; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.public-card .public-stage { padding: 6px 10px; font-size: 12.5px; }
+.public-suggested, .public-answer { margin: 0; font-size: 12.5px; color: #3d4f69; overflow-wrap: anywhere; }
+.public-card .public-actions .small { min-height: 36px; }
+.public-file { display: grid; gap: 6px; width: 100%; }
+.public-more > summary { cursor: pointer; font-size: 12.5px; font-weight: 600; color: var(--blue); }
+.public-detail { margin-top: 8px; gap: 8px; }
+.public-detail .plan-card { padding: 10px; }
+.public-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 12px; align-items: start; }

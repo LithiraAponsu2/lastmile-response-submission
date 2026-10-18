@@ -35,6 +35,10 @@ def rounded(geometry):
     return {"type": out["type"], "coordinates": walk(out["coordinates"])}
 
 
+# Source names that are run together; the id is unchanged.
+SPELLING = {"Galle4Gravets": "Galle Four Gravets"}
+
+
 def main():
     districts = json.loads((DATA / "sri-lanka-districts.geojson").read_text(encoding="utf-8"))["features"]
     divisions = json.loads((DATA / "sri-lanka-divisions.geojson").read_text(encoding="utf-8"))["features"]
@@ -48,9 +52,10 @@ def main():
     features, seen = [], set()
     for f in divisions:
         geom = shape(f["geometry"]).buffer(0)
-        name = f["properties"]["shapeName"].strip()
+        raw = f["properties"]["shapeName"].strip()
         district = max(district_shapes, key=lambda d: d[1].intersection(geom).area)[0]
-        area_id = f"ds-{slug(district)}-{slug(name)}"
+        # Ids keep the source spelling so saved records still match; only the shown name is corrected.
+        area_id, name = f"ds-{slug(district)}-{slug(raw)}", SPELLING.get(raw, raw)
         assert area_id not in seen, area_id
         seen.add(area_id)
         point = geom.representative_point()

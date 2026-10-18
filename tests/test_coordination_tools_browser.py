@@ -65,9 +65,16 @@ def test_requests_bulletins_layers_3w_language_and_partner(browser, tmp_path):
         report.get_by_role("button", name="Read figures & warnings", exact=True).click()
         expect(modal).to_contain_text("Nuwara Eliya: 6,100 people affected")
         expect(modal.get_by_label("Kothmale DS, Nuwara Eliya", exact=True)).to_be_checked()
+        # A bulletin with no separate advice starts from its own warning wording, quoted exactly.
+        expect(modal.get_by_label("Advice from the bulletin", exact=True)).to_have_value("EXERCISE NBRO Level 3 (Red) landslide early warning for Kothmale and Walapane DS divisions.")
         modal.get_by_label("Advice from the bulletin", exact=True).fill("Exercise: move to a safety centre if instructed.")
         modal.get_by_role("button", name="Add ticked records", exact=True).click()
         expect(modal).not_to_be_visible()
+        # Reading the same report again: what is already recorded starts unticked.
+        report.get_by_role("button", name="Read figures & warnings", exact=True).click()
+        expect(modal.get_by_label("Kothmale DS, Nuwara Eliya", exact=True)).not_to_be_checked()
+        expect(modal.locator("input[name=sitrep]").first).not_to_be_checked()
+        modal.get_by_role("button", name="Cancel", exact=True).click()
         page.get_by_role("tab", name="Map & status", exact=True).click()
         expect(page.get_by_role("heading", name="Official warnings in force (", exact=False)).to_contain_text("Official warnings in force")
         expect(page.locator(".warning-list")).to_contain_text("Exercise: move to a safety centre if instructed.")

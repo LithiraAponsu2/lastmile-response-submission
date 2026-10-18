@@ -466,20 +466,25 @@ class PublicRequests:
         return self.find(code=code)
 
     # ---- public tracker
+    @staticmethod
+    def progress(record, c, stage):
+        """The stage the person sees, the body handling it and its request, from the incident's requests between bodies."""
+        mine = {record["id"], record.get("group_of")} - {None}  # an unlinked request (no public ID) is never this person's
+        asks = [a for a in c.get("asks", []) if a.get("public_request_id") in mine]
+        if not asks:
+            return stage, None, None
+        ask = asks[-1]
+        body = org_name(ask["to"])
+        return {"asked": f"Being handled by {body}", "recommended": f"Being handled by {body}", "accepted": "Help on the way",
+                "in_progress": "Help on the way", "done": "Done", "confirmed": "Done"}.get(ask["status"], f"Being handled by {body}"), body, ask
+
     def track(self, code):
         """What the public sees: stage, the body handling it, an open question. Never text, photos or contact details."""
         record = self.find(code=code)
         stage, body = STAGES.get(record["status"], "Received"), None
         if record["incident_id"] and record["status"] in {"filed", "verify"}:
             try:
-                c = self.store.get(record["incident_id"])["coordination"]
-                mine = {record["id"], record.get("group_of")} - {None}  # an unlinked request (no public ID) is never this person's
-                asks = [a for a in c.get("asks", []) if a.get("public_request_id") in mine]
-                if asks:
-                    ask = asks[-1]
-                    body = org_name(ask["to"])
-                    stage = {"asked": f"Being handled by {body}", "recommended": f"Being handled by {body}", "accepted": "Help on the way",
-                             "in_progress": "Help on the way", "done": "Done", "confirmed": "Done"}.get(ask["status"], f"Being handled by {body}")
+                stage, body, _ = self.progress(record, self.store.get(record["incident_id"])["coordination"], stage)
             except WorkspaceError:
                 pass
         reason = record["decision"]["reason"] if record["status"] == "closed" and record.get("decision") else None

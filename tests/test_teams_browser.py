@@ -81,7 +81,7 @@ def test_three_accounts_contribute_confirm_allocate_and_chat(browser, team_serve
     expect(admin.get_by_role("heading", name="Centre readiness from division", exact=True)).to_be_visible(timeout=20000)
     admin.get_by_role("button", name="Accept evidence", exact=True).click()
     owner.get_by_role("button", name="Refresh", exact=True).click()
-    show(owner, "Resources", exact=False)
+    show(owner, "Shelters & resources", exact=False)
     owner.get_by_role("button", name="Confirm resource", exact=True).click()
     dialog = owner.get_by_role("dialog")
     dialog.get_by_label("Resource name", exact=True).fill("Kotmale fictional hall")
@@ -95,7 +95,7 @@ def test_three_accounts_contribute_confirm_allocate_and_chat(browser, team_serve
     expect(dialog).not_to_be_visible()
     expect(owner.get_by_text("60 available in planning balance", exact=False)).to_be_visible()
     admin.get_by_role("button", name="Refresh", exact=True).click()
-    show(admin, "Resources", exact=False)
+    show(admin, "Shelters & resources", exact=False)
     expect(admin.get_by_role("heading", name="Kotmale fictional hall", exact=True)).to_be_visible()
     # API creates the evidenced request; assignment and acceptance use the actual UI.
     result = reporter.request.post(team_server.url + "/api/teams/incidents/" + incident_url.split("incident=")[1].split("&")[0] + "/commands", data={"version": reporter.request.get(team_server.url + "/api/teams/incidents/" + incident_url.split("incident=")[1].split("&")[0]).json()["version"], "request_id": "browser-report-need", "action": "contribute", "data": {"title": "Accommodation need", "text": "EXERCISE 20 people need accommodation.", "observed_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat()}})

@@ -118,15 +118,21 @@ def build(views, actor, activity_limit=12):
         pending_acks = [n for n in c.get("notifications", []) if n.get("ack_required") and org not in n.get("acks", {})] if acting else []
         for n in pending_acks:
             title = next((s["title"] for s in doc["sources"] if s["id"] == n["source_id"]), "Shared report")
-            need("ack", f"Acknowledge a report from {n['from']}", title, "sources", n["source_id"], at=n["at"])
+            need("ack", f"Acknowledge a report from {org_name(n['from'])}", title, "sources", n["source_id"], at=n["at"])
         # Public requests a person must look at: doubtful ones (with the resident's answer, if any) and possible repeats.
         checks = [p for p in c.get("public_requests", []) if p["status"] == "verify" or p.get("similar_to")]
         if checks and has(actor, "coordinator"):
             answered = [p for p in checks if p.get("answer")]
             need("public", f"{len(checks)} public request{'s' if len(checks) != 1 else ''} to check",
                  f"{answered[-1]['code']} answered: {answered[-1]['answer']['text']}" if answered else (checks[-1].get("reading") or {}).get("summary") or checks[-1]["text"],
-                 "overview", "public-requests", at=max((p["answer"]["at"] if p.get("answer") else p["at"] for p in checks), key=timestamp))
-        suggested = [p for p in c.get("plans", []) if p["origin"] == "event" and p["status"] == "pending"]
+                 "public", (answered or checks)[-1]["id"], at=max((p["answer"]["at"] if p.get("answer") else p["at"] for p in checks), key=timestamp))
+        # A public request's suggested request is shown with that request; other suggestions on the Overview.
+        pending_plans = [p for p in c.get("plans", []) if p["origin"] == "event" and p["status"] == "pending"]
+        for_public = [p for p in pending_plans if (p.get("trigger") or {}).get("key", "").startswith("public:")]
+        suggested = [p for p in pending_plans if p not in for_public]
+        if for_public:
+            need("public", f"{len(for_public)} suggested request{'s' if len(for_public) != 1 else ''} for public requests", for_public[0]["title"],
+                 "public", for_public[0]["trigger"]["key"].removeprefix("public:"), at=for_public[-1].get("created_at"))
         if suggested:
             need("proposal", f"{len(suggested)} suggestion{'s' if len(suggested) != 1 else ''} to review", suggested[0]["title"], "overview", "ai-suggestions", at=suggested[-1].get("created_at"))
         unread = [n for n in c.get("notifications", []) if actor["id"] not in n.get("read_by", []) and n not in pending_acks]

@@ -6,6 +6,7 @@ Install requirements-e2e.txt first. An automated pass is not WCAG certification.
 import argparse
 import json
 import os
+import re
 from pathlib import Path
 import sys
 
@@ -92,13 +93,13 @@ def main():
         page.get_by_role("button", name="New request", exact=True).click()
         audit("new-request-dialog")
         page.keyboard.press("Escape")
-        for label in ["Map & status", "Requests", "Reports", "Shelters & resources", "Needs & assignments", "Funding records", "Documents", "Shared with you", "Activity"]:
-            tab = page.get_by_role("tab", name=label, exact=False)
+        for label in ["Map & status", "Requests", "Reports", "Shelters & resources", "Needs & assignments", "Funding records", "Documents", "Shared with you", "Public requests", "Activity"]:
+            tab = page.get_by_role("tab", name=re.compile("^" + re.escape(label)))
             if not tab.count():
                 if not page.locator(".more-views").evaluate("el => el.open"):
                     page.locator(".more-views > .more-trigger").click()
-                page.locator(".more-views").get_by_role("menuitem", name=label, exact=False).click()
-                tab = page.get_by_role("tab", name=label, exact=False)
+                page.locator(".more-views").get_by_role("menuitem", name=re.compile("^" + re.escape(label))).click()
+                tab = page.get_by_role("tab", name=re.compile("^" + re.escape(label)))
             tab.click()
             audit(label.lower().replace(" & ", "-").replace(" ", "-"))
         flow = page.locator('lm-incident-flow')
