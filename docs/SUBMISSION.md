@@ -5,7 +5,7 @@
 | Deliverable | Link / status |
 |---|---|
 | Working prototype | [Cloud Run workspace](https://lastmile-alert-74y2iwqhzq-el.a.run.app/) · [Resident page](https://lastmile-alert-74y2iwqhzq-el.a.run.app/public) |
-| Relevant source | [Submission repository](https://github.com/LithiraAponsu2/lastmile-response-submission); currently a private preparation repository, so public-source submission requirements are not yet complete. |
+| Relevant source | [Public curated submission repository](https://github.com/LithiraAponsu2/lastmile-response-submission): application source, runtime assets, tests and evaluation documentation. Research, private records, original development history, PPTX and video files are excluded. |
 | Architecture | [System, AI, workflow and approval diagrams](ARCHITECTURE.md) |
 | Video | [LastMile Response — Team MOB](https://youtu.be/t2vgS3u6gh8) · **3:23**, within the supplied 3–4 minute requirement. |
 | Pitch deck | Final prescribed-template PDF pending; editable PPTX deliberately withheld/ignored. |
@@ -19,4 +19,4 @@ The prototype uses fictional operations. It does not establish real agency adopt
 
 YouTube's anonymous page and public metadata were checked on 18 October 2026: the title matches the submission, duration is 203 seconds and playability is reported as OK. The complete recording's functionality/content was not reviewed in this check. Keep the recording accessible throughout evaluation.
 
-Public release still requires rights/provenance clearance and the final PDF link. Accepted competition terms remain applicable; no repository notice overrides them.
+The final PDF link remains pending. Publication does not establish agency endorsement or resolve the documented upstream rights/provenance questions. Accepted competition terms remain applicable; no repository notice overrides them.

@@ -34,6 +34,6 @@ These files are the starting lists behind **Places & stock** in the app. `python
 2. Review the changes before using them.
 3. To load a rebuilt list into a deployment that has already started, run `python scripts/upload_reference_seed.py --bucket NAME`. It is a dry run unless you add `--apply`. It uploads only lists the bucket lacks. `--replace NAME` replaces a list only if nobody has edited it there yet. To change an edited list, export it as CSV, merge, and import it in the app.
 
-## Public-release rights gate
+## Rights and provenance
 
-Attribution-only provenance is not itself a redistribution license. Confirm the exact terms for the gauge bulletin, DesInventar history, Sphere-derived summaries and other upstream datasets before public release; see [THIRD_PARTY_NOTICES.md](../../THIRD_PARTY_NOTICES.md). This private preparation copy does not claim those checks are complete. Refresh/upload utilities must target your own resources and are not run by default CI.
+Attribution-only provenance is not itself a redistribution license. The exact terms for the gauge bulletin, DesInventar history, Sphere-derived summaries and other upstream datasets remain subject to the documented review in [THIRD_PARTY_NOTICES.md](../../THIRD_PARTY_NOTICES.md). Publication does not claim those checks are complete. Refresh/upload utilities must target your own resources and are not run by default CI.

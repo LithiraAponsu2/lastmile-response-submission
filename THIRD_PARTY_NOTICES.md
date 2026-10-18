@@ -29,6 +29,6 @@ Python/Node dependencies installed from their package registries retain their ow
 
 See [reference data notes](data/reference/README.md) for dataset-level sources, modifications and limitations. Third-party data must not be described as covered by a restrictive first-party reuse ban. If permission for an included reference is not established, clear it or replace it with compatible, explicitly fictional data before publishing the repository.
 
-## Current publication boundary
+## Publication and unresolved provenance
 
-This is a private preparation repository. The pending schema/dataset/transitive-license checks above are explicit public-release gates. They are not waived by this notice or by prototype evaluation. Existing upstream copyright notices and previously granted licenses remain effective on their own terms.
+This curated repository is published for competition evaluation at the maintainer's direction. Publication does not establish that every schema/dataset/transitive-license question above has been resolved, and it grants no additional rights in upstream material. Existing upstream copyright notices and previously granted licenses remain effective on their own terms. The first-party notice does not replace them.
