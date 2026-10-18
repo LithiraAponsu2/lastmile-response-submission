@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="536" viewBox="0 0 1040 536" role="img" aria-labelledby="title desc">
+<title id="title">04 / Approval, refusal and recovery</title><desc id="desc">The reviewed plan is checked again against current server-side facts before execution.</desc>
+<defs><marker id="navy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#192b45"/></marker><marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#368985"/></marker><marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#3969b6"/></marker></defs>
+<rect x="1" y="1" width="1038" height="534" rx="20" fill="white" stroke="#dce4eb"/>
+<g font-family="Segoe UI, Arial, sans-serif">
+<text x="32" y="43" font-size="27" fill="#192b45" font-weight="650" text-anchor="start">04 / Approval, refusal and recovery</text>
+<text x="32" y="73" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">The reviewed plan is checked again against current server-side facts before execution.</text>
+<rect x="40" y="133" width="280" height="129" rx="12" fill="#eaf5f2" stroke="#dce4eb"/>
+<rect x="40" y="149" width="4" height="97" rx="2" fill="#368985"/>
+<text x="58" y="164" font-size="18" fill="#368985" font-weight="650" text-anchor="start">Reviewed plan</text>
+<text x="58" y="189" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Exact steps and content hash;</text>
+<text x="58" y="210" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">bound incident version, actor</text>
+<text x="58" y="231" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">context and expiry.</text>
+<rect x="380" y="133" width="280" height="129" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="380" y="149" width="4" height="97" rx="2" fill="#192b45"/>
+<text x="398" y="164" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">Server rechecks</text>
+<text x="398" y="189" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Role and incident scope; current</text>
+<text x="398" y="210" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">version, payload and expiry;</text>
+<text x="398" y="231" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">required evidence and numbers.</text>
+<rect x="720" y="133" width="280" height="129" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="720" y="149" width="4" height="97" rx="2" fill="#192b45"/>
+<text x="738" y="164" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">Apply valid plan</text>
+<text x="738" y="189" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Execute domain commands;</text>
+<text x="738" y="210" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">persist changed records and</text>
+<text x="738" y="231" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">the attributed action receipt.</text>
+<path d="M320 199 L380 199" fill="none" stroke="#368985" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal)"/>
+<path d="M660 199 L720 199" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)"/>
+<text x="691" y="180" font-size="14" fill="#368985" font-weight="650" text-anchor="middle">Pass</text>
+<rect x="300" y="355" width="440" height="114" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="300" y="371" width="4" height="82" rx="2" fill="#192b45"/>
+<text x="318" y="386" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">Refuse / refresh / review again</text>
+<text x="318" y="411" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Stale, expired or changed plans do not apply.</text>
+<text x="318" y="432" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Refresh or correct the plan before another approval.</text>
+<path d="M520 262 L520 355" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)" stroke-dasharray="6 5"/>
+<text x="537" y="312" font-size="14" fill="#192b45" font-weight="650" text-anchor="start">Checks fail</text>
+<text x="32" y="512" font-size="14" fill="#43546b" font-weight="400" text-anchor="start">This does not make separate stores one distributed transaction; current writer constraints still apply.</text>
+</g></svg>

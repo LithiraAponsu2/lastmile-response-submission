@@ -1,0 +1,21 @@
+# Cloud Run source builds receive only the Docker build inputs.
+**
+!Dockerfile
+!.dockerignore
+!.gcloudignore
+!requirements.txt
+!lastmile/
+!lastmile/**
+!packs/
+!packs/**
+!data/
+!data/**
+!web/
+!web/**
+**/__pycache__/
+**/*.pyc
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+**/*.pptx

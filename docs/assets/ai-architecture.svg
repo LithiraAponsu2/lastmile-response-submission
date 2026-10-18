@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="936" viewBox="0 0 1040 936" role="img" aria-labelledby="title desc">
+<title id="title">03 / AI architecture and control flow</title><desc id="desc">Separate intake and coordination paths; models interpret and propose, while code controls writes.</desc>
+<defs><marker id="navy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#192b45"/></marker><marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#368985"/></marker><marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#3969b6"/></marker></defs>
+<rect x="1" y="1" width="1038" height="934" rx="20" fill="white" stroke="#dce4eb"/>
+<g font-family="Segoe UI, Arial, sans-serif">
+<text x="32" y="43" font-size="27" fill="#192b45" font-weight="650" text-anchor="start">03 / AI architecture and control flow</text>
+<text x="32" y="73" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Separate intake and coordination paths; models interpret and propose, while code controls writes.</text>
+<text x="40" y="116" font-size="12" fill="#3969b6" font-weight="700" text-anchor="start">PUBLIC INTAKE  /  DIRECT STRUCTURED MODEL CALL</text>
+<rect x="40" y="137" width="280" height="151" rx="12" fill="#eaf5f2" stroke="#dce4eb"/>
+<rect x="40" y="153" width="4" height="119" rx="2" fill="#368985"/>
+<text x="58" y="168" font-size="18" fill="#368985" font-weight="650" text-anchor="start">Message + photos</text>
+<text x="58" y="193" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Resident input is untrusted.</text>
+<text x="58" y="214" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Use selected location and</text>
+<text x="58" y="235" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">retain the original request.</text>
+<rect x="380" y="137" width="280" height="151" rx="12" fill="#edf3fd" stroke="#dce4eb"/>
+<rect x="380" y="153" width="4" height="119" rx="2" fill="#3969b6"/>
+<text x="398" y="168" font-size="18" fill="#3969b6" font-weight="650" text-anchor="start">Gemini reader</text>
+<text x="398" y="193" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Typed need, urgency, count</text>
+<text x="398" y="214" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">quotation, doubt and questions.</text>
+<text x="398" y="235" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Rules fallback if unavailable.</text>
+<rect x="720" y="137" width="280" height="151" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="720" y="153" width="4" height="119" rx="2" fill="#192b45"/>
+<text x="738" y="168" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">Code triage</text>
+<text x="738" y="193" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Check fields and count evidence;</text>
+<text x="738" y="214" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">apply danger and routing rules;</text>
+<text x="738" y="235" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">choose the request state.</text>
+<path d="M320 212 L380 212" fill="none" stroke="#3969b6" stroke-width="2" stroke-linejoin="round" marker-end="url(#blue)"/>
+<path d="M660 212 L720 212" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)"/>
+<text x="40" y="348" font-size="12" fill="#3969b6" font-weight="700" text-anchor="start">STAFF COORDINATION  /  ONE BOUNDED GOOGLE ADK AGENT</text>
+<rect x="40" y="370" width="280" height="172" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="40" y="386" width="4" height="140" rx="2" fill="#192b45"/>
+<text x="58" y="394" font-size="11" fill="#192b45" font-weight="700" text-anchor="start">SERVER CONTEXT</text>
+<text x="58" y="420" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">Scoped turn context</text>
+<text x="58" y="445" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Authenticated actor and incident;</text>
+<text x="58" y="466" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">current version, recent private</text>
+<text x="58" y="487" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">conversation and user message.</text>
+<rect x="380" y="370" width="280" height="172" rx="12" fill="#edf3fd" stroke="#dce4eb"/>
+<rect x="380" y="386" width="4" height="140" rx="2" fill="#3969b6"/>
+<text x="398" y="394" font-size="11" fill="#3969b6" font-weight="700" text-anchor="start">INTERPRET / PLAN</text>
+<text x="398" y="420" font-size="18" fill="#3969b6" font-weight="650" text-anchor="start">ADK + Gemini tool loop</text>
+<text x="398" y="445" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Read tool results and choose</text>
+<text x="398" y="466" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">the next permitted tool call.</text>
+<text x="398" y="487" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Up to 12 model calls per turn.</text>
+<rect x="720" y="370" width="280" height="172" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="720" y="386" width="4" height="140" rx="2" fill="#192b45"/>
+<text x="738" y="394" font-size="11" fill="#192b45" font-weight="700" text-anchor="start">READ / PROPOSE</text>
+<text x="738" y="420" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">Incident-scoped tools</text>
+<text x="738" y="445" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Read dashboard / evidence /</text>
+<text x="738" y="466" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">history;</text>
+<text x="738" y="487" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">find places; prepare action steps.</text>
+<text x="738" y="508" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Drafting tools may call Gemini.</text>
+<path d="M320 456 L380 456" fill="none" stroke="#3969b6" stroke-width="2" stroke-linejoin="round" marker-end="url(#blue)"/>
+<path d="M660 456 L720 456" fill="none" stroke="#3969b6" stroke-width="2" stroke-linejoin="round" marker-end="url(#blue)" marker-start="url(#blue)"/>
+<text x="40" y="608" font-size="12" fill="#368985" font-weight="700" text-anchor="start">MATERIAL CHANGES  /  HUMAN REVIEW AND SERVER-SIDE REVALIDATION</text>
+<rect x="40" y="650" width="280" height="172" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="40" y="666" width="4" height="140" rx="2" fill="#192b45"/>
+<text x="58" y="674" font-size="11" fill="#192b45" font-weight="700" text-anchor="start">NO OPERATIONAL CHANGE YET</text>
+<text x="58" y="700" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">Pending linked plan</text>
+<text x="58" y="725" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Typed steps, dry-run checks,</text>
+<text x="58" y="746" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">source numbers, content hash,</text>
+<text x="58" y="767" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">incident version and expiry.</text>
+<rect x="380" y="650" width="280" height="172" rx="12" fill="#eaf5f2" stroke="#dce4eb"/>
+<rect x="380" y="666" width="4" height="140" rx="2" fill="#368985"/>
+<text x="398" y="674" font-size="11" fill="#368985" font-weight="700" text-anchor="start">EXPLICIT DECISION</text>
+<text x="398" y="700" font-size="18" fill="#368985" font-weight="650" text-anchor="start">Person reviews / approves</text>
+<text x="398" y="725" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Inspect or edit exact steps.</text>
+<text x="398" y="746" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">The AI cannot approve its plan</text>
+<text x="398" y="767" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">or change anyone&#x27;s authority.</text>
+<rect x="720" y="650" width="280" height="172" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="720" y="666" width="4" height="140" rx="2" fill="#192b45"/>
+<text x="738" y="674" font-size="11" fill="#192b45" font-weight="700" text-anchor="start">PERSIST RESULT</text>
+<text x="738" y="700" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">Validate + apply</text>
+<text x="738" y="725" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Recheck role, scope, version,</text>
+<text x="738" y="746" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">hash, expiry and domain rules;</text>
+<text x="738" y="767" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">save records and action receipt.</text>
+<path d="M860 542 L860 574 L24 574 L24 736 L40 736" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)"/>
+<path d="M320 736 L380 736" fill="none" stroke="#368985" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal)"/>
+<path d="M660 736 L720 736" fill="none" stroke="#368985" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal)"/>
+<text x="520" y="869" font-size="15" fill="#43546b" font-weight="400" text-anchor="middle">Intake, letters and translations use distinct model tasks; staff planning has one bounded ADK coordinator.</text>
+<text x="32" y="912" font-size="14" fill="#43546b" font-weight="400" text-anchor="start">Offline mode is a labelled deterministic driver. Retrieval/model output is not verified operational evidence.</text>
+</g></svg>

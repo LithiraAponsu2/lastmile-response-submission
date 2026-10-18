@@ -1,0 +1,84 @@
+/* Reusable single-select skin. Native values, labels, validation and events stay intact. */
+select.lm-select {
+  --select-surface: #f3f6fb;
+  --select-hover: #edf3fc;
+  --select-selected: #e8f0fe;
+  --select-accent: #1967d2;
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 12px 42px 12px 15px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background: var(--select-surface) url("/static/components/chevron-down.svg") right 14px center / 20px no-repeat;
+  color: #24324b;
+  box-shadow: inset 0 0 0 1px #e4eaf3;
+  font: inherit;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  transition: background-color 120ms, box-shadow 120ms;
+}
+select.lm-select:hover:not(:disabled) { background-color: var(--select-hover); box-shadow: inset 0 0 0 1px #c8d8ef; }
+select.lm-select:focus { border-color: transparent; background-color: #edf4ff; box-shadow: inset 0 0 0 1px #abc5eb; }
+select.lm-select:focus:not(:focus-visible) { outline: none; }
+select.lm-select:focus-visible { outline: 2px solid var(--select-accent); outline-offset: 3px; }
+select.lm-select:disabled { color: #728096; background-color: #f4f5f8; box-shadow: none; cursor: not-allowed; }
+select.lm-select[aria-invalid=true], select.lm-select:user-invalid { box-shadow: inset 0 0 0 1px #b3261e; }
+
+/* Standards-based picker: rounded top-layer menu, including inside modal dialogs.
+   Browsers without base-select keep the styled control and their native picker. */
+@supports (appearance: base-select) {
+  select.lm-select, select.lm-select::picker(select) { appearance: base-select; }
+  select.lm-select { display: flex; align-items: center; gap: 12px; padding-right: 17px; background-image: none; }
+  select.lm-select::picker-icon {
+    content: "";
+    width: 20px; height: 20px; flex-shrink: 0;
+    background: url("/static/components/chevron-down.svg") center / contain no-repeat;
+    rotate: 0deg; margin-inline-start: auto;
+    transition: rotate 120ms;
+  }
+  select.lm-select:open::picker-icon { rotate: 180deg; }
+  select.lm-select::picker(select) {
+    width: anchor-size(width);
+    min-width: anchor-size(width);
+    max-width: calc(100vw - 24px);
+    max-height: min(360px, 60dvh);
+    margin-block: 8px;
+    padding: 6px;
+    border: 1px solid #e2e8f1;
+    border-radius: 16px;
+    background: #fff;
+    color: #24324b;
+    box-shadow: 0 12px 36px #24324b24, 0 2px 6px #24324b0a;
+    font: inherit;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #c9d5e5 transparent;
+  }
+  select.lm-select option {
+    display: flex; align-items: center; gap: 12px;
+    min-height: 44px; padding: 10px 12px; margin: 2px 0;
+    border: 0; border-radius: 10px; background: transparent;
+    color: #34435d; white-space: normal; overflow-wrap: anywhere;
+    line-height: 1.5; cursor: pointer;
+  }
+  select.lm-select option:hover:not(:disabled), select.lm-select option:focus:not(:disabled) { background: #f0f5fd; }
+  select.lm-select option:checked:not(:disabled) { background: var(--select-selected); color: #174ea6; font-weight: 600; }
+  select.lm-select option:focus-visible { outline: 2px solid var(--select-accent); outline-offset: -2px; }
+  select.lm-select option:disabled { color: #7a879b; background: #f7f8fb; cursor: not-allowed; }
+  select.lm-select option::checkmark { order: 1; margin-inline-start: auto; color: var(--select-accent); }
+}
+@media (prefers-reduced-motion: reduce) {
+  select.lm-select { transition: none; }
+  select.lm-select::picker-icon { transition: none; }
+}
+@media (forced-colors: active) {
+  select.lm-select { border-color: ButtonText; box-shadow: none; }
+  select.lm-select:focus-visible { outline-color: Highlight; }
+}

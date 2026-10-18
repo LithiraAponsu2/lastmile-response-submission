@@ -1,0 +1,13 @@
+# CHANNEL PACK: how alerts leave the system and the hard limits per channel.
+id: default
+name: Default channels (CAP, SMS, voice script)
+cap:
+  headline_max: 160        # CAP guidance: ~160 chars so it fits an SMS-sized display
+  max_area_km2: 15000      # warn when an alert targets more than this (whole-county mis-targeting, LA 2025)
+sms:
+  max_segments: 3          # UCS-2 (Sinhala/Tamil/Devanagari): 70 chars single, 67 per segment when joined
+voice:
+  max_bytes: 4000          # voice script size cap (a typical TTS request limit; no TTS is called yet)
+approvals:
+  required_replay: 1       # Exercise/replay runs
+  required_live: 2         # live runs need two different reviewers (4-eyes)

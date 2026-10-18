@@ -1,0 +1,33 @@
+# Generated local state and development dependencies
+__pycache__/
+*.pyc
+.pytest_cache/
+pytest-cache-files-*/
+.venv/
+node_modules/
+*.egg-info/
+var/
+tmp/
+
+# Credentials and local configuration; only placeholder examples may be tracked
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*-service-account.json
+credentials.json
+.aws/
+.codex/
+.agents/
+
+# Editable presentations are withheld until explicitly released
+*.pptx
+*.preview.html
+
+# Internal research/planning never belongs in this submission snapshot
+reports/
+research_notes/
+.publication-plan/

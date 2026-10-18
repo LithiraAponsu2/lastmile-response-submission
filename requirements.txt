@@ -1,0 +1,17 @@
+# runtime (offline demo with the fake model needs only these)
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2.5
+pyyaml>=6
+lxml>=5
+shapely>=2
+
+# Gemini on Vertex AI / Agent Platform (needed only when LASTMILE_LLM=gemini)
+google-genai>=1.0
+
+# Durable incident/version storage on Cloud Run; local SQLite needs no cloud calls.
+google-cloud-storage>=3.0,<4
+
+# Conversational coordinator (also exercised by the labelled offline tool model).
+google-adk==1.39.1
+pypdf==6.20.1

@@ -1,0 +1,86 @@
+# HAZARD PACK: generic river-flood warning on a 3-level scale — EXAMPLE ONLY.
+# Shows a second hazard with different wording/measures on the same engine.
+id: flood-generic
+name: River flood warning (generic 3-level, example)
+reviewed: false
+issuer: "Example hydrology agency"
+cap_category: Met
+# Words that name this hazard. Code compares them with the hazard the Intake model reports.
+keywords: [flood, flooding, "flash flood", "river flood", inundation]
+
+event:
+  en: Flood warning
+  ne: बाढीको चेतावनी
+
+scale:
+  - level: 1
+    colour: yellow
+    urgency: Future
+    severity: Minor
+    certainty: Possible
+    response_types: [Monitor]
+    intent: monitor
+    label: {en: "Level 1 – Watch", ne: "तह १ – सतर्कता"}
+  - level: 2
+    colour: orange
+    urgency: Expected
+    severity: Moderate
+    certainty: Likely
+    response_types: [Prepare]
+    intent: prepare
+    label: {en: "Level 2 – Warning", ne: "तह २ – चेतावनी"}
+  - level: 3
+    colour: red
+    urgency: Immediate
+    severity: Severe
+    certainty: Observed
+    response_types: [Evacuate]
+    intent: evacuate
+    label: {en: "Level 3 – Danger", ne: "तह ३ – खतरा"}
+
+measures:
+  river_level_m:
+    unit: m
+    units_accepted: [m, metres, meters]
+    phrase:
+      en: "River level: {value} m."
+      ne: "नदीको सतह: {value} मि."
+
+actions:
+  evacuate:
+    en: "Move to higher ground immediately."
+    ne: "तुरुन्तै उच्च स्थानमा जानुहोस्।"
+  prepare:
+    en: "Be ready to move. Follow official announcements."
+    ne: "बाहिर जान तयार रहनुहोस्। आधिकारिक सूचना पालना गर्नुहोस्।"
+  monitor:
+    en: "Stay alert. Follow official announcements."
+    ne: "सतर्क रहनुहोस्। आधिकारिक सूचना पालना गर्नुहोस्।"
+
+templates:
+  en:
+    headline: "{event}: {top_label} – {top_places}"
+    description: "{event}. {by_level} {measures} Valid until {valid_until}."
+    instruction: "{actions}"
+    sms: "{event}: {top_label} {top_places_sms}. {top_action} Until {valid_until_sms}."
+    spoken: "{event}. {actions} {measures} This warning is valid until {valid_until}."
+    cancel:
+      headline: "{event} cancelled – {areas}"
+      sms: "{event} cancelled: {areas}. Return only when local officials say it is safe."
+      spoken: "The earlier {event} for {areas} has been cancelled. Return only when local officials say it is safe."
+      error_headline: "{event} sent in error – {areas}"
+      error_sms: "The earlier {event} for {areas} was sent in error. Please ignore it and follow official announcements."
+      error_spoken: "The earlier {event} for {areas} was sent in error. Please ignore it and follow official announcements."
+  ne:
+    headline: "{event}: {top_label} – {top_places}"
+    description: "{event}। {by_level} {measures} {valid_until} सम्म मान्य।"
+    instruction: "{actions}"
+    sms: "{event}: {top_label} {top_places_sms}। {top_action} {valid_until_sms} सम्म।"
+    spoken: "{event}। {actions} {measures} यो चेतावनी {valid_until} सम्म मान्य छ।"
+    cancel:
+      headline: "{event} रद्द गरियो – {areas}"
+      sms: "{event} रद्द: {areas}। स्थानीय अधिकारीले सुरक्षित भनेपछि मात्र फर्कनुहोस्।"
+      spoken: "{areas} का लागि अघि जारी गरिएको {event} रद्द गरियो। स्थानीय अधिकारीले सुरक्षित भनेपछि मात्र फर्कनुहोस्।"
+      error_headline: "{event} गल्तीले पठाइयो – {areas}"
+      error_sms: "{areas} का लागि पहिलेको {event} गल्तीले पठाइएको थियो। कृपया यसलाई बेवास्ता गरी आधिकारिक सूचना पालना गर्नुहोस्।"
+      error_spoken: "{areas} का लागि पहिलेको {event} गल्तीले पठाइएको थियो। कृपया यसलाई बेवास्ता गरी आधिकारिक सूचना पालना गर्नुहोस्।"

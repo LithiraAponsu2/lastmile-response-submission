@@ -1,0 +1,28 @@
+/* Shared LastMile header lockup. Geometry lives in response-mark.svg;
+   docs/brand/logo.html is the editable stacked reference. */
+:root {
+  --logo-navy: #192b45;
+  --logo-teal: #368985;
+}
+
+.lm-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  min-height: 48px;
+  color: var(--logo-navy);
+  text-decoration: none;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.lm-brand:hover { color: var(--logo-navy); }
+.lm-brand__mark { display: block; width: 46px; height: 46px; flex: 0 0 46px; }
+.lm-brand__type { display: grid; gap: 3px; min-width: 0; }
+.lm-brand__name { font-size: 28px; font-weight: 800; line-height: 1; letter-spacing: -0.055em; }
+.lm-brand__name span { color: var(--logo-teal); }
+.lm-brand__subtitle { font-size: 11px; font-weight: 500; line-height: 1.4; letter-spacing: 0.025em; }
+
+@media (forced-colors: active) {
+  .lm-brand, .lm-brand:hover, .lm-brand__name span { color: LinkText; }
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-labelledby="title desc">
+  <title id="title">LastMile</title>
+  <desc id="desc">Three organisations connected around one shared disaster response.</desc>
+  <!-- A white ground keeps the navy nodes visible in dark browser tabs. -->
+  <rect width="360" height="360" rx="48" fill="#fff" />
+  <!-- Same editable geometry and colours as docs/brand/logo.html. -->
+  <g transform="translate(0 28)">
+    <g fill="#192b45">
+      <g>
+        <circle cx="180" cy="44" r="36" />
+        <path d="M165 76 C170 88 170 114 155 135 Q180 125 205 135 C190 114 190 88 195 76 Z" />
+      </g>
+      <g transform="rotate(120 180 190)">
+        <circle cx="180" cy="44" r="36" />
+        <path d="M165 76 C170 88 170 114 155 135 Q180 125 205 135 C190 114 190 88 195 76 Z" />
+      </g>
+      <g transform="rotate(240 180 190)">
+        <circle cx="180" cy="44" r="36" />
+        <path d="M165 76 C170 88 170 114 155 135 Q180 125 205 135 C190 114 190 88 195 76 Z" />
+      </g>
+    </g>
+    <circle cx="180" cy="190" r="50" fill="#368985" />
+  </g>
+</svg>

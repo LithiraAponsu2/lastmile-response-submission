@@ -1,0 +1,6 @@
+# EXAMPLE bundle: proves a new country + hazard needs no code changes.
+id: np-flood
+name: Nepal – flood warnings (example; en/ne)
+region: np
+hazard: flood-generic
+channels: default

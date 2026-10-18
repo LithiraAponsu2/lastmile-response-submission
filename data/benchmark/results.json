@@ -1,0 +1,1562 @@
+{
+ "run_at": "2026-10-18T07:33:23.556374+00:00",
+ "cases": 54,
+ "readers": [
+  "rules (offline)",
+  "Gemini (gemini-3.5-flash-lite)"
+ ],
+ "scores": {
+  "rules (offline)": {
+   "cases": 54,
+   "failures": [
+    {
+     "id": "p19",
+     "what": "need",
+     "expected": [
+      "shelter"
+     ],
+     "got": "rescue",
+     "text": "The roof was blown off by the cyclone. We need tents or a shelter for tonight."
+    },
+    {
+     "id": "p26",
+     "what": "people",
+     "expected": null,
+     "got": 3,
+     "text": "Water is rising fast, we are trapped on the roof with 3 children. Please send a boat."
+    },
+    {
+     "id": "p29",
+     "what": "need",
+     "expected": [
+      "rescue"
+     ],
+     "got": "other",
+     "text": "Two people are buried under the mud after the landslide near the tea estate. Help us."
+    },
+    {
+     "id": "p29",
+     "what": "people",
+     "expected": 2,
+     "got": null,
+     "text": "Two people are buried under the mud after the landslide near the tea estate. Help us."
+    },
+    {
+     "id": "p39",
+     "what": "decision",
+     "expected": "closed",
+     "got": "verify",
+     "text": "What is the cricket score today? Who won?"
+    },
+    {
+     "id": "p43",
+     "what": "need",
+     "expected": [
+      "rescue"
+     ],
+     "got": "other",
+     "text": "haha subscribe to my channel but seriously the water is rising and a child is alone at hom"
+    },
+    {
+     "id": "p50",
+     "what": "need",
+     "expected": [
+      "food"
+     ],
+     "got": "rescue",
+     "text": "Fishermen's boats destroyed by the cyclone; 80 people lost their livelihood and need food "
+    },
+    {
+     "id": "p51",
+     "what": "people",
+     "expected": 25,
+     "got": null,
+     "text": "எங்கள் வீடுகளில் வெள்ளம் புகுந்துவிட்டது, 25 பேருக்கு உணவு தேவை."
+    },
+    {
+     "id": "p52",
+     "what": "decision",
+     "expected": "filed",
+     "got": "verify",
+     "text": "Cracks in the slope above our houses are getting bigger and muddy water is coming out. We "
+    },
+    {
+     "id": "p52",
+     "what": "need",
+     "expected": [
+      "shelter",
+      "rescue"
+     ],
+     "got": "other",
+     "text": "Cracks in the slope above our houses are getting bigger and muddy water is coming out. We "
+    },
+    {
+     "id": "p52",
+     "what": "urgency",
+     "expected": "high",
+     "got": "normal",
+     "text": "Cracks in the slope above our houses are getting bigger and muddy water is coming out. We "
+    },
+    {
+     "id": "p53",
+     "what": "decision",
+     "expected": "closed",
+     "got": "verify",
+     "text": "Garbage was not collected this week in our street."
+    }
+   ],
+   "decision": {
+    "correct": 51,
+    "of": 54,
+    "rate": 0.944
+   },
+   "junk_caught": {
+    "correct": 5,
+    "of": 7,
+    "rate": 0.714
+   },
+   "need": {
+    "correct": 39,
+    "of": 44,
+    "rate": 0.886
+   },
+   "owner": {
+    "correct": 40,
+    "of": 44,
+    "rate": 0.909
+   },
+   "people": {
+    "correct": 41,
+    "of": 44,
+    "rate": 0.932
+   },
+   "urgent_flagged": {
+    "correct": 12,
+    "of": 13,
+    "rate": 0.923
+   },
+   "real_requests_wrongly_closed": 0,
+   "invented_counts": 1,
+   "model_errors": 0,
+   "median_seconds": 0.0,
+   "decision_by_language": {
+    "en": 32,
+    "si": 9,
+    "singlish": 2,
+    "ta": 8
+   },
+   "cases_by_language": {
+    "en": 35,
+    "si": 9,
+    "singlish": 2,
+    "ta": 8
+   }
+  },
+  "Gemini (gemini-3.5-flash-lite)": {
+   "cases": 54,
+   "failures": [
+    {
+     "id": "p26",
+     "what": "people",
+     "expected": null,
+     "got": 3,
+     "text": "Water is rising fast, we are trapped on the roof with 3 children. Please send a boat."
+    },
+    {
+     "id": "p29",
+     "what": "people",
+     "expected": 2,
+     "got": null,
+     "text": "Two people are buried under the mud after the landslide near the tea estate. Help us."
+    },
+    {
+     "id": "p42",
+     "what": "need",
+     "expected": [
+      "rescue"
+     ],
+     "got": "other",
+     "text": "lol test, my grandmother is trapped under the wall, www.help.example"
+    },
+    {
+     "id": "p43",
+     "what": "need",
+     "expected": [
+      "rescue"
+     ],
+     "got": "other",
+     "text": "haha subscribe to my channel but seriously the water is rising and a child is alone at hom"
+    },
+    {
+     "id": "p46",
+     "what": "decision",
+     "expected": "verify",
+     "got": "filed",
+     "text": "ඉක්මනට එන්න"
+    }
+   ],
+   "decision": {
+    "correct": 53,
+    "of": 54,
+    "rate": 0.981
+   },
+   "junk_caught": {
+    "correct": 7,
+    "of": 7,
+    "rate": 1.0
+   },
+   "need": {
+    "correct": 42,
+    "of": 44,
+    "rate": 0.955
+   },
+   "owner": {
+    "correct": 42,
+    "of": 44,
+    "rate": 0.955
+   },
+   "people": {
+    "correct": 42,
+    "of": 44,
+    "rate": 0.955
+   },
+   "urgent_flagged": {
+    "correct": 13,
+    "of": 13,
+    "rate": 1.0
+   },
+   "real_requests_wrongly_closed": 0,
+   "invented_counts": 1,
+   "model_errors": 0,
+   "median_seconds": 1.22,
+   "decision_by_language": {
+    "en": 35,
+    "si": 8,
+    "singlish": 2,
+    "ta": 8
+   },
+   "cases_by_language": {
+    "en": 35,
+    "si": 9,
+    "singlish": 2,
+    "ta": 8
+   }
+  }
+ },
+ "rows": {
+  "rules (offline)": [
+   {
+    "id": "p01",
+    "lang": "en",
+    "decision": "filed",
+    "need": "power",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p02",
+    "lang": "en",
+    "decision": "filed",
+    "need": "power",
+    "people": 25,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p03",
+    "lang": "si",
+    "decision": "filed",
+    "need": "power",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p04",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "power",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p05",
+    "lang": "singlish",
+    "decision": "filed",
+    "need": "power",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p06",
+    "lang": "en",
+    "decision": "hold",
+    "need": "power",
+    "people": null,
+    "urgency": "normal",
+    "reason": "No open incident covers Akmeemana DS, Galle yet.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p07",
+    "lang": "en",
+    "decision": "filed",
+    "need": "water",
+    "people": 40,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p08",
+    "lang": "si",
+    "decision": "filed",
+    "need": "water",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p09",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "water",
+    "people": 60,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p10",
+    "lang": "en",
+    "decision": "filed",
+    "need": "water",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p11",
+    "lang": "en",
+    "decision": "hold",
+    "need": "water",
+    "people": 15,
+    "urgency": "normal",
+    "reason": "No open incident covers Nallur DS, Jaffna yet.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p12",
+    "lang": "en",
+    "decision": "filed",
+    "need": "food",
+    "people": 100,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p13",
+    "lang": "si",
+    "decision": "filed",
+    "need": "food",
+    "people": 40,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p14",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "food",
+    "people": 30,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p15",
+    "lang": "en",
+    "decision": "filed",
+    "need": "food",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p16",
+    "lang": "singlish",
+    "decision": "filed",
+    "need": "food",
+    "people": 20,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p17",
+    "lang": "en",
+    "decision": "hold",
+    "need": "food",
+    "people": 35,
+    "urgency": "normal",
+    "reason": "No open incident covers Baddegama DS, Galle yet.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p18",
+    "lang": "en",
+    "decision": "filed",
+    "need": "shelter",
+    "people": 6,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p19",
+    "lang": "en",
+    "decision": "filed",
+    "need": "rescue",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p20",
+    "lang": "si",
+    "decision": "filed",
+    "need": "shelter",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p21",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "shelter",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p22",
+    "lang": "en",
+    "decision": "filed",
+    "need": "medical",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p23",
+    "lang": "en",
+    "decision": "filed",
+    "need": "medical",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p24",
+    "lang": "si",
+    "decision": "filed",
+    "need": "medical",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p25",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "medical",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p26",
+    "lang": "en",
+    "decision": "filed",
+    "need": "rescue",
+    "people": 3,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p27",
+    "lang": "si",
+    "decision": "filed",
+    "need": "rescue",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p28",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "rescue",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p29",
+    "lang": "en",
+    "decision": "filed",
+    "need": "other",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p30",
+    "lang": "en",
+    "decision": "hold",
+    "need": "rescue",
+    "people": null,
+    "urgency": "high",
+    "reason": "No open incident covers Jaffna DS, Jaffna yet.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p31",
+    "lang": "en",
+    "decision": "filed",
+    "need": "road",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p32",
+    "lang": "en",
+    "decision": "filed",
+    "need": "road",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p33",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "road",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p34",
+    "lang": "si",
+    "decision": "filed",
+    "need": "road",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p35",
+    "lang": "en",
+    "decision": "filed",
+    "need": "communications",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p36",
+    "lang": "en",
+    "decision": "closed",
+    "need": "communications",
+    "people": null,
+    "urgency": "normal",
+    "reason": "Looks like an advertisement, a test or an unrelated post.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p37",
+    "lang": "en",
+    "decision": "closed",
+    "need": "other",
+    "people": null,
+    "urgency": "normal",
+    "reason": "Looks like an advertisement, a test or an unrelated post.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p38",
+    "lang": "en",
+    "decision": "closed",
+    "need": "other",
+    "people": null,
+    "urgency": "normal",
+    "reason": "Looks like an advertisement, a test or an unrelated post.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p39",
+    "lang": "en",
+    "decision": "verify",
+    "need": "other",
+    "people": null,
+    "urgency": "normal",
+    "reason": "No disaster need could be found in the message.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p40",
+    "lang": "en",
+    "decision": "closed",
+    "need": "other",
+    "people": null,
+    "urgency": "normal",
+    "reason": "Looks like an advertisement, a test or an unrelated post.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p41",
+    "lang": "en",
+    "decision": "closed",
+    "need": "other",
+    "people": null,
+    "urgency": "normal",
+    "reason": "Looks like an advertisement, a test or an unrelated post.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p42",
+    "lang": "en",
+    "decision": "filed",
+    "need": "rescue",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p43",
+    "lang": "en",
+    "decision": "filed",
+    "need": "other",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p44",
+    "lang": "en",
+    "decision": "verify",
+    "need": "other",
+    "people": null,
+    "urgency": "normal",
+    "reason": "No disaster need could be found in the message.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p45",
+    "lang": "en",
+    "decision": "verify",
+    "need": "other",
+    "people": null,
+    "urgency": "normal",
+    "reason": "No disaster need could be found in the message.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p46",
+    "lang": "si",
+    "decision": "verify",
+    "need": "other",
+    "people": null,
+    "urgency": "normal",
+    "reason": "No disaster need could be found in the message.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p47",
+    "lang": "en",
+    "decision": "filed",
+    "need": "water",
+    "people": 30,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p48",
+    "lang": "en",
+    "decision": "filed",
+    "need": "food",
+    "people": 50,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p49",
+    "lang": "en",
+    "decision": "filed",
+    "need": "rescue",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p50",
+    "lang": "en",
+    "decision": "filed",
+    "need": "rescue",
+    "people": 80,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p51",
+    "lang": "ta",
+    "decision": "hold",
+    "need": "food",
+    "people": null,
+    "urgency": "normal",
+    "reason": "No open incident covers Nallur DS, Jaffna yet.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p52",
+    "lang": "en",
+    "decision": "verify",
+    "need": "other",
+    "people": null,
+    "urgency": "normal",
+    "reason": "No disaster need could be found in the message.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p53",
+    "lang": "en",
+    "decision": "verify",
+    "need": "other",
+    "people": null,
+    "urgency": "normal",
+    "reason": "No disaster need could be found in the message.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   },
+   {
+    "id": "p54",
+    "lang": "si",
+    "decision": "hold",
+    "need": "food",
+    "people": 70,
+    "urgency": "high",
+    "reason": "No open incident covers Akmeemana DS, Galle yet.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.0
+   }
+  ],
+  "Gemini (gemini-3.5-flash-lite)": [
+   {
+    "id": "p01",
+    "lang": "en",
+    "decision": "filed",
+    "need": "power",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 4.73
+   },
+   {
+    "id": "p02",
+    "lang": "en",
+    "decision": "filed",
+    "need": "power",
+    "people": 25,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.23
+   },
+   {
+    "id": "p03",
+    "lang": "si",
+    "decision": "filed",
+    "need": "power",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.2
+   },
+   {
+    "id": "p04",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "power",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.14
+   },
+   {
+    "id": "p05",
+    "lang": "singlish",
+    "decision": "filed",
+    "need": "power",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.02
+   },
+   {
+    "id": "p06",
+    "lang": "en",
+    "decision": "hold",
+    "need": "power",
+    "people": null,
+    "urgency": "normal",
+    "reason": "No open incident covers Akmeemana DS, Galle yet.",
+    "notes": [],
+    "error": null,
+    "seconds": 1.08
+   },
+   {
+    "id": "p07",
+    "lang": "en",
+    "decision": "filed",
+    "need": "water",
+    "people": 40,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.34
+   },
+   {
+    "id": "p08",
+    "lang": "si",
+    "decision": "filed",
+    "need": "water",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.14
+   },
+   {
+    "id": "p09",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "water",
+    "people": 60,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.27
+   },
+   {
+    "id": "p10",
+    "lang": "en",
+    "decision": "filed",
+    "need": "water",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.33
+   },
+   {
+    "id": "p11",
+    "lang": "en",
+    "decision": "hold",
+    "need": "water",
+    "people": 15,
+    "urgency": "high",
+    "reason": "No open incident covers Nallur DS, Jaffna yet.",
+    "notes": [],
+    "error": null,
+    "seconds": 1.25
+   },
+   {
+    "id": "p12",
+    "lang": "en",
+    "decision": "filed",
+    "need": "food",
+    "people": 100,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.23
+   },
+   {
+    "id": "p13",
+    "lang": "si",
+    "decision": "filed",
+    "need": "food",
+    "people": 40,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.22
+   },
+   {
+    "id": "p14",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "food",
+    "people": 30,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.27
+   },
+   {
+    "id": "p15",
+    "lang": "en",
+    "decision": "filed",
+    "need": "food",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.19
+   },
+   {
+    "id": "p16",
+    "lang": "singlish",
+    "decision": "filed",
+    "need": "food",
+    "people": 20,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.31
+   },
+   {
+    "id": "p17",
+    "lang": "en",
+    "decision": "hold",
+    "need": "food",
+    "people": 35,
+    "urgency": "normal",
+    "reason": "No open incident covers Baddegama DS, Galle yet.",
+    "notes": [],
+    "error": null,
+    "seconds": 1.2
+   },
+   {
+    "id": "p18",
+    "lang": "en",
+    "decision": "filed",
+    "need": "shelter",
+    "people": 6,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.22
+   },
+   {
+    "id": "p19",
+    "lang": "en",
+    "decision": "filed",
+    "need": "shelter",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.3
+   },
+   {
+    "id": "p20",
+    "lang": "si",
+    "decision": "filed",
+    "need": "shelter",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.27
+   },
+   {
+    "id": "p21",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "shelter",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.2
+   },
+   {
+    "id": "p22",
+    "lang": "en",
+    "decision": "filed",
+    "need": "medical",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.31
+   },
+   {
+    "id": "p23",
+    "lang": "en",
+    "decision": "filed",
+    "need": "medical",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [
+     "The reader's count 1 is not stated in the message, so it was removed."
+    ],
+    "error": null,
+    "seconds": 1.31
+   },
+   {
+    "id": "p24",
+    "lang": "si",
+    "decision": "filed",
+    "need": "medical",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [
+     "The reader's count 1 is not stated in the message, so it was removed."
+    ],
+    "error": null,
+    "seconds": 1.33
+   },
+   {
+    "id": "p25",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "medical",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.27
+   },
+   {
+    "id": "p26",
+    "lang": "en",
+    "decision": "filed",
+    "need": "rescue",
+    "people": 3,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.8
+   },
+   {
+    "id": "p27",
+    "lang": "si",
+    "decision": "filed",
+    "need": "rescue",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [
+     "The reader's count 3 is not stated in the message, so it was removed."
+    ],
+    "error": null,
+    "seconds": 1.22
+   },
+   {
+    "id": "p28",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "rescue",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.53
+   },
+   {
+    "id": "p29",
+    "lang": "en",
+    "decision": "filed",
+    "need": "rescue",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [
+     "The reader's count 2 is not stated in the message, so it was removed."
+    ],
+    "error": null,
+    "seconds": 1.05
+   },
+   {
+    "id": "p30",
+    "lang": "en",
+    "decision": "hold",
+    "need": "rescue",
+    "people": null,
+    "urgency": "high",
+    "reason": "No open incident covers Jaffna DS, Jaffna yet.",
+    "notes": [
+     "The reader's count 1 is not stated in the message, so it was removed."
+    ],
+    "error": null,
+    "seconds": 1.33
+   },
+   {
+    "id": "p31",
+    "lang": "en",
+    "decision": "filed",
+    "need": "road",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.12
+   },
+   {
+    "id": "p32",
+    "lang": "en",
+    "decision": "filed",
+    "need": "road",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.39
+   },
+   {
+    "id": "p33",
+    "lang": "ta",
+    "decision": "filed",
+    "need": "road",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.16
+   },
+   {
+    "id": "p34",
+    "lang": "si",
+    "decision": "filed",
+    "need": "road",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.22
+   },
+   {
+    "id": "p35",
+    "lang": "en",
+    "decision": "filed",
+    "need": "communications",
+    "people": null,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.12
+   },
+   {
+    "id": "p36",
+    "lang": "en",
+    "decision": "closed",
+    "need": "other",
+    "people": null,
+    "urgency": "low",
+    "reason": "advertisement",
+    "notes": [],
+    "error": null,
+    "seconds": 1.06
+   },
+   {
+    "id": "p37",
+    "lang": "en",
+    "decision": "closed",
+    "need": "other",
+    "people": null,
+    "urgency": "low",
+    "reason": "test",
+    "notes": [],
+    "error": null,
+    "seconds": 1.05
+   },
+   {
+    "id": "p38",
+    "lang": "en",
+    "decision": "closed",
+    "need": "other",
+    "people": null,
+    "urgency": "low",
+    "reason": "advertisement",
+    "notes": [],
+    "error": null,
+    "seconds": 1.12
+   },
+   {
+    "id": "p39",
+    "lang": "en",
+    "decision": "closed",
+    "need": "other",
+    "people": null,
+    "urgency": "low",
+    "reason": "off-topic",
+    "notes": [],
+    "error": null,
+    "seconds": 1.03
+   },
+   {
+    "id": "p40",
+    "lang": "en",
+    "decision": "closed",
+    "need": "other",
+    "people": null,
+    "urgency": "low",
+    "reason": "joke",
+    "notes": [],
+    "error": null,
+    "seconds": 1.11
+   },
+   {
+    "id": "p41",
+    "lang": "en",
+    "decision": "closed",
+    "need": "other",
+    "people": null,
+    "urgency": "low",
+    "reason": "advertisement",
+    "notes": [],
+    "error": null,
+    "seconds": 0.89
+   },
+   {
+    "id": "p42",
+    "lang": "en",
+    "decision": "filed",
+    "need": "other",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [
+     "Marked urgent because the message has words that may mean a life is at risk."
+    ],
+    "error": null,
+    "seconds": 1.22
+   },
+   {
+    "id": "p43",
+    "lang": "en",
+    "decision": "filed",
+    "need": "other",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [
+     "Marked urgent because the message has words that may mean a life is at risk."
+    ],
+    "error": null,
+    "seconds": 1.14
+   },
+   {
+    "id": "p44",
+    "lang": "en",
+    "decision": "verify",
+    "need": "other",
+    "people": null,
+    "urgency": "normal",
+    "reason": "The reader judged this unrelated (off-topic message), but it mentions a need. A person should check it.",
+    "notes": [],
+    "error": null,
+    "seconds": 0.94
+   },
+   {
+    "id": "p45",
+    "lang": "en",
+    "decision": "verify",
+    "need": "other",
+    "people": null,
+    "urgency": "normal",
+    "reason": "The message is extremely vague and provides no location or specific details.",
+    "notes": [],
+    "error": null,
+    "seconds": 1.03
+   },
+   {
+    "id": "p46",
+    "lang": "si",
+    "decision": "filed",
+    "need": "rescue",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.36
+   },
+   {
+    "id": "p47",
+    "lang": "en",
+    "decision": "filed",
+    "need": "water",
+    "people": 30,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.28
+   },
+   {
+    "id": "p48",
+    "lang": "en",
+    "decision": "filed",
+    "need": "food",
+    "people": 50,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.11
+   },
+   {
+    "id": "p49",
+    "lang": "en",
+    "decision": "filed",
+    "need": "rescue",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.2
+   },
+   {
+    "id": "p50",
+    "lang": "en",
+    "decision": "filed",
+    "need": "food",
+    "people": 80,
+    "urgency": "normal",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.34
+   },
+   {
+    "id": "p51",
+    "lang": "ta",
+    "decision": "hold",
+    "need": "food",
+    "people": 25,
+    "urgency": "high",
+    "reason": "No open incident covers Nallur DS, Jaffna yet.",
+    "notes": [],
+    "error": null,
+    "seconds": 1.11
+   },
+   {
+    "id": "p52",
+    "lang": "en",
+    "decision": "filed",
+    "need": "shelter",
+    "people": null,
+    "urgency": "high",
+    "reason": "",
+    "notes": [],
+    "error": null,
+    "seconds": 1.16
+   },
+   {
+    "id": "p53",
+    "lang": "en",
+    "decision": "closed",
+    "need": "other",
+    "people": null,
+    "urgency": "low",
+    "reason": "off-topic message",
+    "notes": [],
+    "error": null,
+    "seconds": 1.09
+   },
+   {
+    "id": "p54",
+    "lang": "si",
+    "decision": "hold",
+    "need": "food",
+    "people": 70,
+    "urgency": "high",
+    "reason": "No open incident covers Akmeemana DS, Galle yet.",
+    "notes": [],
+    "error": null,
+    "seconds": 1.12
+   }
+  ]
+ }
+}

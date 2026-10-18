@@ -1,0 +1,121 @@
+{
+ "dataset": "templates",
+ "version": 1,
+ "updated_at": "2026-10-18T00:00:00+05:30",
+ "updated_by": "seed",
+ "fictional": true,
+ "provenance": {
+  "title": "Message templates (demo)",
+  "note": "Written for this prototype; add Sinhala and Tamil versions in the app."
+ },
+ "records": [
+  {
+   "id": "tpl-flood-warning",
+   "name": "Flood warning",
+   "channel": "sms",
+   "language": "en",
+   "subject": null,
+   "body": "FLOOD WARNING {date} {time}: rising water in {areas}. {details} Move valuables up and be ready to leave. Help: {hotline}",
+   "notes": "Rising water."
+  },
+  {
+   "id": "tpl-evacuate-now",
+   "name": "Evacuate now",
+   "channel": "sms",
+   "language": "en",
+   "subject": null,
+   "body": "EVACUATE NOW: {areas}. {details} Go to the nearest safety centre or higher ground. Help: {hotline}",
+   "notes": "Leave now."
+  },
+  {
+   "id": "tpl-landslide-warning",
+   "name": "Landslide warning",
+   "channel": "sms",
+   "language": "en",
+   "subject": null,
+   "body": "LANDSLIDE WARNING: {areas}. {details} Watch for cracks, tilting trees and muddy springs. Leave slopes now. Help: {hotline}",
+   "notes": "Slopes and cuttings."
+  },
+  {
+   "id": "tpl-safety-centre-open",
+   "name": "Safety centre open",
+   "channel": "sms",
+   "language": "en",
+   "subject": null,
+   "body": "SAFETY CENTRE OPEN in {areas}: {details} Bring ID, medicines and drinking water. Help: {hotline}",
+   "notes": "Where to go."
+  },
+  {
+   "id": "tpl-boil-drinking-water",
+   "name": "Boil drinking water",
+   "channel": "sms",
+   "language": "en",
+   "subject": null,
+   "body": "WATER SAFETY {areas}: {details} Boil drinking water or use bottled water until further notice. Help: {hotline}",
+   "notes": "Water supply affected."
+  },
+  {
+   "id": "tpl-all-clear",
+   "name": "All clear",
+   "channel": "sms",
+   "language": "en",
+   "subject": null,
+   "body": "ALL CLEAR {areas} {date}: {details} Return only when officials confirm your road and home are safe. Help: {hotline}",
+   "notes": "Danger has passed."
+  },
+  {
+   "id": "tpl-press-briefing-notice",
+   "name": "Press briefing notice",
+   "channel": "email",
+   "language": "en",
+   "subject": "Press briefing: {incident}",
+   "body": "Dear editor,\n\n{issuer} will brief the media on {incident} ({district} District) on {date}.\n\n{details}\n\nFor questions, call the media desk through {hotline}.\n\n{issuer}",
+   "notes": "Invite the media to a briefing."
+  },
+  {
+   "id": "tpl-situation-update-to-media",
+   "name": "Situation update to media",
+   "channel": "email",
+   "language": "en",
+   "subject": "Situation update: {incident}, {date} {time}",
+   "body": "Dear editor,\n\nThe latest position on {incident} in {district} District, as of {date} {time}:\n\n{details}\n\nPeople who need help should call {hotline}. Please carry official warnings word for word.\n\n{issuer}",
+   "notes": "Regular update to newsrooms."
+  },
+  {
+   "id": "tpl-media-release-situation",
+   "name": "Media release: situation",
+   "channel": "press_release",
+   "language": "en",
+   "subject": "Media release: {incident}",
+   "body": "MEDIA RELEASE · {date} {time}\n\n{incident}\n\n{issuer} reports the following for {areas}:\n\n{details}\n\nSafety centres are open for anyone who needs to leave home. Call {hotline} for help. Follow only official warnings.\n\nEnds.",
+   "notes": "Public statement during the response."
+  },
+  {
+   "id": "tpl-media-release-all-clear",
+   "name": "Media release: all clear",
+   "channel": "press_release",
+   "language": "en",
+   "subject": "All clear: {incident}",
+   "body": "MEDIA RELEASE · {date} {time}\n\nAll clear for {areas}\n\n{details}\n\nPeople returning home should check for damage, boil drinking water until supplies are tested, and call {hotline} to report hazards.\n\nEnds.",
+   "notes": "When the danger has passed."
+  },
+  {
+   "id": "tpl-official-letter",
+   "name": "Official letter",
+   "channel": "letter",
+   "language": "en",
+   "subject": "{subject}",
+   "body": "{issuer}\nRef: {reference}\nDate: {date}\n\nTo: {to}\n\nSubject: {subject}\n\n{body}\n\nPlease acknowledge receipt of this letter in the coordination portal.\n\n{signer}\n{job_title}, {issuer}\nIncident: {incident} · {district} District",
+   "notes": "Letters to other organisations: situation, request, notice."
+  },
+  {
+   "id": "tpl-request-for-assistance",
+   "name": "Request for assistance",
+   "channel": "letter",
+   "language": "en",
+   "subject": "Request for assistance: {subject}",
+   "body": "{issuer}\nRef: {reference}\nDate: {date}\n\nTo: {to}\n\nSubject: Request for assistance: {subject}\n\nWe request your assistance as set out below.\n\n{body}\n\nPlease confirm what you can provide, and by when, through the coordination portal.\n\n{signer}\n{job_title}, {issuer}\nIncident: {incident} · {district} District",
+   "notes": "Asking another organisation for supplies, people or equipment."
+  }
+ ]
+}

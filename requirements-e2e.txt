@@ -1,0 +1,3 @@
+# optional: browser end-to-end tests of the review console (tests/test_e2e_browser.py)
+-r requirements-dev.txt
+playwright>=1.45

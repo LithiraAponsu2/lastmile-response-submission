@@ -1,0 +1,6 @@
+# BUNDLE: which region + hazard + channel packs form one deployable "alert profile".
+id: lk-landslide
+name: Sri Lanka – landslide warnings (en/si/ta)
+region: lk
+hazard: landslide-nbro
+channels: default

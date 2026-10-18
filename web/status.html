@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f8fc">
+  <title>Sri Lanka Disaster Status · LastMile</title>
+  <meta name="description" content="Find your area to see official warnings, services and safety centres. Prototype exercise data.">
+  <link rel="icon" href="/static/response-mark.svg?v=coordination" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/static/icon-180.png?v=coordination">
+  <link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/static/status.css">
+  <link rel="stylesheet" href="/static/brand.css">
+  <script src="/static/vendor/leaflet/leaflet.js" defer></script>
+  <script type="module" src="/static/status.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <a class="brand lm-brand" href="/public" translate="no" lang="en">
+      <img class="lm-brand__mark" src="/static/response-mark.svg?v=coordination" alt="" width="46" height="46">
+      <span class="lm-brand__type"><span class="lm-brand__name">Last<span>Mile</span></span> <span class="lm-brand__subtitle">Disaster Coordination Portal</span></span>
+    </a>
+    <div class="top-actions">
+      <button id="open-track" type="button" class="quiet" data-t="track_title">Track a request</button>
+      <div id="langs" class="langs" role="group" aria-label="Language"></div>
+    </div>
+  </header>
+  <nav class="emergency" aria-labelledby="emergency-title">
+    <h2 id="emergency-title" class="sr-only" data-t="emergency">Emergency numbers</h2>
+    <ul>
+      <li><a href="tel:117"><strong>117</strong> <span data-t="call_dmc">Disaster Management Centre</span></a></li>
+      <li><a href="tel:119"><strong>119</strong> <span data-t="call_police">Police</span></a></li>
+      <li><a href="tel:110"><strong>110</strong> <span data-t="call_fire">Fire &amp; rescue</span></a></li>
+      <li><a href="tel:1990"><strong>1990</strong> <span data-t="call_ambulance">Suwa Seriya ambulance</span></a></li>
+    </ul>
+  </nav>
+  <main id="main">
+    <p id="exercise" class="exercise" role="note" data-t="exercise">Prototype exercise: every warning, status and figure here is fictional. Follow instructions from the DMC and local officials.</p>
+    <section class="hero" aria-labelledby="page-title">
+      <h1 id="page-title" data-t="title">Sri Lanka disaster status</h1>
+      <p class="lead" data-t="lead">Official warnings, services and safety centres for your area, and a way to ask for help.</p>
+      <div class="actions">
+        <section class="action finder" aria-labelledby="find-title">
+          <h2 id="find-title" data-t="find">Check your area</h2>
+          <div class="finder-row">
+            <label for="area-search" class="sr-only" data-t="search_label">Search for a DS division or district</label>
+            <input id="area-search" type="search" autocomplete="off" aria-controls="area-results" aria-describedby="location-note">
+            <button id="locate" type="button" data-t="use_location">Use my location</button>
+          </div>
+          <small id="location-note" class="muted" data-t="location_note">Your location never leaves your browser.</small>
+          <ul id="area-results" class="results" hidden></ul>
+          <p id="locate-status" role="status" class="muted"></p>
+        </section>
+        <section class="action help" aria-labelledby="help-title">
+          <h2 id="help-title" data-t="help_title">Need help?</h2>
+          <p data-t="help_lead">Tell responders what is happening, with photos and your location. It goes to the organisation that can help, and you can follow it.</p>
+          <button id="open-ask" type="button" class="primary big" data-t="ask_open">Ask for help</button>
+          <small class="muted" data-t="help_note">If a life is in danger, call 117 first.</small>
+        </section>
+      </div>
+    </section>
+    <section id="area" class="area" aria-live="polite" hidden></section>
+    <section class="overview" aria-labelledby="overview-title">
+      <div class="overview-head">
+        <h2 id="overview-title" data-t="overview">Across Sri Lanka</h2>
+        <div id="layers" class="segmented" role="group"></div>
+      </div>
+      <div id="totals" class="totals"></div>
+      <div id="map" class="map"></div>
+      <div id="legend"></div>
+      <small class="muted" data-t="map_note">Outlines are reference DS-division boundaries, not certified warning zones. A blank area means nothing was reported, not that it is safe.</small>
+    </section>
+    <div class="columns">
+      <section aria-labelledby="warnings-title">
+        <h2 id="warnings-title" data-t="warnings_all">Official warnings in force</h2>
+        <ul id="warnings" class="warning-list"></ul>
+      </section>
+      <section aria-labelledby="messages-title">
+        <h2 id="messages-title" data-t="messages_all">Messages to the public</h2>
+        <ul id="messages" class="message-list"></ul>
+      </section>
+    </div>
+    <section aria-labelledby="incidents-title">
+      <h2 id="incidents-title" data-t="incidents">Ongoing incidents</h2>
+      <ul id="incidents" class="incident-list"></ul>
+    </section>
+  </main>
+  <footer class="foot">
+    <p data-t="footer">This page shows only what responding organisations chose to publish. It is not an official warning channel. Updates appear in the language they were recorded in.</p>
+    <p><span id="updated"></span> · <a href="/" data-t="staff">Staff workspace</a></p>
+  </footer>
+  <dialog id="ask-dialog" aria-labelledby="ask-title">
+    <div class="dialog-head">
+      <h2 id="ask-title" data-t="ask_title">Ask for help or report a problem</h2>
+      <button type="button" class="quiet close-dialog" data-close data-t="close">Close</button>
+    </div>
+    <p class="ask-note" data-t="ask_note">For anything life-threatening, call 117, 119, 110 or 1990 first. This form is not watched like an emergency line.</p>
+    <form id="ask-form" novalidate>
+      <label for="ask-text" data-t="ask_what">What is happening? Any language.</label>
+      <textarea id="ask-text" name="text" rows="4" maxlength="2000" required></textarea>
+      <fieldset class="ask-where">
+        <legend data-t="ask_where">Where?</legend>
+        <p id="ask-place" class="place" role="status"></p>
+        <div class="finder-row">
+          <label for="ask-area" class="sr-only" data-t="ask_search">Search for your area</label>
+          <input id="ask-area" type="search" autocomplete="off" aria-controls="ask-area-results">
+          <button id="ask-locate" type="button" data-t="use_location">Use my location</button>
+        </div>
+        <ul id="ask-area-results" class="results" hidden></ul>
+      </fieldset>
+      <label for="ask-photos" data-t="ask_photos">Photos (up to 3, optional)</label>
+      <input id="ask-photos" name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+      <label for="ask-phone" data-t="ask_phone">Phone (optional, so responders can call you)</label>
+      <input id="ask-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20">
+      <label class="check"><input id="ask-consent" name="consent" type="checkbox"> <span data-t="ask_consent">Responders may call me about this request. My number is never shown publicly.</span></label>
+      <p id="ask-status" role="status" class="muted"></p>
+      <div class="dialog-actions"><button type="button" class="quiet" data-close data-t="close">Close</button><button id="ask-send" type="submit" class="primary" data-t="ask_send">Send request</button></div>
+    </form>
+    <div id="ask-done" hidden></div>
+  </dialog>
+  <dialog id="track-dialog" aria-labelledby="track-heading">
+    <div class="dialog-head">
+      <h2 id="track-heading" data-t="track_title">Track a request</h2>
+      <button type="button" class="quiet close-dialog" data-close data-t="close">Close</button>
+    </div>
+    <form id="track-form" class="finder-row">
+      <label for="track-code" class="sr-only" data-t="track_label">Tracking code</label>
+      <input id="track-code" placeholder="LM-XXXXXX" autocomplete="off" maxlength="9">
+      <button type="submit" data-t="track">Track</button>
+    </form>
+    <p class="muted" data-t="track_saved">Requests sent from this device are listed here.</p>
+    <ul id="my-requests" class="plain-list"></ul>
+  </dialog>
+  <div id="toast" role="status" hidden></div>
+</body>
+</html>

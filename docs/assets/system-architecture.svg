@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="662" viewBox="0 0 1040 662" role="img" aria-labelledby="title desc">
+<title id="title">01 / System architecture</title><desc id="desc">Two browser experiences, one Cloud Run backend, scoped AI and private persistence.</desc>
+<defs><marker id="navy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#192b45"/></marker><marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#368985"/></marker><marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#3969b6"/></marker></defs>
+<rect x="1" y="1" width="1038" height="660" rx="20" fill="white" stroke="#dce4eb"/>
+<g font-family="Segoe UI, Arial, sans-serif">
+<text x="32" y="43" font-size="27" fill="#192b45" font-weight="650" text-anchor="start">01 / System architecture</text>
+<text x="32" y="73" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Two browser experiences, one Cloud Run backend, scoped AI and private persistence.</text>
+<rect x="54" y="116" width="440" height="96" rx="12" fill="#eaf5f2" stroke="#dce4eb"/>
+<rect x="54" y="132" width="4" height="64" rx="2" fill="#368985"/>
+<text x="72" y="147" font-size="18" fill="#368985" font-weight="650" text-anchor="start">Residents</text>
+<text x="72" y="172" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Text / photos, location and tracking</text>
+<rect x="546" y="116" width="440" height="96" rx="12" fill="#eaf5f2" stroke="#dce4eb"/>
+<rect x="546" y="132" width="4" height="64" rx="2" fill="#368985"/>
+<text x="564" y="147" font-size="18" fill="#368985" font-weight="650" text-anchor="start">Participating organisations</text>
+<text x="564" y="172" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Incident workspace, plans and review</text>
+<rect x="24" y="258" width="992" height="192" rx="12" fill="#fafcfe" stroke="#dce4eb" stroke-dasharray="7 5"/>
+<text x="44" y="285" font-size="12" fill="#192b45" font-weight="700" text-anchor="start">GOOGLE CLOUD RUN  /  APPLICATION TRUST BOUNDARY</text>
+<rect x="54" y="310" width="286" height="112" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="54" y="326" width="4" height="80" rx="2" fill="#192b45"/>
+<text x="72" y="341" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">FastAPI + domain rules</text>
+<text x="72" y="366" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Intake, staff routes, scope</text>
+<text x="72" y="387" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">and operational commands</text>
+<rect x="378" y="310" width="286" height="112" rx="12" fill="#edf3fd" stroke="#dce4eb"/>
+<rect x="378" y="326" width="4" height="80" rx="2" fill="#3969b6"/>
+<text x="396" y="341" font-size="18" fill="#3969b6" font-weight="650" text-anchor="start">Google ADK coordinator</text>
+<text x="396" y="366" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Gemini-guided tools and</text>
+<text x="396" y="387" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">evidence-grounded proposals</text>
+<rect x="702" y="310" width="286" height="112" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="702" y="326" width="4" height="80" rx="2" fill="#192b45"/>
+<text x="720" y="341" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">Approval + execution</text>
+<text x="720" y="366" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Reviewed plan, actor rights,</text>
+<text x="720" y="387" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">current version and payload</text>
+<path d="M274 212 L274 236 L34 236 L34 365 L54 365" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)"/>
+<path d="M766 212 L766 240 L845 240 L845 310" fill="none" stroke="#368985" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal)"/>
+<path d="M340 365 L378 365" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)"/>
+<path d="M664 365 L702 365" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)"/>
+<rect x="54" y="526" width="286" height="100" rx="12" fill="#edf3fd" stroke="#dce4eb"/>
+<rect x="54" y="542" width="4" height="68" rx="2" fill="#3969b6"/>
+<text x="72" y="557" font-size="18" fill="#3969b6" font-weight="650" text-anchor="start">Gemini on Vertex AI</text>
+<text x="72" y="582" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Structured intake, planning,</text>
+<text x="72" y="603" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">drafting and translation</text>
+<rect x="378" y="526" width="286" height="100" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="378" y="542" width="4" height="68" rx="2" fill="#192b45"/>
+<text x="396" y="557" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">Private Cloud Storage</text>
+<text x="396" y="582" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Persisted application state;</text>
+<text x="396" y="603" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">generation-checked incidents</text>
+<rect x="702" y="526" width="286" height="100" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="702" y="542" width="4" height="68" rx="2" fill="#192b45"/>
+<text x="720" y="557" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">Bundled references</text>
+<text x="720" y="582" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Maps, reference lists and</text>
+<text x="720" y="603" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">labelled fictional seed data</text>
+<path d="M196 422 L196 526" fill="none" stroke="#3969b6" stroke-width="2" stroke-linejoin="round" marker-end="url(#blue)"/>
+<path d="M520 422 L520 479 L274 479 L274 526" fill="none" stroke="#3969b6" stroke-width="2" stroke-linejoin="round" marker-end="url(#blue)"/>
+<path d="M845 422 L845 497 L520 497 L520 526" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)"/>
+<path d="M926 422 L926 526" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)" stroke-dasharray="6 5"/>
+<text x="34" y="651" font-size="14" fill="#43546b" font-weight="400" text-anchor="start">Current deployment retains one active writer; local mode uses SQLite/files. Firebase/Firestore are unused.</text>
+</g></svg>

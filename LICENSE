@@ -1,0 +1,44 @@
+LastMile Response — Restricted Evaluation License
+Copyright (c) 2026 the respective LastMile Response contributors/rightsholders.
+
+1. Scope
+These terms apply only to original first-party material to the extent the
+respective rightsholders have authority to grant these permissions. Third-party
+software, schemas, data and assets retain their own licenses/notices, identified
+in THIRD_PARTY_NOTICES.md and the affected files. All other first-party rights
+are reserved. This is not an open-source license.
+
+2. Authorised evaluation
+The project team and authorised AI Builder Cup organisers, judges and evaluation
+personnel may obtain copies, inspect, install dependencies, build, execute and
+test this submission for evaluation, including limited local adaptations needed
+solely to conduct that evaluation and records required by the competition.
+This does not grant general commercial deployment, incorporation into another
+product, redistribution of derivative products, resale or reuse as another entry.
+Separate written permission is required for additional first-party uses except
+where an existing license, applicable law or the provisions below permit them.
+
+3. Existing grants, platform terms and competition terms
+Nothing here revokes a license previously validly granted for an earlier copy,
+including an earlier MIT-licensed copy, or restricts mandatory legal exceptions.
+Nothing limits rights granted under accepted AI Builder Cup rules, including
+organiser/sponsor disclosure, evaluation and marketing permissions or applicable
+exclusive-licensing obligations. Nothing restricts rights granted to GitHub or
+other users under the applicable platform agreement, including authorised viewing
+and forking if the repository is made public. This notice is not a promise of
+confidentiality or a technical copying restriction.
+
+4. Third-party rights and attribution
+Retain all applicable copyright and license notices. These terms do not add
+restrictions to upstream licensed materials or imply endorsement by any public
+authority, data provider, Google or the competition organisers. Publication does
+not itself establish ownership or permission in material subject to third-party
+rights. Unresolved rights must be cleared before public release.
+
+5. Prototype and warranty
+THE FIRST-PARTY MATERIAL IS PROVIDED AS IS, WITHOUT WARRANTIES TO THE EXTENT
+PERMITTED BY LAW. IT IS AN EXERCISE PROTOTYPE, NOT AN AUTHORISED EMERGENCY SERVICE.
+THE RIGHTSHOLDERS ACCEPT NO LIABILITY TO THE EXTENT PERMITTED BY APPLICABLE LAW.
+No provision excludes liability or rights that cannot lawfully be excluded.
+
+Additional permissions should be requested from the repository maintainers.

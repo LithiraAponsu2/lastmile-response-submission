@@ -1,0 +1,40 @@
+# REGION PACK: Nepal — EXAMPLE ONLY, to show that a new country is "just another file".
+# Machine-drafted, unverified, tiny gazetteer. Uses Devanagari digits in labels on
+# purpose so the number checks are exercised against a non-ASCII digit script.
+id: np
+name: Nepal (example)
+timezone: Asia/Kathmandu
+utc_offset: "+05:45"
+verified: false
+verification_note: "Example pack: machine-drafted names and text, approximate centroids. Not for real use."
+
+authority:
+  sender_id: "lastmile-demo-np@example.org"
+  sender_name: "LastMile Alert demo – Nepal example (not an official source)"
+  web: "https://example.org/lastmile"
+
+languages:
+  en: {name: English, cap_lang: en-NP, tts_lang: en-IN, script: Latin}
+  ne:
+    name: Nepali
+    native_name: नेपाली
+    cap_lang: ne-NP
+    tts_lang: ne-NP
+    script: Devanagari
+    exercise_prefix: "अभ्यास मात्र - वास्तविक होइन।"
+    weekdays: [सोमबार, मंगलबार, बुधबार, बिहीबार, शुक्रबार, शनिबार, आइतबार]
+    months: [जनवरी, फेब्रुअरी, मार्च, अप्रिल, मे, जुन, जुलाई, अगस्ट, सेप्टेम्बर, अक्टोबर, नोभेम्बर, डिसेम्बर]
+    datetime_format: "{year} {month} {day} {weekday}, {time}"
+    more_areas: "र अन्य क्षेत्रहरू"
+    update_word: "अद्यावधिक"
+    now_at: "{place} अब {label}"
+    help_sms: "सहायता: {hotline}"
+    help_voice: "सहायताका लागि {hotline} मा फोन गर्नुहोस्।"
+    ref_label: "सन्दर्भ"
+
+gazetteer:
+  - {id: NP-KTM, kind: district, names: {en: Kathmandu, ne: काठमाडौं}, aliases: [Kathmandu], lat: 27.7172, lon: 85.3240, radius_km: 12}
+  - {id: NP-SUN, kind: district, names: {en: Sunsari,   ne: सुनसरी},   aliases: [Sunsari],   lat: 26.6290, lon: 87.1810, radius_km: 20}
+  - {id: NP-MOR, kind: district, names: {en: Morang,    ne: मोरङ},     aliases: [Morang],    lat: 26.6667, lon: 87.4667, radius_km: 25}
+  - {id: NP-KAI, kind: district, names: {en: Kailali,   ne: कैलाली},   aliases: [Kailali],   lat: 28.7000, lon: 80.9000, radius_km: 35}
+  - {id: NP-CHI, kind: district, names: {en: Chitwan,   ne: चितवन},    aliases: [Chitwan],   lat: 27.5291, lon: 84.3542, radius_km: 30}

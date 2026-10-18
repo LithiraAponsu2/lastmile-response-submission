@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="586" viewBox="0 0 1040 586" role="img" aria-labelledby="title desc">
+<title id="title">02 / How a request becomes recorded work</title><desc id="desc">Residents report needs; operators resolve ambiguity; organisations record progress.</desc>
+<defs><marker id="navy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#192b45"/></marker><marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#368985"/></marker><marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#3969b6"/></marker></defs>
+<rect x="1" y="1" width="1038" height="584" rx="20" fill="white" stroke="#dce4eb"/>
+<g font-family="Segoe UI, Arial, sans-serif">
+<text x="32" y="43" font-size="27" fill="#192b45" font-weight="650" text-anchor="start">02 / How a request becomes recorded work</text>
+<text x="32" y="73" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Residents report needs; operators resolve ambiguity; organisations record progress.</text>
+<rect x="40" y="124" width="280" height="146" rx="12" fill="#eaf5f2" stroke="#dce4eb"/>
+<rect x="40" y="140" width="4" height="114" rx="2" fill="#368985"/>
+<text x="58" y="155" font-size="18" fill="#368985" font-weight="650" text-anchor="start">1. Report a need</text>
+<text x="58" y="180" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Description, location and</text>
+<text x="58" y="201" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">optional photos; receive a</text>
+<text x="58" y="222" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">private tracking code.</text>
+<rect x="380" y="124" width="280" height="146" rx="12" fill="#edf3fd" stroke="#dce4eb"/>
+<rect x="380" y="140" width="4" height="114" rx="2" fill="#3969b6"/>
+<text x="398" y="155" font-size="18" fill="#3969b6" font-weight="650" text-anchor="start">2. Read the request</text>
+<text x="398" y="180" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Gemini extracts need, urgency,</text>
+<text x="398" y="201" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">count evidence, questions and</text>
+<text x="398" y="222" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">possible inconsistencies.</text>
+<rect x="720" y="124" width="280" height="146" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="720" y="140" width="4" height="114" rx="2" fill="#192b45"/>
+<text x="738" y="155" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">3. Apply triage rules</text>
+<text x="738" y="180" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Code validates interpretation;</text>
+<text x="738" y="201" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">file, verify, hold or close</text>
+<text x="738" y="222" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">according to current rules.</text>
+<rect x="720" y="356" width="280" height="146" rx="12" fill="#eaf5f2" stroke="#dce4eb"/>
+<rect x="720" y="372" width="4" height="114" rx="2" fill="#368985"/>
+<text x="738" y="387" font-size="18" fill="#368985" font-weight="650" text-anchor="start">4. Review and clarify</text>
+<text x="738" y="412" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Staff see replies; coordinator</text>
+<text x="738" y="433" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">decides whether a possible</text>
+<text x="738" y="454" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">duplicate is the same issue.</text>
+<rect x="380" y="356" width="280" height="146" rx="12" fill="#eaf5f2" stroke="#dce4eb"/>
+<rect x="380" y="372" width="4" height="114" rx="2" fill="#368985"/>
+<text x="398" y="387" font-size="18" fill="#368985" font-weight="650" text-anchor="start">5. Coordinate action</text>
+<text x="398" y="412" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Review an operational plan;</text>
+<text x="398" y="433" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">assign work to a participating</text>
+<text x="398" y="454" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">organisation and track it.</text>
+<rect x="40" y="356" width="280" height="146" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>
+<rect x="40" y="372" width="4" height="114" rx="2" fill="#192b45"/>
+<text x="58" y="387" font-size="18" fill="#192b45" font-weight="650" text-anchor="start">6. Record the outcome</text>
+<text x="58" y="412" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Store progress and outcome;</text>
+<text x="58" y="433" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">resident sees staff-recorded</text>
+<text x="58" y="454" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">status in the tracker.</text>
+<path d="M320 197 L380 197" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)"/>
+<path d="M660 197 L720 197" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)"/>
+<path d="M860 270 L860 356" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)"/>
+<path d="M720 429 L660 429" fill="none" stroke="#368985" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal)"/>
+<path d="M380 429 L320 429" fill="none" stroke="#368985" stroke-width="2" stroke-linejoin="round" marker-end="url(#teal)"/>
+<text x="520" y="316" font-size="15" fill="#43546b" font-weight="400" text-anchor="middle">Questions and resident replies stay linked to the request.</text>
+<text x="32" y="562" font-size="14" fill="#43546b" font-weight="400" text-anchor="start">Staff-recorded completion is distinct from resident confirmation; this prototype does not dispatch aid.</text>
+</g></svg>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LastMile Alert — danger map</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/static/public-map.css">
+  <script src="/static/vendor/leaflet/leaflet.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2 1 21h22L12 2zm0 6 6.9 11H5.1L12 8zm-1 3v4h2v-4h-2zm0 5v2h2v-2h-2z"/></svg>
+      <div>
+        <h1 id="title">Danger map</h1>
+        <p>Warnings in force, by area. Demo — not an official source.</p>
+      </div>
+    </div>
+    <div class="badges" id="langs" role="group" aria-label="Language"></div>
+  </header>
+  <nav class="public-nav" aria-label="Workspace links"><a href="/">← Incident workspace</a><span>Sri Lanka · Exercise prototype</span></nav>
+
+  <div id="exerciseBanner" class="banner" hidden></div>
+  <div id="notice" class="banner info" role="status" hidden></div>
+
+  <main class="layout public">
+    <section class="panel">
+      <div class="row asof">
+        <label for="at">As of</label>
+        <input id="at" type="datetime-local" step="60">
+        <button type="button" id="now" class="secondary">Now</button>
+        <button type="button" id="latest" class="secondary" hidden>Latest published alert</button>
+      </div>
+      <div id="public-map" aria-label="Interactive Sri Lanka warning map"></div>
+      <p class="geography-note">District reference: geoBoundaries / OpenStreetMap, 2017, ODbL 1.0. Warning areas also use OCHA ROAP / Survey Department of Sri Lanka, 2020, CC BY 3.0 IGO. Dashed areas use approximate geometry. No warning displayed does not mean safe.</p>
+      <details class="map-fallback"><summary>Static map alternative</summary><div class="mapwrap"><img id="map" alt="Danger map: areas coloured by warning level" width="640" height="760"></div></details>
+    </section>
+
+    <aside class="panel">
+      <h2 id="findTitle">Find your area</h2>
+      <select id="area" aria-labelledby="findTitle"></select>
+      <div id="areaResult" class="arearesult" aria-live="polite"></div>
+
+      <h2 id="inForceTitle">Warnings in force</h2>
+      <ul id="alerts" class="issues"></ul>
+
+      <h2>Check a reference</h2>
+      <div class="row">
+        <input id="ref" type="text" maxlength="12" placeholder="e.g. A5E08B" aria-label="Reference from an SMS or email">
+        <button type="button" id="checkRef" class="secondary">Check</button>
+      </div>
+      <p id="refResult" class="hint" aria-live="polite"></p>
+
+      <h2>Email warnings</h2>
+      <div id="manage" hidden>
+        <p class="hint" id="manageWho"></p>
+      </div>
+      <form id="subForm">
+        <label for="email">Email address</label>
+        <input id="email" type="email" maxlength="254" autocomplete="email" required>
+        <fieldset class="areas"><legend>Areas</legend><div id="areaChecks"></div></fieldset>
+        <div class="row two">
+          <div><label for="subLang">Language</label><select id="subLang"></select></div>
+          <div><label for="minLevel">Email me from</label><select id="minLevel"></select></div>
+        </div>
+        <label class="check"><input id="drills" type="checkbox"> Also email me exercises (drills)</label>
+        <label class="check"><input id="consent" type="checkbox"> <span id="consentText"></span></label>
+        <button type="button" id="subscribe" class="primary">Subscribe</button>
+        <button type="button" id="save" class="primary" hidden>Save changes</button>
+        <button type="button" id="deleteMe" class="reject" hidden>Unsubscribe and delete my data</button>
+      </form>
+      <details id="signinBox">
+        <summary>Already subscribed? Sign in with an email link</summary>
+        <div class="row"><input id="signinEmail" type="email" maxlength="254" aria-label="Your email address" autocomplete="email">
+          <button type="button" id="signin" class="secondary">Send link</button></div>
+      </details>
+      <p class="hint">No password: we email you a link. Warnings on this page never need an account.</p>
+    </aside>
+  </main>
+  <div id="toast" class="toast" role="alert" hidden></div>
+  <script src="/static/public.js" defer></script>
+</body>
+</html>

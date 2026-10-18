@@ -1,0 +1,214 @@
+{
+ "dataset": "items",
+ "version": 1,
+ "updated_at": "2026-10-17T00:00:00+05:30",
+ "updated_by": "seed",
+ "fictional": false,
+ "provenance": {
+  "title": "Relief items and standards",
+  "licence": "Item names are the exercise's own; standards summarise the Sphere Handbook",
+  "attribution": "Sphere Association, The Sphere Handbook (2018)",
+  "retrieved_on": "2026-10-17",
+  "note": "Sphere indicators are minimums for planning, read alongside the full handbook."
+ },
+ "records": [
+  {
+   "id": "drinking-water",
+   "name": "Drinking and domestic water",
+   "category": "water",
+   "unit": "litres",
+   "per_person": 15,
+   "per_person_unit": "L per day",
+   "standard": "Sphere: at least 15 L per person per day for drinking, cooking and hygiene."
+  },
+  {
+   "id": "water-bowser",
+   "name": "Water bowser",
+   "category": "water",
+   "unit": "bowsers",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "Record the tank size in the stock notes."
+  },
+  {
+   "id": "purification-tablets",
+   "name": "Water purification tablets",
+   "category": "water",
+   "unit": "tablets",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "Follow the product dose per litre."
+  },
+  {
+   "id": "dry-rations",
+   "name": "Dry ration pack",
+   "category": "food",
+   "unit": "packs",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "Sphere: 2,100 kcal per person per day. Pack contents follow the issuing agency's list (exercise definition)."
+  },
+  {
+   "id": "cooking-set",
+   "name": "Cooking utensil set",
+   "category": "food",
+   "unit": "sets",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "One per household or communal kitchen (exercise planning note)."
+  },
+  {
+   "id": "tarpaulin",
+   "name": "Tarpaulin",
+   "category": "shelter",
+   "unit": "pieces",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "Sphere: covered living space of at least 3.5 m² per person."
+  },
+  {
+   "id": "family-tent",
+   "name": "Family tent",
+   "category": "shelter",
+   "unit": "tents",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "Sphere: covered living space of at least 3.5 m² per person."
+  },
+  {
+   "id": "sleeping-mat",
+   "name": "Sleeping mat",
+   "category": "shelter",
+   "unit": "pieces",
+   "per_person": 1,
+   "per_person_unit": "per person",
+   "standard": "Sphere: a sleeping mat or mattress for each person."
+  },
+  {
+   "id": "blanket",
+   "name": "Blanket",
+   "category": "shelter",
+   "unit": "pieces",
+   "per_person": 1,
+   "per_person_unit": "per person",
+   "standard": "Sphere: a blanket for each person; more in cold areas."
+  },
+  {
+   "id": "mosquito-net",
+   "name": "Mosquito net",
+   "category": "health",
+   "unit": "pieces",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "One per sleeping space where mosquito-borne disease is a risk (exercise planning note)."
+  },
+  {
+   "id": "hygiene-kit",
+   "name": "Hygiene kit",
+   "category": "hygiene",
+   "unit": "kits",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "Sphere: 250 g bathing soap and 200 g laundry soap per person per month."
+  },
+  {
+   "id": "first-aid-kit",
+   "name": "First-aid kit",
+   "category": "health",
+   "unit": "kits",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "One per centre at least (exercise planning note)."
+  },
+  {
+   "id": "generator",
+   "name": "Generator",
+   "category": "equipment",
+   "unit": "generators",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "Record the kVA rating in the stock notes."
+  },
+  {
+   "id": "inflatable-boat",
+   "name": "Inflatable rescue boat",
+   "category": "rescue",
+   "unit": "boats",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "Crew and life jackets go with each boat."
+  },
+  {
+   "id": "life-jacket",
+   "name": "Life jacket",
+   "category": "rescue",
+   "unit": "pieces",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": null
+  },
+  {
+   "id": "excavator",
+   "name": "Excavator",
+   "category": "roads",
+   "unit": "machines",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": null
+  },
+  {
+   "id": "backhoe",
+   "name": "Backhoe loader",
+   "category": "roads",
+   "unit": "machines",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": null
+  },
+  {
+   "id": "chainsaw",
+   "name": "Chainsaw",
+   "category": "roads",
+   "unit": "pieces",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": null
+  },
+  {
+   "id": "tipper",
+   "name": "Tipper truck",
+   "category": "transport",
+   "unit": "vehicles",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": null
+  },
+  {
+   "id": "passenger-bus",
+   "name": "Passenger bus",
+   "category": "transport",
+   "unit": "vehicles",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "Record the seat count in the stock notes."
+  },
+  {
+   "id": "helicopter",
+   "name": "Helicopter",
+   "category": "rescue",
+   "unit": "aircraft",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "Record type, seats and hoist in the stock notes; tasking stays with the Air Force."
+  },
+  {
+   "id": "rescue-team",
+   "name": "Search and rescue team",
+   "category": "rescue",
+   "unit": "teams",
+   "per_person": null,
+   "per_person_unit": null,
+   "standard": "Record team size and skills (swift water, collapse, medical) in the notes."
+  }
+ ]
+}

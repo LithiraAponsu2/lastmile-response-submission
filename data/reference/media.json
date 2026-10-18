@@ -1,0 +1,163 @@
+{
+ "dataset": "media",
+ "version": 1,
+ "updated_at": "2026-10-18T00:00:00+05:30",
+ "updated_by": "seed",
+ "fictional": true,
+ "provenance": {
+  "title": "Media recipients (demo)",
+  "note": "Generic desks, not real outlets; no addresses."
+ },
+ "records": [
+  {
+   "id": "media-national-television-newsroom",
+   "name": "National television newsroom",
+   "type": "tv",
+   "language": "all",
+   "area": "national",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-sinhala-television-news-desk",
+   "name": "Sinhala television news desk",
+   "type": "tv",
+   "language": "si",
+   "area": "national",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-tamil-television-news-desk",
+   "name": "Tamil television news desk",
+   "type": "tv",
+   "language": "ta",
+   "area": "national",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-national-radio-news",
+   "name": "National radio news",
+   "type": "radio",
+   "language": "all",
+   "area": "national",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-hill-country-community-radio",
+   "name": "Hill country community radio",
+   "type": "radio",
+   "language": "si",
+   "area": "district-kandy",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-eastern-community-radio",
+   "name": "Eastern community radio",
+   "type": "radio",
+   "language": "ta",
+   "area": "district-batticaloa",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-northern-community-radio",
+   "name": "Northern community radio",
+   "type": "radio",
+   "language": "ta",
+   "area": "district-jaffna",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-southern-community-radio",
+   "name": "Southern community radio",
+   "type": "radio",
+   "language": "si",
+   "area": "district-galle",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-english-daily-newspaper",
+   "name": "English daily newspaper",
+   "type": "newspaper",
+   "language": "en",
+   "area": "national",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-sinhala-daily-newspaper",
+   "name": "Sinhala daily newspaper",
+   "type": "newspaper",
+   "language": "si",
+   "area": "national",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-tamil-daily-newspaper",
+   "name": "Tamil daily newspaper",
+   "type": "newspaper",
+   "language": "ta",
+   "area": "national",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-online-news-portal",
+   "name": "Online news portal",
+   "type": "online",
+   "language": "en",
+   "area": "national",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-sinhala-online-news",
+   "name": "Sinhala online news",
+   "type": "online",
+   "language": "si",
+   "area": "national",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-wire-news-agency",
+   "name": "Wire news agency",
+   "type": "agency",
+   "language": "en",
+   "area": "national",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  },
+  {
+   "id": "media-government-information-office",
+   "name": "Government information office",
+   "type": "government",
+   "language": "all",
+   "area": "national",
+   "email": null,
+   "notes": null,
+   "fictional": true
+  }
+ ]
+}

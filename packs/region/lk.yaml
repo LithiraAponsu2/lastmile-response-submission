@@ -1,0 +1,133 @@
+# REGION PACK: Sri Lanka
+#
+# A region pack answers "where, in which languages, who is the sender".
+# Add a country by dropping a new file like this one into packs/region/.
+#
+# !!! STARTER DATA — NOT NATIVE-VERIFIED !!!
+# Sinhala/Tamil place names below are machine-drafted. Before any real use a
+# native reader or the issuing authority must verify every name and set
+# `verified: true` on it. Centroids are approximate and exist only so the demo
+# can draw a map; replace them with COD-AB boundaries (see scripts/).
+id: lk
+name: Sri Lanka
+timezone: Asia/Colombo
+utc_offset: "+05:30"
+verified: false
+verification_note: >-
+  Starter gazetteer: machine-drafted names, approximate centroids.
+  Must be verified by native readers / the issuing authority before real use.
+
+authority:
+  sender_id: "lastmile-demo@example.org"   # CAP <sender>; replace with the real authority id
+  sender_name: "LastMile Alert demo (not an official source)"
+  web: "https://example.org/lastmile"
+  sms_sender: "LastMile"                    # demo; replace with the authority's registered SMS sender ID
+  hotline: "117"                            # DMC 24-hour emergency line; the authority must confirm before use
+
+languages:
+  # exercise_prefix starts every SMS/voice payload of a drill (CAP status Exercise). si/ta: unverified, see banner.
+  # Phrases code adds around the model's text (exercise prefix, dates, update/help/ref lines). English uses the
+  # built-in defaults. si/ta: unverified starter data like everything else here (see banner).
+  en: {name: English, native_name: English, cap_lang: en-LK, tts_lang: en-IN, script: Latin, exercise_prefix: "EXERCISE - NOT REAL."}
+  si:
+    name: Sinhala
+    native_name: සිංහල
+    cap_lang: si-LK
+    tts_lang: si-LK
+    script: Sinhala
+    exercise_prefix: "පුහුණුවකි - සැබෑ නොවේ."
+    weekdays: [සඳුදා, අඟහරුවාදා, බදාදා, බ්‍රහස්පතින්දා, සිකුරාදා, සෙනසුරාදා, ඉරිදා]
+    months: [ජනවාරි, පෙබරවාරි, මාර්තු, අප්‍රේල්, මැයි, ජූනි, ජූලි, අගෝස්තු, සැප්තැම්බර්, ඔක්තෝබර්, නොවැම්බර්, දෙසැම්බර්]
+    datetime_format: "{year} {month} {day} {weekday}, {time}"
+    more_areas: "සහ තවත් ප්‍රදේශ"
+    update_word: "යාවත්කාලීනයි"
+    now_at: "{place} දැන් {label}"
+    help_sms: "උදව්: {hotline}"
+    help_voice: "උදව් සඳහා {hotline} අමතන්න."
+    ref_label: "යොමු"
+    ui:
+      map_title: "අනතුරු සිතියම"
+      no_alerts: "මේ අවස්ථාවේ මෙම කලාපයට බලපැවැත්වෙන අනතුරු ඇඟවීම් නැත."
+      in_force: "බලපැවැත්වෙන අනතුරු ඇඟවීම්"
+      find_area: "ඔබේ ප්‍රදේශය සොයන්න"
+      your_areas: "ඔබේ ප්‍රදේශ"
+      what_to_do: "කළ යුතු දේ"
+      reference: "යොමු අංකය"
+      check_at: "සත්‍ය බව මෙහි පරීක්ෂා කරන්න"
+      valid_until: "වලංගු කාලය"
+      no_warning_here: "මෙම ප්‍රදේශයට අනතුරු ඇඟවීමක් නැත."
+      exercise_tag: "පුහුණුව"
+      exercise_banner: "පුහුණුව: මේවා සැබෑ අනතුරු ඇඟවීම් නොවේ."
+      why_receiving: "ඔබ මෙම ප්‍රදේශ සඳහා අනතුරු ඇඟවීම් ලබා ගැනීමට ලියාපදිංචි වූ නිසා මෙය ලැබේ."
+      unsubscribe: "දායකත්වය ඉවත් කරන්න (ඔබේ ඊමේල් ලිපිනය මකා දමයි)"
+      confirm_subject: "ඔබේ අනතුරු ඇඟවීම් ඊමේල් තහවුරු කරන්න"
+      confirm_intro: "මෙම ප්‍රදේශ සඳහා අනතුරු ඇඟවීම් ඊමේල් අවශ්‍ය බව තහවුරු කරන්න: {areas}. තහවුරු කිරීමට මෙම සබැඳිය විවෘත කරන්න:"
+      consent_label: "ඔබ එකඟ වන දේ"
+      signin_subject: "ඔබේ පිවිසුම් සබැඳිය"
+      signin_intro: "ඔබේ අනතුරු ඇඟවීම් ඊමේල් කළමනාකරණය කිරීමට විනාඩි 30ක් ඇතුළත මෙම සබැඳිය විවෘත කරන්න:"
+      ignore_if_not_you: "ඔබ මෙය ඉල්ලා නොසිටියේ නම්, මෙම ඊමේලය නොසලකා හරින්න."
+  ta:
+    name: Tamil
+    native_name: தமிழ்
+    cap_lang: ta-LK
+    tts_lang: ta-IN
+    script: Tamil
+    exercise_prefix: "பயிற்சி - உண்மை அல்ல."
+    weekdays: [திங்கள், செவ்வாய், புதன், வியாழன், வெள்ளி, சனி, ஞாயிறு]
+    months: [ஜனவரி, பிப்ரவரி, மார்ச், ஏப்ரல், மே, ஜூன், ஜூலை, ஆகஸ்ட், செப்டம்பர், அக்டோபர், நவம்பர், டிசம்பர்]
+    datetime_format: "{day} {month} {year} {weekday}, {time}"
+    more_areas: "முதலிய பகுதிகள்"
+    update_word: "புதுப்பிப்பு"
+    now_at: "{place} இப்போது {label}"
+    help_sms: "உதவி: {hotline}"
+    help_voice: "உதவிக்கு {hotline} ஐ அழைக்கவும்."
+    ref_label: "குறிப்பு"
+    ui:
+      map_title: "ஆபத்து வரைபடம்"
+      no_alerts: "இந்த நேரத்தில் இந்தப் பிராந்தியத்திற்கு நடைமுறையிலுள்ள எச்சரிக்கைகள் இல்லை."
+      in_force: "நடைமுறையிலுள்ள எச்சரிக்கைகள்"
+      find_area: "உங்கள் பகுதியைத் தேடுங்கள்"
+      your_areas: "உங்கள் பகுதிகள்"
+      what_to_do: "செய்ய வேண்டியது"
+      reference: "குறிப்பு எண்"
+      check_at: "உண்மையானதா என இங்கே சரிபார்க்கவும்"
+      valid_until: "செல்லுபடியாகும் வரை"
+      no_warning_here: "இந்தப் பகுதிக்கு எச்சரிக்கை இல்லை."
+      exercise_tag: "பயிற்சி"
+      exercise_banner: "பயிற்சி: இவை உண்மையான எச்சரிக்கைகள் அல்ல."
+      why_receiving: "இந்தப் பகுதிகளுக்கான எச்சரிக்கைகளுக்குப் பதிவு செய்ததால் இதைப் பெறுகிறீர்கள்."
+      unsubscribe: "பதிவை நீக்கு (உங்கள் மின்னஞ்சல் முகவரி அழிக்கப்படும்)"
+      confirm_subject: "உங்கள் எச்சரிக்கை மின்னஞ்சல்களை உறுதிப்படுத்துங்கள்"
+      confirm_intro: "இந்தப் பகுதிகளுக்கான எச்சரிக்கை மின்னஞ்சல்கள் வேண்டும் என உறுதிப்படுத்துங்கள்: {areas}. உறுதிப்படுத்த இந்த இணைப்பைத் திறக்கவும்:"
+      consent_label: "நீங்கள் ஒப்புக்கொள்வது"
+      signin_subject: "உங்கள் உள்நுழைவு இணைப்பு"
+      signin_intro: "உங்கள் எச்சரிக்கை மின்னஞ்சல்களை நிர்வகிக்க 30 நிமிடங்களுக்குள் இந்த இணைப்பைத் திறக்கவும்:"
+      ignore_if_not_you: "நீங்கள் இதைக் கோரவில்லை என்றால், இந்த மின்னஞ்சலைப் புறக்கணிக்கவும்."
+
+gazetteer:
+  # ---- districts
+  - {id: LK-BD, kind: district, names: {en: Badulla,       si: බදුල්ල,      ta: பதுளை},          aliases: [Badulla],        lat: 6.9934, lon: 81.0550, radius_km: 25}
+  - {id: LK-NE, kind: district, names: {en: Nuwara Eliya,  si: නුවරඑළිය,    ta: நுவரெலியா},      aliases: [Nuwaraeliya, Nuwara-Eliya], lat: 6.9497, lon: 80.7891, radius_km: 22}
+  - {id: LK-KY, kind: district, names: {en: Kandy,         si: මහනුවර,      ta: கண்டி},          aliases: [Mahanuwara],     lat: 7.2906, lon: 80.6337, radius_km: 22}
+  - {id: LK-KE, kind: district, names: {en: Kegalle,       si: කෑගල්ල,      ta: கேகாலை},         aliases: [Kegalla],        lat: 7.2513, lon: 80.3464, radius_km: 20}
+  - {id: LK-RA, kind: district, names: {en: Ratnapura,     si: රත්නපුර,     ta: இரத்தினபுரி},    aliases: [Ratnapura],      lat: 6.6828, lon: 80.3992, radius_km: 28}
+  - {id: LK-MT, kind: district, names: {en: Matale,        si: මාතලේ,       ta: மாத்தளை},        aliases: [Matale],         lat: 7.4675, lon: 80.6234, radius_km: 24}
+  - {id: LK-KL, kind: district, names: {en: Kalutara,      si: කළුතර,       ta: களுத்துறை},      aliases: [Kalutara],       lat: 6.5854, lon: 79.9607, radius_km: 18}
+  - {id: LK-GL, kind: district, names: {en: Galle,         si: ගාල්ල,       ta: காலி},           aliases: [Galle],          lat: 6.0535, lon: 80.2210, radius_km: 20}
+  - {id: LK-MA, kind: district, names: {en: Matara,        si: මාතර,        ta: மாத்தறை},        aliases: [Matara],         lat: 5.9549, lon: 80.5550, radius_km: 18}
+  - {id: LK-CO, kind: district, names: {en: Colombo,       si: කොළඹ,        ta: கொழும்பு},       aliases: [Colombo],        lat: 6.9271, lon: 79.8612, radius_km: 14}
+  - {id: LK-GM, kind: district, names: {en: Gampaha,       si: ගම්පහ,       ta: கம்பஹா},         aliases: [Gampaha],        lat: 7.0873, lon: 79.9925, radius_km: 18}
+  - {id: LK-HB, kind: district, names: {en: Hambantota,    si: හම්බන්තොට,   ta: அம்பாந்தோட்டை},  aliases: [Hambantota],     lat: 6.1241, lon: 81.1185, radius_km: 30}
+  - {id: LK-MO, kind: district, names: {en: Monaragala,    si: මොණරාගල,     ta: மொனராகலை},      aliases: [Moneragala, Monaragala], lat: 6.8728, lon: 81.3507, radius_km: 35}
+  - {id: LK-KU, kind: district, names: {en: Kurunegala,    si: කුරුණෑගල,    ta: குருணாகலை},     aliases: [Kurunegala],     lat: 7.4863, lon: 80.3647, radius_km: 30}
+  # ---- DS divisions (sample only; load all 339 from COD-AB for real use)
+  - {id: LK-BD-PAS, kind: ds, parent: LK-BD, names: {en: Passara,       si: පස්සර,      ta: பசறை},          aliases: [Passara],      lat: 6.9400, lon: 81.1500, radius_km: 7}
+  - {id: LK-BD-HAL, kind: ds, parent: LK-BD, names: {en: Haldummulla,   si: හල්දුම්මුල්ල, ta: ஹல்துமுல்ல},    aliases: [Haldumulla, Haldummulla], lat: 6.7667, lon: 80.8833, radius_km: 6}
+  - {id: LK-BD-BAN, kind: ds, parent: LK-BD, names: {en: Bandarawela,   si: බණ්ඩාරවෙල,  ta: பண்டாரவளை},     aliases: [Bandarawella, Bandarawela], lat: 6.8259, lon: 80.9877, radius_km: 6}
+  - {id: LK-NE-HAN, kind: ds, parent: LK-NE, names: {en: Hanguranketha, si: හඟුරන්කෙත, ta: ஹங்குரன்கெத்த},  aliases: [Hanguranketa, Hanguranketha], lat: 7.1000, lon: 80.7800, radius_km: 8}
+  - {id: LK-NE-WAL, kind: ds, parent: LK-NE, names: {en: Walapane,      si: වලපනේ,      ta: வலப்பனை},       aliases: [Walapana, Walapane], lat: 7.0500, lon: 80.8500, radius_km: 8}
+  - {id: LK-KY-UDU, kind: ds, parent: LK-KY, names: {en: Udunuwara,     si: උඩුනුවර,    ta: உடுநுவர},        aliases: [Udunuwara],    lat: 7.2000, lon: 80.5700, radius_km: 6}
+  - {id: LK-KY-YAT, kind: ds, parent: LK-KY, names: {en: Yatinuwara,    si: යටිනුවර,    ta: யட்டிநுவர},      aliases: [Yatinuwara],   lat: 7.2000, lon: 80.5500, radius_km: 6}
+  - {id: LK-KY-HAR, kind: ds, parent: LK-KY, names: {en: Harispattuwa,  si: හරිස්පත්තුව, ta: ஹரிஸ்பத்துவ},    aliases: [Harispattuwa], lat: 7.3300, lon: 80.6600, radius_km: 7}
+  - {id: LK-KE-ARA, kind: ds, parent: LK-KE, names: {en: Aranayake,      si: අරණායක,     ta: அரநாயக்க},       aliases: [Aranayaka, Aranayake], lat: 7.2000, lon: 80.4300, radius_km: 7}
+  - {id: LK-RA-KUR, kind: ds, parent: LK-RA, names: {en: Kuruwita,       si: කුරුවිට,     ta: குருவிட்ட},      aliases: [Kuruwita],     lat: 6.7875, lon: 80.3667, radius_km: 7}

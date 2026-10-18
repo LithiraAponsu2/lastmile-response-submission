@@ -1,0 +1,17 @@
+{
+  "name": "lastmile-interface",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:ui": "node scripts/build-ui.mjs",
+    "check:ui": "node scripts/build-ui.mjs --check"
+  },
+  "dependencies": {
+    "@awesome.me/webawesome": "3.14.0",
+    "@dagrejs/dagre": "3.1.1",
+    "lit": "3.3.3"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

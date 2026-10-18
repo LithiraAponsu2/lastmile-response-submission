@@ -1,0 +1,117 @@
+# HAZARD PACK: landslide warnings on a 3-level colour scale (NBRO-style).
+#
+# A hazard pack answers "what do the levels mean, what do we say per language".
+# Add a hazard (flood, cyclone, tsunami, heat…) by adding another file here.
+#
+# !!! The level -> CAP mapping and ALL language text below are drafts. !!!
+# The issuing authority must review `scale` (esp. what Level 2 means) and a
+# native reader must review the si/ta text before real use. `reviewed: false`
+# keeps a visible banner in the console.
+id: landslide-nbro
+name: Landslide early warning (3-level colour scale)
+reviewed: false
+issuer: "National Building Research Organisation (NBRO)"
+cap_category: Geo
+# Words that name this hazard. Code compares them with the hazard the Intake model reports.
+keywords: [landslide, "land slide", mudslide, "slope failure", "rock fall"]
+
+event:
+  en: Landslide warning
+  si: නායයාමේ අනතුරු ඇඟවීම
+  ta: நிலச்சரிவு எச்சரிக்கை
+
+# Per-place level -> machine meaning. Code (not AI) uses this to set CAP urgency,
+# severity, certainty, responseType, and to catch mislabelled advice.
+scale:
+  - level: 1
+    colour: yellow
+    urgency: Future
+    severity: Minor
+    certainty: Possible
+    response_types: [Monitor]
+    intent: monitor
+    label: {en: "Level 1 – Yellow", si: "1 වන මට්ටම – කහ", ta: "நிலை 1 – மஞ்சள்"}
+  - level: 2
+    colour: amber
+    urgency: Expected
+    severity: Moderate
+    certainty: Likely
+    response_types: [Prepare]
+    intent: prepare
+    label: {en: "Level 2 – Amber", si: "2 වන මට්ටම – තැඹිලි", ta: "நிலை 2 – ஆம்பர்"}
+  - level: 3
+    colour: red
+    urgency: Immediate
+    severity: Severe
+    certainty: Likely
+    response_types: [Evacuate]
+    intent: evacuate
+    label: {en: "Level 3 – Red", si: "3 වන මට්ටම – රතු", ta: "நிலை 3 – சிவப்பு"}
+
+# Figures the localizer must carry through verbatim. Phrases are pre-approved text.
+measures:
+  rainfall_24h:
+    unit: mm
+    units_accepted: [mm, millimetres, millimeters]
+    phrase:
+      en: "Rainfall in the past 24 hours: {value} mm."
+      si: "පසුගිය පැය 24 තුළ වර්ෂාපතනය: මි.මී. {value}."
+      ta: "கடந்த 24 மணி நேரத்தில் மழைவீழ்ச்சி: {value} மி.மீ."
+
+# Pre-approved advice sentences, one per intent. The fast path uses these as-is.
+actions:
+  evacuate:
+    en: "Evacuate to a safe place immediately."
+    si: "ආරක්ෂිත ස්ථානවලට වහාම ඉවත් වන්න."
+    ta: "உடனடியாக பாதுகாப்பான இடங்களுக்கு வெளியேறுங்கள்."
+  prepare:
+    en: "Be ready to evacuate. Follow official announcements."
+    si: "ඉවත් වීමට සූදානම්ව සිටින්න. නිල නිවේදන අනුගමනය කරන්න."
+    ta: "வெளியேறத் தயாராக இருங்கள். அதிகாரப்பூர்வ அறிவிப்புகளைப் பின்பற்றுங்கள்."
+  monitor:
+    en: "Stay alert. Follow official announcements."
+    si: "අවධානයෙන් සිටින්න. නිල නිවේදන අනුගමනය කරන්න."
+    ta: "கவனமாக இருங்கள். அதிகாரப்பூர்வ அறிவிப்புகளைப் பின்பற்றுங்கள்."
+
+# Slots: {event} {top_label} {top_places} {top_places_sms} {by_level} {measures}
+#        {actions} {top_action} {valid_until}
+templates:
+  en:
+    headline: "{event}: {top_label} – {top_places}"
+    description: "{event}. {by_level} {measures} Valid until {valid_until}."
+    instruction: "{actions}"
+    sms: "{event}: {top_label} {top_places_sms}. {top_action} Until {valid_until_sms}."
+    spoken: "{event}. {actions} {measures} This warning is valid until {valid_until}."
+    cancel:
+      headline: "{event} cancelled – {areas}"
+      sms: "{event} cancelled: {areas}. Return only when local officials say it is safe."
+      spoken: "The earlier {event} for {areas} has been cancelled. Return only when local officials say it is safe."
+      error_headline: "{event} sent in error – {areas}"
+      error_sms: "The earlier {event} for {areas} was sent in error. Please ignore it and follow official announcements."
+      error_spoken: "The earlier {event} for {areas} was sent in error. Please ignore it and follow official announcements."
+  si:
+    headline: "{event}: {top_label} – {top_places}"
+    description: "{event}. {by_level} {measures} {valid_until} දක්වා වලංගුයි."
+    instruction: "{actions}"
+    sms: "{event}: {top_label} {top_places_sms}. {top_action} {valid_until_sms} දක්වා."
+    spoken: "{event}. {actions} {measures} මෙම අනතුරු ඇඟවීම {valid_until} දක්වා වලංගුයි."
+    cancel:
+      headline: "{event} අවලංගු කරන ලදී – {areas}"
+      sms: "{event} අවලංගුයි: {areas}. ප්‍රාදේශීය නිලධාරීන් ආරක්ෂිත බව පවසන විට පමණක් ආපසු යන්න."
+      spoken: "{areas} සඳහා පෙර නිකුත් කළ {event} අවලංගු කරන ලදී. ප්‍රාදේශීය නිලධාරීන් ආරක්ෂිත බව පවසන විට පමණක් ආපසු යන්න."
+      error_headline: "{event} වැරදීමකින් නිකුත් විය – {areas}"
+      error_sms: "{areas} සඳහා වූ පෙර {event} වැරදීමකින් නිකුත් කෙරිණි. කරුණාකර එය නොසලකා නිල නිවේදන අනුගමනය කරන්න."
+      error_spoken: "{areas} සඳහා වූ පෙර {event} වැරදීමකින් නිකුත් කෙරිණි. කරුණාකර එය නොසලකා නිල නිවේදන අනුගමනය කරන්න."
+  ta:
+    headline: "{event}: {top_label} – {top_places}"
+    description: "{event}. {by_level} {measures} {valid_until} வரை செல்லுபடியாகும்."
+    instruction: "{actions}"
+    sms: "{event}: {top_label} {top_places_sms}. {top_action} {valid_until_sms} வரை."
+    spoken: "{event}. {actions} {measures} இந்த எச்சரிக்கை {valid_until} வரை செல்லுபடியாகும்."
+    cancel:
+      headline: "{event} ரத்து செய்யப்பட்டது – {areas}"
+      sms: "{event} ரத்து: {areas}. உள்ளூர் அதிகாரிகள் பாதுகாப்பானது என்று கூறும்போது மட்டுமே திரும்புங்கள்."
+      spoken: "{areas} பகுதிகளுக்கான முந்தைய {event} ரத்து செய்யப்பட்டது. உள்ளூர் அதிகாரிகள் பாதுகாப்பானது என்று கூறும்போது மட்டுமே திரும்புங்கள்."
+      error_headline: "{event} தவறாக அனுப்பப்பட்டது – {areas}"
+      error_sms: "{areas} பகுதிகளுக்கான முந்தைய {event} தவறாக அனுப்பப்பட்டது. அதைப் புறக்கணித்து அதிகாரப்பூர்வ அறிவிப்புகளைப் பின்பற்றுங்கள்."
+      error_spoken: "{areas} பகுதிகளுக்கான முந்தைய {event} தவறாக அனுப்பப்பட்டது. அதைப் புறக்கணித்து அதிகாரப்பூர்வ அறிவிப்புகளைப் பின்பற்றுங்கள்."

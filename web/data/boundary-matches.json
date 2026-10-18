@@ -1,0 +1,1785 @@
+{
+  "matched": [
+    {
+      "name": "Galle",
+      "id": "LK-GL",
+      "score": 1.0
+    },
+    {
+      "name": "Hambantota",
+      "id": "LK-HB",
+      "score": 1.0
+    },
+    {
+      "name": "Matara",
+      "id": "LK-MA",
+      "score": 1.0
+    },
+    {
+      "name": "Badulla",
+      "id": "LK-BD",
+      "score": 1.0
+    },
+    {
+      "name": "Monaragala",
+      "id": "LK-MO",
+      "score": 1.0
+    },
+    {
+      "name": "Colombo",
+      "id": "LK-CO",
+      "score": 1.0
+    },
+    {
+      "name": "Gampaha",
+      "id": "LK-GM",
+      "score": 1.0
+    },
+    {
+      "name": "Kalutara",
+      "id": "LK-KL",
+      "score": 1.0
+    },
+    {
+      "name": "Kegalle",
+      "id": "LK-KE",
+      "score": 1.0
+    },
+    {
+      "name": "Kurunegala",
+      "id": "LK-KU",
+      "score": 1.0
+    },
+    {
+      "name": "Ratnapura",
+      "id": "LK-RA",
+      "score": 1.0
+    },
+    {
+      "name": "Kandy",
+      "id": "LK-KY",
+      "score": 1.0
+    },
+    {
+      "name": "Matale",
+      "id": "LK-MT",
+      "score": 1.0
+    },
+    {
+      "name": "Nuwara Eliya",
+      "id": "LK-NE",
+      "score": 1.0
+    },
+    {
+      "name": "Aranayake",
+      "id": "LK-KE-ARA",
+      "score": 1.0
+    },
+    {
+      "name": "Bandarawela",
+      "id": "LK-BD-BAN",
+      "score": 1.0
+    },
+    {
+      "name": "Haldummulla",
+      "id": "LK-BD-HAL",
+      "score": 1.0
+    },
+    {
+      "name": "Hanguranketa",
+      "id": "LK-NE-HAN",
+      "score": 1.0
+    },
+    {
+      "name": "Harispattuwa",
+      "id": "LK-KY-HAR",
+      "score": 1.0
+    },
+    {
+      "name": "Passara",
+      "id": "LK-BD-PAS",
+      "score": 1.0
+    },
+    {
+      "name": "Udunuwara",
+      "id": "LK-KY-UDU",
+      "score": 1.0
+    },
+    {
+      "name": "Walapane",
+      "id": "LK-NE-WAL",
+      "score": 1.0
+    },
+    {
+      "name": "Yatinuwara",
+      "id": "LK-KY-YAT",
+      "score": 1.0
+    }
+  ],
+  "fuzzy": [],
+  "unmatched": [
+    {
+      "file": "web\\data\\sri-lanka-districts.geojson",
+      "name": "Jaffna",
+      "why": "unresolved: 'Jaffna' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-districts.geojson",
+      "name": "Kilinochchi",
+      "why": "unresolved: 'Kilinochchi' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-districts.geojson",
+      "name": "Mannar",
+      "why": "unresolved: 'Mannar' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-districts.geojson",
+      "name": "Mullaitivu",
+      "why": "unresolved: 'Mullaitivu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-districts.geojson",
+      "name": "Vavuniya",
+      "why": "unresolved: 'Vavuniya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-districts.geojson",
+      "name": "Ampara",
+      "why": "unresolved: 'Ampara' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-districts.geojson",
+      "name": "Anuradhapura",
+      "why": "unresolved: 'Anuradhapura' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-districts.geojson",
+      "name": "Batticaloa",
+      "why": "unresolved: 'Batticaloa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-districts.geojson",
+      "name": "Polonnaruwa",
+      "why": "unresolved: 'Polonnaruwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-districts.geojson",
+      "name": "Puttalam",
+      "why": "unresolved: 'Puttalam' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-districts.geojson",
+      "name": "Trincomalee",
+      "why": "unresolved: 'Trincomalee' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Manmunai South & Eruvil Pattu",
+      "why": "unresolved: 'Manmunai South & Eruvil Pattu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Koralai Pattu West",
+      "why": "unresolved: 'Koralai Pattu West' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Thenmaradchi (Chavakachcheri)",
+      "why": "unresolved: 'Thenmaradchi (Chavakachcheri)' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Manmunai South West",
+      "why": "unresolved: 'Manmunai South West' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Manmunai Pattu",
+      "why": "unresolved: 'Manmunai Pattu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Koralai Pattu",
+      "why": "unresolved: 'Koralai Pattu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Porativu Pattu",
+      "why": "unresolved: 'Porativu Pattu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Eravur Pattu",
+      "why": "unresolved: 'Eravur Pattu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mundel",
+      "why": "unresolved: 'Mundel' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Addalaichenai",
+      "why": "unresolved: 'Addalaichenai' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Agalawatta",
+      "why": "unresolved: 'Agalawatta' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Akkaraipattu",
+      "why": "unresolved: 'Akkaraipattu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Akmeemana",
+      "why": "unresolved: 'Akmeemana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Akurana",
+      "why": "unresolved: 'Akurana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Akuressa",
+      "why": "unresolved: 'Akuressa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Alawwa",
+      "why": "unresolved: 'Alawwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Alayadivembu",
+      "why": "unresolved: 'Alayadivembu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ambagamuwa",
+      "why": "unresolved: 'Ambagamuwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ambalangoda",
+      "why": "unresolved: 'Ambalangoda' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ambalantota",
+      "why": "unresolved: 'Ambalantota' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ambanganga",
+      "why": "unresolved: 'Ambanganga' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ambanpola",
+      "why": "unresolved: 'Ambanpola' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ampara",
+      "why": "unresolved: 'Ampara' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Anamaduwa",
+      "why": "unresolved: 'Anamaduwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Angunakolapelessa",
+      "why": "unresolved: 'Angunakolapelessa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Arachchikattuwa",
+      "why": "unresolved: 'Arachchikattuwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Athuraliya",
+      "why": "unresolved: 'Athuraliya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Attanagalla",
+      "why": "unresolved: 'Attanagalla' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ayagama",
+      "why": "unresolved: 'Ayagama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Badalkumbura",
+      "why": "unresolved: 'Badalkumbura' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Baddegama",
+      "why": "unresolved: 'Baddegama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Badulla",
+      "why": "unresolved: 'Badulla' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Balangoda",
+      "why": "unresolved: 'Balangoda' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Balapitiya",
+      "why": "unresolved: 'Balapitiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Bamunakotuwa",
+      "why": "unresolved: 'Bamunakotuwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Bandaragama",
+      "why": "unresolved: 'Bandaragama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Beliatta",
+      "why": "unresolved: 'Beliatta' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Bentota",
+      "why": "unresolved: 'Bentota' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Beruwala",
+      "why": "unresolved: 'Beruwala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Bibile",
+      "why": "unresolved: 'Bibile' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Bingiriya",
+      "why": "unresolved: 'Bingiriya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Biyagama",
+      "why": "unresolved: 'Biyagama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Bope-Poddala",
+      "why": "unresolved: 'Bope-Poddala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Bulathkohipitiya",
+      "why": "unresolved: 'Bulathkohipitiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Bulathsinhala",
+      "why": "unresolved: 'Bulathsinhala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Buttala",
+      "why": "unresolved: 'Buttala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Chilaw",
+      "why": "unresolved: 'Chilaw' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Colombo",
+      "why": "unresolved: 'Colombo' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Damana",
+      "why": "unresolved: 'Damana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Dambulla",
+      "why": "unresolved: 'Dambulla' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Dankotuwa",
+      "why": "unresolved: 'Dankotuwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Dehiattakandiya",
+      "why": "unresolved: 'Dehiattakandiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Dehiowita",
+      "why": "unresolved: 'Dehiowita' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Dehiwala",
+      "why": "unresolved: 'Dehiwala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Delft",
+      "why": "unresolved: 'Delft' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Deltota",
+      "why": "unresolved: 'Deltota' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Deraniyagala",
+      "why": "unresolved: 'Deraniyagala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Devinuwara",
+      "why": "unresolved: 'Devinuwara' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Dikwella",
+      "why": "unresolved: 'Dikwella' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Dimbulagala",
+      "why": "unresolved: 'Dimbulagala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Divulapitiya",
+      "why": "unresolved: 'Divulapitiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Dodangoda",
+      "why": "unresolved: 'Dodangoda' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Doluwa",
+      "why": "unresolved: 'Doluwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Dompe",
+      "why": "unresolved: 'Dompe' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Eheliyagoda",
+      "why": "unresolved: 'Eheliyagoda' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ehetuwewa",
+      "why": "unresolved: 'Ehetuwewa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Elahera",
+      "why": "unresolved: 'Elahera' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Elapatha",
+      "why": "unresolved: 'Elapatha' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ella",
+      "why": "unresolved: 'Ella' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Elpitiya",
+      "why": "unresolved: 'Elpitiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Embilipitiya",
+      "why": "unresolved: 'Embilipitiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Eravur Town",
+      "why": "unresolved: 'Eravur Town' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Galenbidunuwewa",
+      "why": "unresolved: 'Galenbidunuwewa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Galewela",
+      "why": "unresolved: 'Galewela' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Galgamuwa",
+      "why": "unresolved: 'Galgamuwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Galigamuwa",
+      "why": "unresolved: 'Galigamuwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Galle4Gravets",
+      "why": "unresolved: 'Galle4Gravets' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Galnewa",
+      "why": "unresolved: 'Galnewa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Gampaha",
+      "why": "unresolved: 'Gampaha' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ganewatta",
+      "why": "unresolved: 'Ganewatta' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ganga Ihala Korale",
+      "why": "unresolved: 'Ganga Ihala Korale' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Gangawata Korale",
+      "why": "unresolved: 'Gangawata Korale' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Giribawa",
+      "why": "unresolved: 'Giribawa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Godakawela",
+      "why": "unresolved: 'Godakawela' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Gomarankadawala",
+      "why": "unresolved: 'Gomarankadawala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Gonapinuwala",
+      "why": "unresolved: 'Gonapinuwala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Habaraduwa",
+      "why": "unresolved: 'Habaraduwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Hakmana",
+      "why": "unresolved: 'Hakmana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Hali-Ela",
+      "why": "unresolved: 'Hali-Ela' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Hambantota",
+      "why": "unresolved: 'Hambantota' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Haputale",
+      "why": "unresolved: 'Haputale' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Hatharaliyadda",
+      "why": "unresolved: 'Hatharaliyadda' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Higurakgoda",
+      "why": "unresolved: 'Higurakgoda' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Hikkaduwa",
+      "why": "unresolved: 'Hikkaduwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Homagama",
+      "why": "unresolved: 'Homagama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Horana",
+      "why": "unresolved: 'Horana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Horowpathana",
+      "why": "unresolved: 'Horowpathana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ibbagamuwa",
+      "why": "unresolved: 'Ibbagamuwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Imaduwa",
+      "why": "unresolved: 'Imaduwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Imbulpe",
+      "why": "unresolved: 'Imbulpe' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ingiriya",
+      "why": "unresolved: 'Ingiriya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ipalogama",
+      "why": "unresolved: 'Ipalogama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Irakkamam",
+      "why": "unresolved: 'Irakkamam' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Islands North (Kayts)",
+      "why": "unresolved: 'Islands North (Kayts)' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Islands South (Velanai)",
+      "why": "unresolved: 'Islands South (Velanai)' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ja Ela",
+      "why": "unresolved: 'Ja Ela' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Jaffna",
+      "why": "unresolved: 'Jaffna' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kaburupitiya",
+      "why": "unresolved: 'Kaburupitiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kaduwela",
+      "why": "unresolved: 'Kaduwela' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kahatagasdigiliya",
+      "why": "unresolved: 'Kahatagasdigiliya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kahawattha",
+      "why": "unresolved: 'Kahawattha' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kalawana",
+      "why": "unresolved: 'Kalawana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kalmunai",
+      "why": "unresolved: 'Kalmunai' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kalpitiya",
+      "why": "unresolved: 'Kalpitiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kalutara",
+      "why": "unresolved: 'Kalutara' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kandavalai",
+      "why": "unresolved: 'Kandavalai' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kandeketiya",
+      "why": "unresolved: 'Kandeketiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kantale",
+      "why": "unresolved: 'Kantale' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Karachchi",
+      "why": "unresolved: 'Karachchi' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Karainagar",
+      "why": "unresolved: 'Karainagar' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Karaitivu",
+      "why": "unresolved: 'Karaitivu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Karandeniya",
+      "why": "unresolved: 'Karandeniya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Karuwalagaswewa",
+      "why": "unresolved: 'Karuwalagaswewa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Katana",
+      "why": "unresolved: 'Katana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Katharagama",
+      "why": "unresolved: 'Katharagama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kattankudy",
+      "why": "unresolved: 'Kattankudy' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Katuwana",
+      "why": "unresolved: 'Katuwana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kebithigollewa",
+      "why": "unresolved: 'Kebithigollewa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kegalle",
+      "why": "unresolved: 'Kegalle' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kekirawa",
+      "why": "unresolved: 'Kekirawa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kelaniya",
+      "why": "unresolved: 'Kelaniya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kesbewa",
+      "why": "unresolved: 'Kesbewa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kinniya",
+      "why": "unresolved: 'Kinniya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kiriella",
+      "why": "unresolved: 'Kiriella' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kirinda Puhulwella",
+      "why": "unresolved: 'Kirinda Puhulwella' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kobeigane",
+      "why": "unresolved: 'Kobeigane' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kolonna",
+      "why": "unresolved: 'Kolonna' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kolonnawa",
+      "why": "unresolved: 'Kolonnawa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Koralai Pattu Central",
+      "why": "unresolved: 'Koralai Pattu Central' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Koralai Pattu North",
+      "why": "unresolved: 'Koralai Pattu North' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Koralai Pattu South",
+      "why": "unresolved: 'Koralai Pattu South' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kotapola",
+      "why": "unresolved: 'Kotapola' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kotawehera",
+      "why": "unresolved: 'Kotawehera' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kothmale",
+      "why": "unresolved: 'Kothmale' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kuchchaweli",
+      "why": "unresolved: 'Kuchchaweli' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kuliyapitiya East",
+      "why": "unresolved: 'Kuliyapitiya East' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kuliyapitiya West",
+      "why": "unresolved: 'Kuliyapitiya West' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kundasale",
+      "why": "unresolved: 'Kundasale' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kurunegala",
+      "why": "unresolved: 'Kurunegala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Kuruvita",
+      "why": "fuzzy: 'Kuruvita' matched to Kuruwita (similarity 0.88)"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Laggala",
+      "why": "unresolved: 'Laggala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Lahugala",
+      "why": "unresolved: 'Lahugala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Lankapura",
+      "why": "unresolved: 'Lankapura' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Lunugala",
+      "why": "unresolved: 'Lunugala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Lunugamwehera",
+      "why": "unresolved: 'Lunugamwehera' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Madampe",
+      "why": "unresolved: 'Madampe' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Madhu",
+      "why": "unresolved: 'Madhu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Madulla",
+      "why": "unresolved: 'Madulla' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Madurawala",
+      "why": "unresolved: 'Madurawala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mahakumbukkadawala",
+      "why": "unresolved: 'Mahakumbukkadawala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mahaoya",
+      "why": "unresolved: 'Mahaoya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mahara",
+      "why": "unresolved: 'Mahara' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Maharagama",
+      "why": "unresolved: 'Maharagama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mahawewa",
+      "why": "unresolved: 'Mahawewa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mahawilachchiya",
+      "why": "unresolved: 'Mahawilachchiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mahiyanganaya",
+      "why": "unresolved: 'Mahiyanganaya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Maho",
+      "why": "unresolved: 'Maho' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Malimbada",
+      "why": "unresolved: 'Malimbada' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mallawapitiya",
+      "why": "unresolved: 'Mallawapitiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Manmunai North",
+      "why": "unresolved: 'Manmunai North' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Manmunai West",
+      "why": "unresolved: 'Manmunai West' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mannar Town",
+      "why": "unresolved: 'Mannar Town' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Manthai East",
+      "why": "unresolved: 'Manthai East' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Manthai West",
+      "why": "unresolved: 'Manthai West' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Maritimepattu",
+      "why": "unresolved: 'Maritimepattu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Maspotha",
+      "why": "unresolved: 'Maspotha' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Matale",
+      "why": "unresolved: 'Matale' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Matara Four Gravets",
+      "why": "unresolved: 'Matara Four Gravets' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Matugama",
+      "why": "unresolved: 'Matugama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mawanella",
+      "why": "unresolved: 'Mawanella' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mawathagama",
+      "why": "unresolved: 'Mawathagama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Medadumbara",
+      "why": "unresolved: 'Medadumbara' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Medagama",
+      "why": "unresolved: 'Medagama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Medawachchiya",
+      "why": "unresolved: 'Medawachchiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Medirigiriya",
+      "why": "unresolved: 'Medirigiriya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Meegahakiula",
+      "why": "unresolved: 'Meegahakiula' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mihinthale",
+      "why": "unresolved: 'Mihinthale' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Millaniya",
+      "why": "unresolved: 'Millaniya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Minipe",
+      "why": "unresolved: 'Minipe' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Minuwangoda",
+      "why": "unresolved: 'Minuwangoda' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mirigama",
+      "why": "unresolved: 'Mirigama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Monaragala",
+      "why": "unresolved: 'Monaragala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Moratuwa",
+      "why": "unresolved: 'Moratuwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Morawewa",
+      "why": "unresolved: 'Morawewa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Mulatiyana",
+      "why": "unresolved: 'Mulatiyana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Musali",
+      "why": "unresolved: 'Musali' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Muthur",
+      "why": "unresolved: 'Muthur' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nachchaduwa",
+      "why": "unresolved: 'Nachchaduwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nagoda",
+      "why": "unresolved: 'Nagoda' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nallur",
+      "why": "unresolved: 'Nallur' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nanaddan",
+      "why": "unresolved: 'Nanaddan' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Narammala",
+      "why": "unresolved: 'Narammala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nattandiya",
+      "why": "unresolved: 'Nattandiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Naula",
+      "why": "unresolved: 'Naula' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Navithanveli",
+      "why": "unresolved: 'Navithanveli' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nawagattegama",
+      "why": "unresolved: 'Nawagattegama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Negombo",
+      "why": "unresolved: 'Negombo' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Neluwa",
+      "why": "unresolved: 'Neluwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nikaweratiya",
+      "why": "unresolved: 'Nikaweratiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nintavur",
+      "why": "unresolved: 'Nintavur' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nivithigala",
+      "why": "unresolved: 'Nivithigala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Niyagama",
+      "why": "unresolved: 'Niyagama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nochchiyagama",
+      "why": "unresolved: 'Nochchiyagama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nuwara Eliya",
+      "why": "unresolved: 'Nuwara Eliya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nuwaragam Palatha Central",
+      "why": "unresolved: 'Nuwaragam Palatha Central' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Nuwaragam Palatha East",
+      "why": "unresolved: 'Nuwaragam Palatha East' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Oddusuddan",
+      "why": "unresolved: 'Oddusuddan' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Okewela",
+      "why": "unresolved: 'Okewela' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Opanayake",
+      "why": "unresolved: 'Opanayake' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Pachchilaipalli",
+      "why": "unresolved: 'Pachchilaipalli' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Padavi Sri Pura",
+      "why": "unresolved: 'Padavi Sri Pura' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Padaviya",
+      "why": "unresolved: 'Padaviya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Padiyathalawa",
+      "why": "unresolved: 'Padiyathalawa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Padukka",
+      "why": "unresolved: 'Padukka' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Palagala",
+      "why": "unresolved: 'Palagala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Palindanuwara",
+      "why": "unresolved: 'Palindanuwara' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Pallama",
+      "why": "unresolved: 'Pallama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Pallepola",
+      "why": "unresolved: 'Pallepola' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Palugaswewa",
+      "why": "unresolved: 'Palugaswewa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Panadura",
+      "why": "unresolved: 'Panadura' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Panduwasnuwara East",
+      "why": "unresolved: 'Panduwasnuwara East' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Panduwasnuwara West",
+      "why": "unresolved: 'Panduwasnuwara West' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Pannala",
+      "why": "unresolved: 'Pannala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Panvila",
+      "why": "unresolved: 'Panvila' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Pasbagekorale",
+      "why": "unresolved: 'Pasbagekorale' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Pasgoda",
+      "why": "unresolved: 'Pasgoda' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Pathadumbara",
+      "why": "unresolved: 'Pathadumbara' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Pathahewaheta",
+      "why": "unresolved: 'Pathahewaheta' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Pelmadulla",
+      "why": "unresolved: 'Pelmadulla' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Pitabaddara",
+      "why": "unresolved: 'Pitabaddara' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Polgahawela",
+      "why": "unresolved: 'Polgahawela' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Polpitigama",
+      "why": "unresolved: 'Polpitigama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Poojapitiya",
+      "why": "unresolved: 'Poojapitiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Poonakary",
+      "why": "unresolved: 'Poonakary' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Pottuvil",
+      "why": "unresolved: 'Pottuvil' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Puthukkudiyiruppu",
+      "why": "unresolved: 'Puthukkudiyiruppu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Puttalam",
+      "why": "unresolved: 'Puttalam' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Rajanganaya",
+      "why": "unresolved: 'Rajanganaya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Rambewa",
+      "why": "unresolved: 'Rambewa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Rambukkana",
+      "why": "unresolved: 'Rambukkana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Rasnayakapura",
+      "why": "unresolved: 'Rasnayakapura' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ratmalana",
+      "why": "unresolved: 'Ratmalana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ratnapura",
+      "why": "unresolved: 'Ratnapura' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Rattota",
+      "why": "unresolved: 'Rattota' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Rideegama",
+      "why": "unresolved: 'Rideegama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Rideemaliyadda",
+      "why": "unresolved: 'Rideemaliyadda' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ruwanwella",
+      "why": "unresolved: 'Ruwanwella' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Sainthamaruthu",
+      "why": "unresolved: 'Sainthamaruthu' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Sammanthurai",
+      "why": "unresolved: 'Sammanthurai' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Seethawaka",
+      "why": "unresolved: 'Seethawaka' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Seruvila",
+      "why": "unresolved: 'Seruvila' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Sevanagala",
+      "why": "unresolved: 'Sevanagala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Siyambalanduwa",
+      "why": "unresolved: 'Siyambalanduwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Sooriyawewa",
+      "why": "unresolved: 'Sooriyawewa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Soranathota",
+      "why": "unresolved: 'Soranathota' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Sri Jayawardanapura Kotte",
+      "why": "unresolved: 'Sri Jayawardanapura Kotte' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Tangalle",
+      "why": "unresolved: 'Tangalle' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Thalawa",
+      "why": "unresolved: 'Thalawa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Thamankaduwa",
+      "why": "unresolved: 'Thamankaduwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Thambalagamuwa",
+      "why": "unresolved: 'Thambalagamuwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Thambuththegama",
+      "why": "unresolved: 'Thambuththegama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Thanamalwila",
+      "why": "unresolved: 'Thanamalwila' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Thawalama",
+      "why": "unresolved: 'Thawalama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Thihagoda",
+      "why": "unresolved: 'Thihagoda' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Thimbirigasyaya",
+      "why": "unresolved: 'Thimbirigasyaya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Thirappane",
+      "why": "unresolved: 'Thirappane' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Thissamaharama",
+      "why": "unresolved: 'Thissamaharama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Thunukkai",
+      "why": "unresolved: 'Thunukkai' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Tirukkovil",
+      "why": "unresolved: 'Tirukkovil' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Town & Gravets",
+      "why": "unresolved: 'Town & Gravets' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Tumpane",
+      "why": "unresolved: 'Tumpane' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Udapalatha",
+      "why": "unresolved: 'Udapalatha' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Udubaddawa",
+      "why": "unresolved: 'Udubaddawa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ududumbara",
+      "why": "unresolved: 'Ududumbara' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Uhana",
+      "why": "unresolved: 'Uhana' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Ukuwela",
+      "why": "unresolved: 'Ukuwela' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Uvaparanagama",
+      "why": "unresolved: 'Uvaparanagama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Vadamaradchchi East",
+      "why": "unresolved: 'Vadamaradchchi East' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Vadamaradchchi South-West (Karaveddy)",
+      "why": "unresolved: 'Vadamaradchchi South-West (Karaveddy)' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Vadamaradchi North (Point Pedro)",
+      "why": "unresolved: 'Vadamaradchi North (Point Pedro)' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Valikamam East (Kopay)",
+      "why": "unresolved: 'Valikamam East (Kopay)' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Valikamam North (Thllippalai)",
+      "why": "unresolved: 'Valikamam North (Thllippalai)' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Valikamam South (Uduvil)",
+      "why": "unresolved: 'Valikamam South (Uduvil)' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Valikamam South West (Sandilipay)",
+      "why": "unresolved: 'Valikamam South West (Sandilipay)' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Valikamam West (Chankanai)",
+      "why": "unresolved: 'Valikamam West (Chankanai)' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Vanathavilluwa",
+      "why": "unresolved: 'Vanathavilluwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Vavuniya",
+      "why": "unresolved: 'Vavuniya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Vavuniya North",
+      "why": "unresolved: 'Vavuniya North' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Vavuniya South",
+      "why": "unresolved: 'Vavuniya South' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Vengalacheddikulam",
+      "why": "unresolved: 'Vengalacheddikulam' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Verugal",
+      "why": "unresolved: 'Verugal' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Walallawita",
+      "why": "unresolved: 'Walallawita' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Walasmulla",
+      "why": "unresolved: 'Walasmulla' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Warakapola",
+      "why": "unresolved: 'Warakapola' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Wariyapola",
+      "why": "unresolved: 'Wariyapola' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Wattala",
+      "why": "unresolved: 'Wattala' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Weerabugedara",
+      "why": "unresolved: 'Weerabugedara' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Weeraketiya",
+      "why": "unresolved: 'Weeraketiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Weligama",
+      "why": "unresolved: 'Weligama' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Weligepola",
+      "why": "unresolved: 'Weligepola' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Welikanda",
+      "why": "unresolved: 'Welikanda' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Welimada",
+      "why": "unresolved: 'Welimada' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Welioya",
+      "why": "unresolved: 'Welioya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Welipitiya",
+      "why": "unresolved: 'Welipitiya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Welivitiya-Divitura",
+      "why": "unresolved: 'Welivitiya-Divitura' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Wellawaya",
+      "why": "unresolved: 'Wellawaya' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Wennappuwa",
+      "why": "unresolved: 'Wennappuwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Wilgamuwa",
+      "why": "unresolved: 'Wilgamuwa' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Yakkalamulla",
+      "why": "unresolved: 'Yakkalamulla' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Yatawatta",
+      "why": "unresolved: 'Yatawatta' is not in the gazetteer"
+    },
+    {
+      "file": "web\\data\\sri-lanka-divisions.geojson",
+      "name": "Yatiyantota",
+      "why": "unresolved: 'Yatiyantota' is not in the gazetteer"
+    }
+  ],
+  "missing": [
+    "LK-RA-KUR"
+  ]
+}
