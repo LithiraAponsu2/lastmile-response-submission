@@ -9,14 +9,14 @@
 <p align="center"><strong>From a resident's request to a coordinated response.</strong><br>Gemini + Google ADK · Google Cloud Run · Human-approved operational plans</p>
 <p align="center"><strong>Team MOB</strong> · Lithira Aponsu &amp; Pulsara Aponsu<br>AI Builder Cup 2026 · Sustainability &amp; Social Impact</p>
 
-**[Try the workspace](https://lastmile-alert-74y2iwqhzq-el.a.run.app/) · [Resident page](https://lastmile-alert-74y2iwqhzq-el.a.run.app/public) · [Architecture](docs/ARCHITECTURE.md) · [AI implementation](docs/AI_USAGE.md)**
+**[Watch the demo (3:23)](https://youtu.be/t2vgS3u6gh8) · [Try the workspace](https://lastmile-alert-74y2iwqhzq-el.a.run.app/) · [Resident page](https://lastmile-alert-74y2iwqhzq-el.a.run.app/public) · [Architecture](docs/ARCHITECTURE.md) · [AI implementation](docs/AI_USAGE.md)**
 
 Sri Lankan disaster-response teams need to connect scattered requests, reports and resources. LastMile gives residents a way to report needs and track staff updates, while organisations share evidence, clarify requests, assign work and record outcomes in one workspace. The intended benefit is fewer lost requests and clearer accountability; field impact has not yet been measured.
 
 **Report → review → coordinate → track:** residents send text/photos and answer questions; staff work from public-request boards across incidents or inside one incident; the responsible body records progress. Notifications take reviewers to the relevant request. Possible duplicates need a human decision, and separate delivery sites retain their own quantities and completion.
 
-> **Submission links:** 3–4 minute demonstration video and final template-based PDF will be added after verification. Editable PPTX is withheld for now.
-<!-- Add verified PDF/video links here before submission. Add a PPTX link only after explicit release; no broken placeholder links. -->
+> **Submission materials:** demonstration linked above. Final template-based PDF pending; editable PPTX is withheld for now.
+<!-- Add the verified PDF link before submission. Add a PPTX link only after explicit release. -->
 
 ## Where Gemini does the work
 

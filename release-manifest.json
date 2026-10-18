@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "LastMile Response",
   "version": "0.3.0",
-  "generated_at_utc": "2026-10-18T17:47:27.083571+00:00",
+  "generated_at_utc": "2026-10-18T17:53:55.539227+00:00",
   "publication_state": "private preparation candidate",
   "repository": "https://github.com/LithiraAponsu2/lastmile-response-submission",
   "runtime_content_sha256": "abfeeff1adde3248ae2c9236d41e8d7588c62734a1a1ccb8723fc2314fd28ab3",
@@ -17,7 +17,7 @@
     "CHANGELOG.md": "80d38706b1d9db12cc12a7e99e9669d780f01089754116da0416320eae2fcb4e",
     "Dockerfile": "6499baf1820784fc9a7616da171500757a057737538adc6d56d9c04f28268a11",
     "LICENSE": "affafeaf4c11d18a3c4d1b860934f81e10147effecedc5beb9350e0342ca17cd",
-    "README.md": "cff28fcba49698a191bc66e689a0128c1ca55a503c945cf4289cde84fc9b19e2",
+    "README.md": "1d0c3147436a845773d9df04d21df84a251f54b0157f8c4aac308ece5e34c11d",
     "SECURITY.md": "32b82ed727c71f669a689788a6bf6ea31a63b7badbfd93beedc91340b88de739",
     "THIRD_PARTY_NOTICES.md": "968049918ff5fd27566384f6da608b52f771ece724a74b311a29dedf0e523f9b",
     "adk_agents/lastmile/__init__.py": "684f72cd6a903ad08a8a1d26d5d78f7ae9f8d0031eda0a8ea1d3d9a69e057c04",
@@ -49,9 +49,9 @@
     "docs/CONFIGURATION.md": "d1c5fd0629d17a96434cd8bfa7ae0a2ef14a3113a11dd63c26214809343dd77f",
     "docs/DEPLOYMENT.md": "4d6c48ec2b02a37788cc50050dfa0671a82806e886a7bb5e49b5e042e276eb07",
     "docs/EVIDENCE.md": "f022d36822ff687f997c91c4d34c80f712ba020b048b259b5eba65a2ebec5568",
-    "docs/JUDGE_GUIDE.md": "7010fdf7e2aabd77add7e9b71e7fac3b6bee44e9f6a653de4016cf8bdf631e2d",
+    "docs/JUDGE_GUIDE.md": "7028618e9e52c18f0ba7c322f69de42bf9d291289e0f5b39e44cc504a6b27e80",
     "docs/SAFETY.md": "b55fc473132368e190de8050f94955bc571605a132bbc9ab483138498ce25d43",
-    "docs/SUBMISSION.md": "48f44a3236c62e99b8be24ef642c05efb59a4ef0f8c3f19111d018a8d9eb2661",
+    "docs/SUBMISSION.md": "dae05f54b477f8abc03f9e0882dd1d65c075deaf9a2e4ce03959eadf7aa34115",
     "docs/TESTING.md": "f955efc6ab5b6d45c1501770fa3f44a834826aab63549bbe468fc33e46f4ddc3",
     "docs/assets/ai-architecture.png": "d7b5f095511e3da5b521b3eadf7ea755c7c85d82a39ccbcfdc8a5e314e26201e",
     "docs/assets/ai-architecture.svg": "a6e1e2670cf992040501f3f400911d2de7ed28d716e17b94dc1b81836b0da8f0",
@@ -317,8 +317,12 @@
   "public_release_pending": [
     "dataset/schema and transitive rights clearance",
     "final evaluation terms/ownership review",
-    "actual demo recording URL",
     "final prescribed-template PDF",
     "public visibility decision after exact-tree review"
-  ]
+  ],
+  "submission_links": {
+    "demo_video": "https://youtu.be/t2vgS3u6gh8",
+    "demo_video_duration_seconds": 203,
+    "video_check": "Anonymous YouTube metadata: matching title and playability OK; full content not reviewed."
+  }
 }
