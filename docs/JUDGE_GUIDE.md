@@ -1,6 +1,6 @@
 # Judge walkthrough
 
-[Watch the 3:23 demonstration](https://youtu.be/t2vgS3u6gh8), then explore the workspace using the steps below.
+[Watch the 3:23 demonstration](https://www.youtube.com/watch?v=t2vgS3u6gh8), then explore the workspace using the steps below.
 
 Use fictional information only. The hosted role picker simulates organisations and permissions; it is not a government login or evidence of agency adoption. Submitting data to the hosted prototype changes its demo records and may trigger Gemini calls. For repeatable inspection without cloud model costs, use the local exercise instead.
 

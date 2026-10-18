@@ -1,5 +1,12 @@
 # Public-candidate changes
 
+## Submission update · 18 October 2026
+
+- README rewritten for evaluators: the problem and product, screens from the recorded exercise, how each Google service is used, the AI chat-turn and public-request flows, guardrails, application architecture, benchmark, measured and estimated cost, and how to try it. Video link: https://www.youtube.com/watch?v=t2vgS3u6gh8.
+- Adds the prescribed-template presentation as `docs/LastMile-Response-presentation.pdf`.
+- Names the model platform as Google's Gemini Enterprise Agent Platform (formerly Vertex AI) across the docs and the system diagram.
+- Removes the GitHub Actions workflow; the documented local checks remain (docs/TESTING.md). The release manifest is regenerated for the changed files.
+
 ## Application sync — 18 October 2026
 
 - Updates global and incident public-request boards, request-specific attention/notification links and staff-visible progress.

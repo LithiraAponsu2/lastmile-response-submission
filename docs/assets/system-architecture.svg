@@ -36,7 +36,7 @@
 <path d="M664 365 L702 365" fill="none" stroke="#192b45" stroke-width="2" stroke-linejoin="round" marker-end="url(#navy)"/>
 <rect x="54" y="526" width="286" height="100" rx="12" fill="#edf3fd" stroke="#dce4eb"/>
 <rect x="54" y="542" width="4" height="68" rx="2" fill="#3969b6"/>
-<text x="72" y="557" font-size="18" fill="#3969b6" font-weight="650" text-anchor="start">Gemini on Vertex AI</text>
+<text x="72" y="557" font-size="18" fill="#3969b6" font-weight="650" text-anchor="start">Gemini · Agent Platform</text>
 <text x="72" y="582" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">Structured intake, planning,</text>
 <text x="72" y="603" font-size="16" fill="#43546b" font-weight="400" text-anchor="start">drafting and translation</text>
 <rect x="378" y="526" width="286" height="100" rx="12" fill="#f1f4f8" stroke="#dce4eb"/>

@@ -10,7 +10,7 @@ Each diagram is a self-contained editable SVG with a title, description and read
 
 Gemini is not the database or the authority for permissions. Public intake uses a structured model reader directly; conversational planning uses ADK. Letters/translations are separate model tasks. These paths are not a claim that every model call is an autonomous agent.
 
-Cloud Run uses its attached Google identity for Vertex AI and private storage. Credentials stay server-side. Cloud incident records use generation-checked writes; legacy caches and cross-incident shared resources still constrain the deployment to one active writer process/revision/instance. This is not a claim of distributed transactions or unrestricted horizontal scale. Local operation uses SQLite/files and a deterministic offline model driver. Firebase/Firestore are not implemented.
+Cloud Run uses its attached Google identity for the Gemini Enterprise Agent Platform (formerly Vertex AI) and private storage. Credentials stay server-side. Cloud incident records use generation-checked writes; legacy caches and cross-incident shared resources still constrain the deployment to one active writer process/revision/instance. This is not a claim of distributed transactions or unrestricted horizontal scale. Local operation uses SQLite/files and a deterministic offline model driver. Firebase/Firestore are not implemented.
 
 ## Resident request to recorded outcome
 

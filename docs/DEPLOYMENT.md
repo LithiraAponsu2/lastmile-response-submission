@@ -1,6 +1,6 @@
 # Deploying your own exercise instance
 
-The prototype runs a Python/FastAPI container on Google Cloud Run. Gemini uses Vertex AI through the attached runtime identity. An optional private Cloud Storage bucket persists cloud state. Firebase and Firestore are not currently implemented.
+The prototype runs a Python/FastAPI container on Google Cloud Run. Gemini runs on the Gemini Enterprise Agent Platform (formerly Vertex AI) through the attached runtime identity. An optional private Cloud Storage bucket persists cloud state. Firebase and Firestore are not currently implemented.
 
 ## Local verification first
 
@@ -13,7 +13,7 @@ Open `http://localhost:8080` and `/public`. This starts a fictional exercise wit
 
 ## Own-project Cloud Run setup
 
-1. Use a Google Cloud project/billing account you control. Enable the APIs needed for Cloud Run, Artifact Registry, Vertex AI and Cloud Storage. Verify current model/region availability in your account.
+1. Use a Google Cloud project/billing account you control. Enable the APIs needed for Cloud Run, Artifact Registry, the Agent Platform API (aiplatform.googleapis.com) and Cloud Storage. Verify current model/region availability in your account.
 2. Build/push the supplied Docker image to your own Artifact Registry repository. Keep the Docker/upload contexts restricted by the supplied ignore files.
 3. Create a runtime service account with only the model and private-bucket permissions actually needed. Use its attached identity; do not put service-account JSON, access tokens or API keys in the repository or frontend.
 4. Deploy one container process with **one active writer revision and at most one instance**. Legacy caches and owner-linked cross-incident resources do not provide distributed multiwriter consistency. Do not route traffic to two writer revisions against the same state.
@@ -23,6 +23,6 @@ Open `http://localhost:8080` and `/public`. This starts a fictional exercise wit
 
 The Docker command trusts forwarded headers for the intended Cloud Run proxy topology. Restrict ingress appropriately when adapting the image to a different hosting topology.
 
-The public-source candidate has **no production deployment workflow, credentials or Workload Identity Federation binding**. Its CI builds/tests in isolation. Deployment of the hosted submission remains controlled separately; cloning this repository does not grant access to its cloud resources.
+The public-source candidate has **no production deployment workflow, credentials or Workload Identity Federation binding**. Deployment of the hosted submission remains controlled separately; cloning this repository does not grant access to its cloud resources.
 
 [Architecture](ARCHITECTURE.md) · [Configuration](CONFIGURATION.md) · [Testing](TESTING.md)

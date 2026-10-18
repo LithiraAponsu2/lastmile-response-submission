@@ -21,7 +21,7 @@ python -m lastmile.eval --out var/eval-report.md
 
 Browser tests start local subprocess servers and use private per-test state under `var/`. Never commit that state or screenshots containing real records. `scripts/audit_team_accessibility.py` requires an explicitly supplied official local axe script, output directory and optionally browser path; its isolated test context does not weaken the deployed application CSP.
 
-The container CI job builds the supplied Dockerfile, waits for `/api/health`, checks packs and executes `scripts/smoke_http.py` against the local fake-model container. It has no production cloud identity or deployment step.
+To check the container locally, build the supplied Dockerfile, waits for `/api/health`, checks packs and executes `scripts/smoke_http.py` against the local fake-model container. It has no production cloud identity or deployment step.
 
 For public-intake comparison, `scripts/benchmark_public.py` defaults to rules/offline. Use an output under `var/` for new runs so committed evidence is not overwritten. `--gemini` is a separate billable evaluation requiring deliberate configuration; a fresh run must disclose model, date, inputs and limitations. See [AI_EVALUATION.md](AI_EVALUATION.md), [AI_EVALUATION_HOLDOUT.md](AI_EVALUATION_HOLDOUT.md) and [EVIDENCE.md](EVIDENCE.md).
 

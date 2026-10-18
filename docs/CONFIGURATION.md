@@ -36,7 +36,7 @@ Disable `LASTMILE_TEAM_DEMO` and use a separate empty data directory. First-admi
 | `LASTMILE_MODEL_FAST`, `LASTMILE_MODEL_VERIFIER` | Available model IDs chosen for your own project. |
 | `LASTMILE_RATE_LIMIT_PER_MIN`, `LASTMILE_PUBLIC_RATE_LIMIT_PER_MIN` | Request controls; these are not billing guarantees. |
 
-## Optional Gemini through Vertex AI
+## Optional Gemini through the Gemini Enterprise Agent Platform (Vertex AI API)
 
 Set `LASTMILE_LLM=gemini`, `GOOGLE_GENAI_USE_VERTEXAI=TRUE`, your `GOOGLE_CLOUD_PROJECT` and a supported `GOOGLE_CLOUD_LOCATION`. Use authorised Application Default Credentials locally or the attached runtime identity on Cloud Run. Verify model availability/permissions and expected costs first. No private project/bucket IDs or credentials are supplied by this source release.
 
@@ -44,4 +44,4 @@ The coordinator and reader use the configured model adapter; drafting/translatio
 
 ## UI development
 
-Node 22 is used by CI. Run `npm ci --ignore-scripts`, then `npm run build:ui` after changing authored components and `npm run check:ui` to verify committed bundles/icons/notices. Python serves the committed assets without a Node runtime or UI CDN.
+Node 22 is used for the UI bundle. Run `npm ci --ignore-scripts`, then `npm run build:ui` after changing authored components and `npm run check:ui` to verify committed bundles/icons/notices. Python serves the committed assets without a Node runtime or UI CDN.

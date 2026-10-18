@@ -1,6 +1,6 @@
 # Where AI contributes
 
-The deployed design uses **Gemini on Vertex AI**, with a **Google ADK coordinator** for conversational tools, served by **Cloud Run**. Private **Cloud Storage** persists cloud state. Firebase and Firestore are not currently used. Model IDs/configuration must be recorded with the final release; the stored intake benchmark identifies its tested model separately.
+The deployed design uses **Gemini on Google's Gemini Enterprise Agent Platform** (formerly Vertex AI), with a **Google ADK coordinator** for conversational tools, served by **Cloud Run**. Private **Cloud Storage** persists cloud state. Firebase and Firestore are not currently used. Model IDs/configuration must be recorded with the final release; the stored intake benchmark identifies its tested model separately.
 
 [![AI architecture showing the structured public reader, scoped ADK model-tool loop and human-approved execution boundary.](assets/ai-architecture.svg)](assets/ai-architecture.svg)
 
@@ -21,7 +21,7 @@ The model-tool loop is bounded to 12 model calls per turn. Read tools remain inc
 
 ## Two different execution modes
 
-- **Gemini:** authorised server identity calls Vertex AI. Model calls can incur cost; input/model/latency evidence must identify the actual configuration.
+- **Gemini:** authorised server identity calls the Gemini Enterprise Agent Platform. Model calls can incur cost; input/model/latency evidence must identify the actual configuration.
 - **Offline:** a labelled deterministic driver exercises the ADK function loop and rules. It supports reproducible demonstrations/tests, but is not Gemini inference or a claim of equivalent language understanding.
 
 If the public reader fails or reaches its model limit, the application can use its rules fallback. Fallback behaviour requires its own safety tests. No guarantee of zero hallucinations, perfect triage, safe emergency advice or certified translations is made.
